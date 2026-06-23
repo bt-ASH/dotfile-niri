@@ -18,7 +18,7 @@ SSH 用了默认密钥路径，但你的密钥叫 mygithub.key	创建了 ~/.ssh/
 | **GPU** | NVIDIA GeForce 940MX (2GB GDDR5, Maxwell架构) |
 | **内存** | 15 GB DDR3L |
 | **存储** | NVMe SSD |
-| **系统** | Arch Linux (kernel 6.x) + niri Wayland |
+| **系统** | Arch Linux (kernel 7.x-lts) + niri Wayland |
 | **显卡驱动** | NVIDIA 580.159.04 |
 | **转译层** | Proton 10.0 / DXVK |
 | **显示器** | 1440×900 (16:9, 等效缩放窗口800×450) |
