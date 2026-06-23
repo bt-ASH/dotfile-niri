@@ -1,4 +1,7 @@
-# VRChat 极致帧率优化配置
+tty(0.46.2)  问题	修复
+nixos 目录里没有 .git，但 git 只追踪了空目录占位符	git rm --cached nixos + git add nixos/ 重新追踪文件
+SSH 用了默认密钥路径，但你的密钥叫 mygithub.key	创建了 ~/.ssh/config 指向 IdentityFile ~/./mygithub.key
+密钥没加载到 ssh-agent	ssh-add ~/.ssh/mygithub.key# VRChat 极致帧率优化配置
 
 > ⚠️ **免责声明：本配置由 Step 3.7 Flash 自动生成，请谨慎使用。**
 > 优化涉及修改注册表、系统 GPU 设置、游戏配置文件等，
@@ -69,7 +72,8 @@
 ### 1. 一键配置（仅需一次，或重置后）
 
 ```bash
-/home/ash/dotfile-niri/VRchat-config/apply.sh
+cd dotfile-niri/VRchat-config
+./apply.sh
 ```
 
 ### 2. Steam 启动选项
@@ -82,7 +86,8 @@
 ### 3. 每次启动前
 
 ```bash
-/home/ash/dotfile-niri/VRchat-config/set_gpu_perf.sh
+cd dotfile-niri/VRchat-config
+./set_gpu_perf.sh
 ```
 
 ### 4. 游戏内设置
