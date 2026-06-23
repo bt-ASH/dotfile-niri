@@ -1,9 +1,3 @@
-tty(0.46.2)  --enable-sandbox=False --disable-vr --screen-width 800 --screen-height 450 --window-mode exclusive
-tty(0.46.2)  问题	修复
-nixos 目录里没有 .git，但 git 只追踪了空目录占位符	git rm --cached nixos + git add nixos/ 重新追踪文件
-SSH 用了默认密钥路径，但你的密钥叫 mygithub.key	创建了 ~/.ssh/config 指向 IdentityFile ~/./mygithub.key
-密钥没加载到 ssh-agent	ssh-add ~/.ssh/mygithub.key# VRChat 极致帧率优化配置
-
 > ⚠️ **免责声明：本配置由 Step 3.7 Flash 自动生成，请谨慎使用。**
 > 优化涉及修改注册表、系统 GPU 设置、游戏配置文件等，
 > 可能导致游戏不稳定、闪退或封号风险。
@@ -80,7 +74,8 @@ cd dotfile-niri/VRchat-config
 ### 2. Steam 启动选项
 
 右键 VRChat → 属性 → 启动选项，粘贴：
-```
+tty(0.46.2)```
+  --enable-sandbox=False --disable-vr --screen-width 800 --screen-height 450 --window-mode exclusive
 LSFG_PROCESS="Genshin" PRESSURE_VESSEL_IMPORT_OPENXR_1_RUNTIMES=1 prime-run %command% --enable-sandbox=False --disable-vr --screen-width 800 --screen-height 450 --window-mode exclusive
 ```
 
