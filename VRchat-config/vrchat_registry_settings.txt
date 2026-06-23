@@ -1,0 +1,1158 @@
+[Software\\VRChat\\VRChat] 1782147515
+#time=1dd02685d6cb50a
+"14C4B06B824EC593239362517F538B29_h1518735675"=hex:65,68,49,69,2b,6d,71,35,6e,\
+  59,72,52,63,74,5a,33,50,72,52,76,76,67,3d,3d,00
+"5F4DCC3B5AA765D61D8327DEB882CF99_h997075211"=hex:65,59,73,69,38,74,79,73,42,\
+  70,6a,4b,30,35,57,77,39,46,4c,32,35,41,3d,3d,00
+"93D3AE97F80BEDA8E396065DC4770A93_h1522417508"=hex:4c,42,70,36,67,4f,49,71,49,\
+  63,41,73,70,55,69,4b,36,66,72,77,63,36,41,61,6d,63,4e,72,55,79,67,61,61,66,\
+  33,72,7a,64,54,57,42,65,49,3d,00
+"AUDIO_GAME_AVATARS_ENABLED_h1043985701"=dword:00000001
+"AUDIO_GAME_AVATARS_STEAMAUDIO_h1047912952"=hex(4):00,00,00,00,00,00,00,00
+"AUDIO_GAME_PROPS_ENABLED_h1917607401"=dword:00000001
+"AUDIO_GAME_PROPS_STEAMAUDIO_h320557492"=hex(4):00,00,00,00,00,00,00,00
+"AUDIO_GAME_SFX_ENABLED_h3370237354"=dword:00000001
+"AUDIO_GAME_SFX_STEAMAUDIO_h3142030231"=hex(4):00,00,00,00,00,00,00,00
+"AUDIO_GAME_VOICE_ENABLED_h2864962737"=dword:00000001
+"AUDIO_GAME_VOICE_STEAMAUDIO_h295017964"=hex(4):00,00,00,00,00,00,00,00
+"AUDIO_MASTER_ENABLED_h3453344810"=dword:00000001
+"AUDIO_MASTER_STEAMAUDIO_h477438487"=hex(4):00,00,00,00,00,00,00,00
+"AUDIO_UI_ENABLED_h2428663594"=dword:00000001
+"AUDIO_UI_STEAMAUDIO_h1558174999"=hex(4):00,00,00,00,00,00,00,00
+"AVATAR_WORN_HISTORY_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h4334340"=hex:7b,\
+  22,61,76,74,72,5f,34,35,30,35,35,37,30,34,2d,63,31,30,32,2d,34,38,35,65,2d,\
+  38,31,33,37,2d,32,65,36,37,31,37,66,64,62,36,39,66,22,3a,22,32,30,32,36,2d,\
+  30,36,2d,32,32,54,31,36,3a,33,30,3a,30,34,2e,37,36,36,34,38,38,32,5a,22,2c,\
+  22,61,76,74,72,5f,35,63,65,38,34,36,35,61,2d,33,31,38,62,2d,34,65,33,36,2d,\
+  62,34,31,39,2d,35,65,32,33,32,32,35,64,32,37,63,34,22,3a,22,32,30,32,36,2d,\
+  30,36,2d,31,33,54,31,35,3a,30,35,3a,30,39,2e,33,31,31,35,33,5a,22,2c,22,61,\
+  76,74,72,5f,35,32,64,62,38,63,63,33,2d,33,64,61,35,2d,34,35,36,63,2d,38,65,\
+  34,61,2d,64,36,36,65,62,63,63,31,61,64,31,36,22,3a,22,32,30,32,36,2d,30,36,\
+  2d,31,33,54,31,34,3a,30,38,3a,34,38,2e,36,34,38,33,39,35,31,5a,22,2c,22,61,\
+  76,74,72,5f,62,39,65,62,66,63,32,31,2d,34,66,64,34,2d,34,30,39,38,2d,38,33,\
+  39,65,2d,37,62,64,30,37,33,62,38,38,34,62,38,22,3a,22,32,30,32,36,2d,30,36,\
+  2d,31,35,54,31,37,3a,34,37,3a,34,31,2e,38,33,34,34,37,36,33,5a,22,2c,22,61,\
+  76,74,72,5f,32,35,34,35,66,38,34,36,2d,66,30,61,62,2d,34,64,30,32,2d,61,37,\
+  61,39,2d,65,34,32,31,65,34,33,62,65,37,39,33,22,3a,22,32,30,32,36,2d,30,36,\
+  2d,31,33,54,31,34,3a,34,39,3a,30,36,2e,35,34,33,30,36,37,35,5a,22,2c,22,61,\
+  76,74,72,5f,66,61,63,61,33,32,35,36,2d,33,39,65,33,2d,34,39,30,39,2d,62,62,\
+  61,37,2d,37,37,33,35,34,65,30,61,63,61,32,32,22,3a,22,32,30,32,36,2d,30,36,\
+  2d,31,33,54,31,34,3a,35,32,3a,31,37,2e,38,34,39,31,36,33,34,5a,22,2c,22,61,\
+  76,74,72,5f,30,64,65,64,63,36,30,31,2d,65,63,34,64,2d,34,65,32,61,2d,38,63,\
+  64,35,2d,64,63,38,61,38,34,35,38,34,61,34,64,22,3a,22,32,30,32,36,2d,30,36,\
+  2d,31,33,54,31,34,3a,35,33,3a,35,36,2e,39,31,34,31,34,34,38,5a,22,2c,22,61,\
+  76,74,72,5f,38,39,62,36,62,66,66,66,2d,33,66,65,34,2d,34,38,34,66,2d,62,35,\
+  30,31,2d,39,38,37,35,37,31,32,66,39,30,65,66,22,3a,22,32,30,32,36,2d,30,36,\
+  2d,31,33,54,30,33,3a,33,30,3a,35,30,2e,34,35,39,39,37,32,39,5a,22,2c,22,61,\
+  76,74,72,5f,64,34,32,66,39,31,39,38,2d,64,65,66,35,2d,34,61,66,35,2d,39,66,\
+  38,33,2d,33,37,33,33,35,38,61,36,62,36,38,34,22,3a,22,32,30,32,36,2d,30,36,\
+  2d,32,32,54,31,36,3a,32,38,3a,34,39,2e,38,30,39,34,32,32,32,5a,22,2c,22,61,\
+  76,74,72,5f,66,38,36,32,32,33,39,38,2d,30,63,39,36,2d,34,62,62,34,2d,61,37,\
+  37,65,2d,39,62,65,39,65,38,33,61,37,35,35,30,22,3a,22,32,30,32,36,2d,30,36,\
+  2d,31,33,54,30,33,3a,31,34,3a,34,36,2e,33,36,39,36,38,33,39,5a,22,2c,22,61,\
+  76,74,72,5f,33,61,64,65,64,37,35,62,2d,62,64,33,38,2d,34,35,66,33,2d,61,34,\
+  63,65,2d,33,36,61,31,65,65,30,37,63,36,36,39,22,3a,22,32,30,32,36,2d,30,36,\
+  2d,31,33,54,30,33,3a,31,33,3a,34,31,2e,33,33,30,35,33,37,35,5a,22,2c,22,61,\
+  76,74,72,5f,32,35,36,30,38,36,35,33,2d,66,31,37,64,2d,34,32,65,64,2d,62,61,\
+  36,31,2d,37,30,64,33,64,33,38,30,36,63,63,63,22,3a,22,32,30,32,36,2d,30,36,\
+  2d,31,31,54,31,34,3a,33,37,3a,32,38,2e,38,36,37,33,32,5a,22,2c,22,61,76,74,\
+  72,5f,39,34,35,62,36,31,39,35,2d,34,61,63,36,2d,34,35,37,64,2d,38,65,61,32,\
+  2d,38,34,32,36,38,38,33,30,36,31,64,32,22,3a,22,32,30,32,36,2d,30,36,2d,31,\
+  33,54,31,34,3a,30,34,3a,32,37,2e,31,33,39,36,38,30,37,5a,22,2c,22,61,76,74,\
+  72,5f,39,34,65,62,65,37,35,64,2d,31,33,64,31,2d,34,66,63,61,2d,62,64,31,34,\
+  2d,33,38,35,35,62,32,38,66,36,34,62,37,22,3a,22,32,30,32,36,2d,30,36,2d,31,\
+  33,54,31,33,3a,33,38,3a,34,36,2e,39,38,39,34,39,38,32,5a,22,2c,22,61,76,74,\
+  72,5f,34,39,61,63,36,36,39,31,2d,37,66,39,63,2d,34,30,37,36,2d,39,63,35,39,\
+  2d,34,61,38,64,30,64,33,61,62,30,30,62,22,3a,22,32,30,32,36,2d,30,36,2d,31,\
+  33,54,31,33,3a,34,31,3a,34,32,2e,32,38,36,34,39,37,36,5a,22,2c,22,61,76,74,\
+  72,5f,64,30,39,30,64,36,34,33,2d,37,30,32,33,2d,34,38,32,30,2d,39,64,34,38,\
+  2d,33,33,32,38,63,39,34,30,32,38,36,66,22,3a,22,32,30,32,36,2d,30,36,2d,31,\
+  33,54,31,33,3a,34,34,3a,32,32,2e,33,39,33,30,36,33,39,5a,22,2c,22,61,76,74,\
+  72,5f,61,31,39,32,62,65,36,35,2d,38,35,31,64,2d,34,39,66,35,2d,38,36,63,62,\
+  2d,36,36,31,65,30,31,66,62,65,32,33,31,22,3a,22,32,30,32,36,2d,30,36,2d,31,\
+  33,54,31,33,3a,35,33,3a,33,38,2e,30,37,31,35,31,38,35,5a,22,2c,22,61,76,74,\
+  72,5f,37,37,31,65,61,64,61,37,2d,39,32,65,35,2d,34,39,64,65,2d,38,62,37,66,\
+  2d,65,66,31,65,63,31,32,31,36,64,66,33,22,3a,22,32,30,32,36,2d,30,36,2d,31,\
+  33,54,31,33,3a,35,37,3a,34,31,2e,33,33,32,31,30,37,37,5a,22,2c,22,61,76,74,\
+  72,5f,61,34,66,32,66,63,36,34,2d,34,30,37,39,2d,34,39,31,63,2d,62,62,61,61,\
+  2d,30,64,66,65,64,63,33,36,39,36,37,62,22,3a,22,32,30,32,36,2d,30,36,2d,31,\
+  33,54,31,34,3a,30,31,3a,31,33,2e,37,38,33,35,32,32,38,5a,22,2c,22,61,76,74,\
+  72,5f,34,63,61,64,37,34,33,63,2d,63,37,66,64,2d,34,62,33,61,2d,38,62,62,38,\
+  2d,38,37,32,32,65,35,35,64,39,38,66,39,22,3a,22,32,30,32,36,2d,30,36,2d,31,\
+  33,54,31,34,3a,30,31,3a,31,30,2e,35,31,37,36,35,36,39,5a,22,2c,22,61,76,74,\
+  72,5f,63,33,37,32,63,31,38,66,2d,61,37,61,66,2d,34,61,61,38,2d,62,34,30,37,\
+  2d,61,30,33,35,66,65,38,30,33,64,65,39,22,3a,22,32,30,32,36,2d,30,36,2d,31,\
+  33,54,31,34,3a,30,36,3a,33,31,2e,30,39,36,36,33,5a,22,2c,22,61,76,74,72,5f,\
+  65,31,37,65,62,33,65,66,2d,64,36,39,34,2d,34,35,64,39,2d,61,38,33,65,2d,63,\
+  30,37,33,65,39,66,64,64,61,63,33,22,3a,22,32,30,32,36,2d,30,36,2d,31,33,54,\
+  31,34,3a,30,32,3a,32,39,2e,31,34,31,38,37,39,31,5a,22,2c,22,61,76,74,72,5f,\
+  34,30,33,61,38,38,65,63,2d,36,30,39,34,2d,34,33,33,36,2d,62,31,65,61,2d,37,\
+  62,30,30,36,39,61,30,65,65,61,64,22,3a,22,32,30,32,36,2d,30,36,2d,31,33,54,\
+  30,33,3a,30,32,3a,35,37,2e,39,32,32,39,32,31,5a,22,2c,22,61,76,74,72,5f,32,\
+  30,64,37,61,34,66,37,2d,36,31,64,35,2d,34,35,65,35,2d,61,61,38,30,2d,64,30,\
+  65,62,66,37,39,35,31,35,31,34,22,3a,22,32,30,32,36,2d,30,36,2d,31,33,54,31,\
+  33,3a,33,35,3a,32,32,2e,38,39,38,30,36,38,35,5a,22,2c,22,61,76,74,72,5f,63,\
+  33,38,61,31,36,31,35,2d,35,62,66,35,2d,34,32,62,34,2d,38,34,65,62,2d,61,38,\
+  62,36,63,33,37,63,62,64,31,31,22,3a,22,32,30,32,36,2d,30,36,2d,31,35,54,30,\
+  36,3a,31,30,3a,33,36,2e,35,30,37,39,33,38,36,5a,22,7d,00
+"avatarProxyAlwaysShowExplicit_h3831300188"=dword:00000001
+"avatarProxyAlwaysShowFriends_h4183870315"=dword:00000001
+"avatarProxyShowAtRange_h3229000273"=hex(4):00,00,00,00,00,00,59,40
+"avatarProxyShowAtRangeToggle_h3274849731"=dword:00000000
+"avatarProxyShowMaxNumber_h171091884"=dword:00000050
+"BACKGROUND_DEBUG_LOG_COLLECTION_h2255328119"=dword:00000000
+"BACKGROUND_MATERIAL_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h3496965929"=hex:00
+"BCD9D91ED8D8F1926B20D3D620647C8E_h2167456022"=hex:76,4b,66,2b,2b,4f,53,76,6f,\
+  34,73,72,4a,6c,51,67,43,6a,64,38,72,53,51,53,72,30,74,68,6c,62,62,50,49,68,\
+  55,34,67,7a,66,58,4b,39,59,3d,00
+"BD2E932A03A19217AB5A1DFB5AA93340_h1920873149"=hex:55,55,55,5a,53,62,6c,31,69,\
+  30,4c,41,56,43,38,78,45,7a,37,76,34,52,2b,37,79,62,34,63,65,67,51,58,68,4d,\
+  48,78,79,47,65,38,4d,44,6b,63,61,4d,31,54,6e,75,46,36,6c,6c,31,36,6e,57,35,\
+  46,48,6b,64,46,32,7a,45,74,7a,49,32,4d,43,67,34,3d,00
+"BestRegionCache_h195528817"=dword:00000002
+"COLOR_PALETTES_CURRENT_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h2865807081"=hex:7b,\
+  22,6e,61,6d,65,22,3a,22,44,65,66,61,75,6c,74,22,2c,22,69,64,22,3a,6e,75,6c,\
+  6c,2c,22,68,69,67,68,6c,69,67,68,74,73,22,3a,22,23,32,42,41,41,43,31,22,2c,\
+  22,69,63,6f,6e,73,22,3a,22,23,32,42,41,41,43,31,22,2c,22,62,75,74,74,6f,6e,\
+  73,22,3a,22,23,32,42,41,41,43,31,22,2c,22,62,61,63,6b,67,72,6f,75,6e,64,73,\
+  22,3a,22,23,31,32,35,35,36,36,22,2c,22,74,65,78,74,22,3a,22,23,46,46,46,46,\
+  46,46,22,2c,22,73,75,62,74,65,78,74,22,3a,22,23,38,30,38,30,38,30,22,7d,00
+"CosmeticsSectionRedirect_Settings_h1116789622"=dword:00000000
+"currentShowMaxNumberOfAvatarsEnabled_h1218052438"=dword:00000000
+"CustomTrustLevel_AdvancedTrustLevel1_CanSpeak_h3763947065"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel1_CanUseAnimatedEmoji_h2886526733"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel1_CanUseAvatarAudio_h4256062353"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel1_CanUseCustomAnimations_h3337768320"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel1_CanUseCustomAvatar_h4019586932"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel1_CanUseCustomShaders_h168543583"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel1_CanUseDrone_h1407436836"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel1_CanUseEmojiStickersSharing_h4033281752"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel1_CanUseParticleSystems_h1743590900"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel1_CanUseTriggers_h846144093"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel1_CanUseUserIcons_h2350386015"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel2_CanSpeak_h3560718042"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel2_CanUseAnimatedEmoji_h3705134862"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel2_CanUseAvatarAudio_h3781309970"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel2_CanUseCustomAnimations_h1661613411"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel2_CanUseCustomAvatar_h2790985623"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel2_CanUseCustomShaders_h3297944668"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel2_CanUseDrone_h2758166439"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel2_CanUseEmojiStickersSharing_h3212822779"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel2_CanUseParticleSystems_h3624546359"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel2_CanUseTriggers_h440405630"=dword:00000001
+"CustomTrustLevel_AdvancedTrustLevel2_CanUseUserIcons_h3748203228"=dword:00000001
+"CustomTrustLevel_BasicTrustLevel1_CanSpeak_h3469223421"=dword:00000001
+"CustomTrustLevel_BasicTrustLevel1_CanUseAnimatedEmoji_h925748169"=dword:00000001
+"CustomTrustLevel_BasicTrustLevel1_CanUseAvatarAudio_h3089780821"=dword:00000000
+"CustomTrustLevel_BasicTrustLevel1_CanUseCustomAnimations_h18504516"=dword:00000000
+"CustomTrustLevel_BasicTrustLevel1_CanUseCustomAvatar_h3157635888"=dword:00000001
+"CustomTrustLevel_BasicTrustLevel1_CanUseCustomShaders_h3218222107"=dword:00000000
+"CustomTrustLevel_BasicTrustLevel1_CanUseDrone_h2438181088"=dword:00000001
+"CustomTrustLevel_BasicTrustLevel1_CanUseEmojiStickersSharing_h1028214684"=dword:00000001
+"CustomTrustLevel_BasicTrustLevel1_CanUseParticleSystems_h2677083824"=dword:00000000
+"CustomTrustLevel_BasicTrustLevel1_CanUseTriggers_h2886381593"=dword:00000000
+"CustomTrustLevel_BasicTrustLevel1_CanUseUserIcons_h2605731867"=dword:00000001
+"CustomTrustLevel_BasicTrustLevel_CanSpeak_h1255185612"=dword:00000001
+"CustomTrustLevel_BasicTrustLevel_CanUseAnimatedEmoji_h2703477208"=dword:00000001
+"CustomTrustLevel_BasicTrustLevel_CanUseAvatarAudio_h2055107012"=dword:00000000
+"CustomTrustLevel_BasicTrustLevel_CanUseCustomAnimations_h551221237"=dword:00000000
+"CustomTrustLevel_BasicTrustLevel_CanUseCustomAvatar_h616828545"=dword:00000001
+"CustomTrustLevel_BasicTrustLevel_CanUseCustomShaders_h3849841034"=dword:00000000
+"CustomTrustLevel_BasicTrustLevel_CanUseDrone_h1886967153"=dword:00000001
+"CustomTrustLevel_BasicTrustLevel_CanUseEmojiStickersSharing_h178918381"=dword:00000001
+"CustomTrustLevel_BasicTrustLevel_CanUseParticleSystems_h1309549665"=dword:00000000
+"CustomTrustLevel_BasicTrustLevel_CanUseTriggers_h3846697192"=dword:00000000
+"CustomTrustLevel_BasicTrustLevel_CanUseUserIcons_h10967690"=dword:00000001
+"CustomTrustLevel_DeveloperTrustLevel_CanSpeak_h1348479936"=dword:00000001
+"CustomTrustLevel_DeveloperTrustLevel_CanUseAnimatedEmoji_h1224270932"=dword:00000001
+"CustomTrustLevel_DeveloperTrustLevel_CanUseAvatarAudio_h2668824904"=dword:00000001
+"CustomTrustLevel_DeveloperTrustLevel_CanUseCustomAnimations_h160905209"=dword:00000001
+"CustomTrustLevel_DeveloperTrustLevel_CanUseCustomAvatar_h3979433357"=dword:00000001
+"CustomTrustLevel_DeveloperTrustLevel_CanUseCustomShaders_h2833000710"=dword:00000001
+"CustomTrustLevel_DeveloperTrustLevel_CanUseDrone_h3502715901"=dword:00000001
+"CustomTrustLevel_DeveloperTrustLevel_CanUseEmojiStickersSharing_h305271009"=dword:00000001
+"CustomTrustLevel_DeveloperTrustLevel_CanUseParticleSystems_h1253552877"=dword:00000001
+"CustomTrustLevel_DeveloperTrustLevel_CanUseTriggers_h737962724"=dword:00000001
+"CustomTrustLevel_DeveloperTrustLevel_CanUseUserIcons_h1109555974"=dword:00000001
+"CustomTrustLevel_Friend_CanSpeak_h1076804550"=dword:00000001
+"CustomTrustLevel_Friend_CanUseAnimatedEmoji_h1841941650"=dword:00000001
+"CustomTrustLevel_Friend_CanUseAvatarAudio_h3272095374"=dword:00000001
+"CustomTrustLevel_Friend_CanUseCustomAnimations_h2442825087"=dword:00000001
+"CustomTrustLevel_Friend_CanUseCustomAvatar_h3238784139"=dword:00000001
+"CustomTrustLevel_Friend_CanUseCustomShaders_h2830625984"=dword:00000001
+"CustomTrustLevel_Friend_CanUseDrone_h1694465339"=dword:00000001
+"CustomTrustLevel_Friend_CanUseEmojiStickersSharing_h2183515111"=dword:00000001
+"CustomTrustLevel_Friend_CanUseParticleSystems_h281854379"=dword:00000001
+"CustomTrustLevel_Friend_CanUseTriggers_h934581346"=dword:00000001
+"CustomTrustLevel_Friend_CanUseUserIcons_h1860207168"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel1_CanSpeak_h1176565206"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel1_CanUseAnimatedEmoji_h1117716610"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel1_CanUseAvatarAudio_h4212765342"=dword:00000000
+"CustomTrustLevel_IntermediateTrustLevel1_CanUseCustomAnimations_h2413592431"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel1_CanUseCustomAvatar_h4241088155"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel1_CanUseCustomShaders_h2968004816"=dword:00000000
+"CustomTrustLevel_IntermediateTrustLevel1_CanUseDrone_h494317867"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel1_CanUseEmojiStickersSharing_h1375262199"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel1_CanUseParticleSystems_h2892802491"=dword:00000000
+"CustomTrustLevel_IntermediateTrustLevel1_CanUseTriggers_h60494450"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel1_CanUseUserIcons_h1827811920"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel2_CanSpeak_h1379794229"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel2_CanUseAnimatedEmoji_h299108481"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel2_CanUseAvatarAudio_h392550429"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel2_CanUseCustomAnimations_h4089747340"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel2_CanUseCustomAvatar_h1174722168"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel2_CanUseCustomShaders_h4133571027"=dword:00000000
+"CustomTrustLevel_IntermediateTrustLevel2_CanUseDrone_h3438555560"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel2_CanUseEmojiStickersSharing_h2195721172"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel2_CanUseParticleSystems_h1011847032"=dword:00000000
+"CustomTrustLevel_IntermediateTrustLevel2_CanUseTriggers_h466232913"=dword:00000001
+"CustomTrustLevel_IntermediateTrustLevel2_CanUseUserIcons_h429994707"=dword:00000001
+"CustomTrustLevel_KnownTrustLevel_CanSpeak_h529273413"=dword:00000001
+"CustomTrustLevel_KnownTrustLevel_CanUseAnimatedEmoji_h2124802033"=dword:00000001
+"CustomTrustLevel_KnownTrustLevel_CanUseAvatarAudio_h1316703981"=dword:00000000
+"CustomTrustLevel_KnownTrustLevel_CanUseCustomAnimations_h1588360380"=dword:00000001
+"CustomTrustLevel_KnownTrustLevel_CanUseCustomAvatar_h472420744"=dword:00000001
+"CustomTrustLevel_KnownTrustLevel_CanUseCustomShaders_h2743984803"=dword:00000000
+"CustomTrustLevel_KnownTrustLevel_CanUseDrone_h1188909144"=dword:00000001
+"CustomTrustLevel_KnownTrustLevel_CanUseEmojiStickersSharing_h428198308"=dword:00000001
+"CustomTrustLevel_KnownTrustLevel_CanUseParticleSystems_h267795400"=dword:00000000
+"CustomTrustLevel_KnownTrustLevel_CanUseTriggers_h328568481"=dword:00000001
+"CustomTrustLevel_KnownTrustLevel_CanUseUserIcons_h153105955"=dword:00000001
+"CustomTrustLevel_LegendTrustLevel_CanSpeak_h515219031"=dword:00000001
+"CustomTrustLevel_LegendTrustLevel_CanUseAnimatedEmoji_h1482987171"=dword:00000001
+"CustomTrustLevel_LegendTrustLevel_CanUseAvatarAudio_h832871359"=dword:00000001
+"CustomTrustLevel_LegendTrustLevel_CanUseCustomAnimations_h1184402734"=dword:00000001
+"CustomTrustLevel_LegendTrustLevel_CanUseCustomAvatar_h2633444506"=dword:00000001
+"CustomTrustLevel_LegendTrustLevel_CanUseCustomShaders_h1446172145"=dword:00000001
+"CustomTrustLevel_LegendTrustLevel_CanUseDrone_h822566410"=dword:00000001
+"CustomTrustLevel_LegendTrustLevel_CanUseEmojiStickersSharing_h1041849526"=dword:00000001
+"CustomTrustLevel_LegendTrustLevel_CanUseParticleSystems_h1335743258"=dword:00000001
+"CustomTrustLevel_LegendTrustLevel_CanUseTriggers_h2350696243"=dword:00000001
+"CustomTrustLevel_LegendTrustLevel_CanUseUserIcons_h1201635313"=dword:00000001
+"CustomTrustLevel_LocalPlayer_CanSpeak_h243867914"=dword:00000001
+"CustomTrustLevel_LocalPlayer_CanUseAnimatedEmoji_h3420779230"=dword:00000001
+"CustomTrustLevel_LocalPlayer_CanUseAvatarAudio_h1841594050"=dword:00000001
+"CustomTrustLevel_LocalPlayer_CanUseCustomAnimations_h2161804467"=dword:00000001
+"CustomTrustLevel_LocalPlayer_CanUseCustomAvatar_h4127243719"=dword:00000001
+"CustomTrustLevel_LocalPlayer_CanUseCustomShaders_h1889644300"=dword:00000001
+"CustomTrustLevel_LocalPlayer_CanUseDrone_h3256015479"=dword:00000001
+"CustomTrustLevel_LocalPlayer_CanUseEmojiStickersSharing_h1810816555"=dword:00000001
+"CustomTrustLevel_LocalPlayer_CanUseParticleSystems_h2356358631"=dword:00000001
+"CustomTrustLevel_LocalPlayer_CanUseTriggers_h4035079598"=dword:00000001
+"CustomTrustLevel_LocalPlayer_CanUseUserIcons_h2261467020"=dword:00000001
+"CustomTrustLevel_NegativeTrustLevel1_CanSpeak_h2069813380"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel1_CanUseAnimatedEmoji_h3935967248"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel1_CanUseAvatarAudio_h198134284"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel1_CanUseCustomAnimations_h3837572029"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel1_CanUseCustomAvatar_h2356867913"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel1_CanUseCustomShaders_h3068590274"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel1_CanUseDrone_h2774559417"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel1_CanUseEmojiStickersSharing_h1804956069"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel1_CanUseParticleSystems_h3820524969"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel1_CanUseTriggers_h2205354144"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel1_CanUseUserIcons_h4041133506"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel2_CanSpeak_h3810459495"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel2_CanUseAnimatedEmoji_h3019473939"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel2_CanUseAvatarAudio_h3934249103"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel2_CanUseCustomAnimations_h1474632030"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel2_CanUseCustomAvatar_h3323951018"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel2_CanUseCustomShaders_h1346165697"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel2_CanUseDrone_h1016679226"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel2_CanUseEmojiStickersSharing_h2931111686"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel2_CanUseParticleSystems_h3777366634"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel2_CanUseTriggers_h4088384771"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel2_CanUseUserIcons_h4130926145"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel_CanSpeak_h772597077"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel_CanUseAnimatedEmoji_h2585269473"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel_CanUseAvatarAudio_h1603765245"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel_CanUseCustomAnimations_h4136943532"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel_CanUseCustomAvatar_h1380474008"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel_CanUseCustomShaders_h4066056115"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel_CanUseDrone_h956857672"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel_CanUseEmojiStickersSharing_h813935796"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel_CanUseParticleSystems_h223698136"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel_CanUseTriggers_h685335985"=dword:00000000
+"CustomTrustLevel_NegativeTrustLevel_CanUseUserIcons_h2084200243"=dword:00000000
+"CustomTrustLevel_TrustedTrustLevel_CanSpeak_h251570915"=dword:00000001
+"CustomTrustLevel_TrustedTrustLevel_CanUseAnimatedEmoji_h2054426647"=dword:00000001
+"CustomTrustLevel_TrustedTrustLevel_CanUseAvatarAudio_h1547181451"=dword:00000001
+"CustomTrustLevel_TrustedTrustLevel_CanUseCustomAnimations_h2568844250"=dword:00000001
+"CustomTrustLevel_TrustedTrustLevel_CanUseCustomAvatar_h1956533038"=dword:00000001
+"CustomTrustLevel_TrustedTrustLevel_CanUseCustomShaders_h3778529477"=dword:00000000
+"CustomTrustLevel_TrustedTrustLevel_CanUseDrone_h4040447294"=dword:00000001
+"CustomTrustLevel_TrustedTrustLevel_CanUseEmojiStickersSharing_h1982058114"=dword:00000001
+"CustomTrustLevel_TrustedTrustLevel_CanUseParticleSystems_h3319727214"=dword:00000000
+"CustomTrustLevel_TrustedTrustLevel_CanUseTriggers_h1979213703"=dword:00000001
+"CustomTrustLevel_TrustedTrustLevel_CanUseUserIcons_h390707781"=dword:00000001
+"CustomTrustLevel_Untrusted_CanSpeak_h3561541626"=dword:00000001
+"CustomTrustLevel_Untrusted_CanUseAnimatedEmoji_h329675886"=dword:00000001
+"CustomTrustLevel_Untrusted_CanUseAvatarAudio_h231222002"=dword:00000000
+"CustomTrustLevel_Untrusted_CanUseCustomAnimations_h3535915395"=dword:00000000
+"CustomTrustLevel_Untrusted_CanUseCustomAvatar_h47678391"=dword:00000001
+"CustomTrustLevel_Untrusted_CanUseCustomShaders_h3257793852"=dword:00000000
+"CustomTrustLevel_Untrusted_CanUseDrone_h3638558023"=dword:00000001
+"CustomTrustLevel_Untrusted_CanUseEmojiStickersSharing_h2030089179"=dword:00000001
+"CustomTrustLevel_Untrusted_CanUseParticleSystems_h3087058583"=dword:00000000
+"CustomTrustLevel_Untrusted_CanUseTriggers_h2039985630"=dword:00000000
+"CustomTrustLevel_Untrusted_CanUseUserIcons_h532209980"=dword:00000001
+"CustomTrustLevel_VeryNegativeTrustLevel_CanSpeak_h1153197229"=dword:00000000
+"CustomTrustLevel_VeryNegativeTrustLevel_CanUseAnimatedEmoji_h155691801"=dword:00000000
+"CustomTrustLevel_VeryNegativeTrustLevel_CanUseAvatarAudio_h3757975173"=dword:00000000
+"CustomTrustLevel_VeryNegativeTrustLevel_CanUseCustomAnimations_h1948517652"=dword:00000000
+"CustomTrustLevel_VeryNegativeTrustLevel_CanUseCustomAvatar_h346242528"=dword:00000000
+"CustomTrustLevel_VeryNegativeTrustLevel_CanUseCustomShaders_h1768628299"=dword:00000000
+"CustomTrustLevel_VeryNegativeTrustLevel_CanUseDrone_h3480751664"=dword:00000000
+"CustomTrustLevel_VeryNegativeTrustLevel_CanUseEmojiStickersSharing_h70476108"=dword:00000000
+"CustomTrustLevel_VeryNegativeTrustLevel_CanUseParticleSystems_h751810528"=dword:00000000
+"CustomTrustLevel_VeryNegativeTrustLevel_CanUseTriggers_h1999113673"=dword:00000000
+"CustomTrustLevel_VeryNegativeTrustLevel_CanUseUserIcons_h1558057803"=dword:00000000
+"CustomTrustLevel_VeteranTrustLevel_CanSpeak_h299423817"=dword:00000001
+"CustomTrustLevel_VeteranTrustLevel_CanUseAnimatedEmoji_h2970100605"=dword:00000001
+"CustomTrustLevel_VeteranTrustLevel_CanUseAvatarAudio_h150073185"=dword:00000001
+"CustomTrustLevel_VeteranTrustLevel_CanUseCustomAnimations_h2019714992"=dword:00000001
+"CustomTrustLevel_VeteranTrustLevel_CanUseCustomAvatar_h531332996"=dword:00000001
+"CustomTrustLevel_VeteranTrustLevel_CanUseCustomShaders_h1331804975"=dword:00000001
+"CustomTrustLevel_VeteranTrustLevel_CanUseDrone_h3572057044"=dword:00000001
+"CustomTrustLevel_VeteranTrustLevel_CanUseEmojiStickersSharing_h560691624"=dword:00000001
+"CustomTrustLevel_VeteranTrustLevel_CanUseParticleSystems_h2206752580"=dword:00000001
+"CustomTrustLevel_VeteranTrustLevel_CanUseTriggers_h1591068589"=dword:00000001
+"CustomTrustLevel_VeteranTrustLevel_CanUseUserIcons_h1134160815"=dword:00000001
+"DebugUIBackgroundOpacity_h127591103"=hex(4):00,00,00,60,8f,c2,ed,3f
+"DebugUILocalMovement_Desktop_h477353643"=dword:00000000
+"DebugUILocalMovement_VR_h1070712381"=dword:00000000
+"DEFAULT_GROUP_h809021550"=hex:00
+"DroneControllerSettings_h1518859854"=hex:00
+"DroneFlightPresetValues_h374024722"=hex:00
+"E1F946CE2FD302B954E26AD92C0B30BF_h577412776"=hex:6a,34,72,52,5a,39,32,4f,36,\
+  54,36,42,6c,47,6a,51,35,74,4c,59,63,41,3d,3d,00
+"FaceMirrorOwner_h1560350044"=dword:00000000
+"FIELD_OF_VIEW_h2031753091"=hex(4):00,00,00,00,00,c0,52,40
+"FirstTimeEvent_First_Action_Menu_Open_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h92160659"=dword:00000001
+"FirstTimeEvent_First_Avatar_Change_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h733872066"=dword:00000001
+"FirstTimeEvent_First_Main_Menu_Open_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h456614950"=dword:00000001
+"FirstTimeEvent_First_Movement_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h491751657"=dword:00000001
+"FirstTimeEvent_First_Quick_Menu_Open_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h1334943560"=dword:00000001
+"FirstTimeEvent_First_Wing_Menu_Open_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h3503168410"=dword:00000001
+"FOLDOUT_STATES_h2348100881"=hex:31,32,34,32,32,34,35,35,33,36,00
+"ForceSettings_AutoWalk_h1588324572"=dword:00000001
+"ForceSettings_ClearFoldoutPrefKeys_h4157079793"=dword:00000001
+"ForceSettings_MicToggle_h3560290679"=dword:00000002
+"ForceSettings_MigrateMicSettings_h381240097"=dword:00000001
+"ForceSettings_Mixer_h3729000201"=dword:00000002
+"ForceSettings_PedestalSharing_h2061253940"=dword:00000001
+"ForceSettings_SteamAudioSliderRemap_h1261739540"=dword:00000001
+"ForceSettings_WorldTooltipMode_h79299318"=dword:00000001
+"FPS_LIMIT_h3202401354"=dword:00000048
+"FPSCapType_h2453803306"=dword:00000000
+"FPSType_h850469784"=dword:00000003
+"FRIEND_LAST_VISIT_HISTORY_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h2625570343"=hex:7b,\
+  22,75,73,72,5f,31,37,32,66,35,31,65,62,2d,32,32,30,35,2d,34,35,66,62,2d,38,\
+  32,30,33,2d,35,38,64,32,31,39,35,64,39,36,37,62,22,3a,22,32,30,32,36,2d,30,\
+  36,2d,32,31,54,30,32,3a,32,32,3a,34,35,2e,32,33,39,36,30,38,36,5a,22,7d,00
+"GiftDropNoRefundAfterUsageAgreeToggle_h3034415416"=dword:00000000
+"has_seen_event_discovery_in_beta_h1489595630"=dword:00000000
+"HasSeen_Callout_AccessoriesShopTab_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h441430221"=dword:00000001
+"HasSeen_Callout_ThirdPersonViewNewCallout_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h2314820147"=dword:00000000
+"HasSeenAccessoriesShopQMCalloutusr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h376911353"=dword:00000001
+"HasSeenCameraDollyUserCameraCalloutusr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h3836519204"=dword:00000001
+"HasSeenPrideCampaign2026QMCalloutusr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h3636631337"=dword:00000001
+"HasSeenShopRabbidsQMCalloutusr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h4119660850"=dword:00000001
+"HasSeenVRCPlusExclusiveItemsQMCalloutusr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h1359341486"=dword:00000001
+"InQueueWidgetInfoShowcaseID_h185847275"=dword:00000000
+"LocationContext_h2266281351"=dword:00000001
+"LocationContext_World_h2703649242"=hex:77,72,6c,64,5f,39,38,37,36,65,32,33,34,\
+  2d,36,64,63,66,2d,34,34,34,65,2d,62,39,65,39,2d,64,35,30,35,62,36,64,32,37,\
+  31,38,39,7c,4e,6f,20,54,69,6d,65,20,54,77,6f,20,54,61,6c,6b,00
+"LOD_QUALITY_h4091515664"=dword:00000000
+"LOGGING_ENABLED_h120798204"=dword:00000001
+"migrated-local-pmods-usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315-HideAvatar_h3686437648"=dword:00000001
+"migrated-local-pmods-usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315-HideDrone_h4159060851"=dword:00000001
+"migrated-local-pmods-usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315-ShowAvatar_h3308647699"=dword:00000001
+"migrated-local-pmods-usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315-ShowDrone_h3489900816"=dword:00000001
+"PARTICLE_PHYSICS_QUALITY_h1323555479"=dword:00000000
+"PersonalMirror.FaceMirrorOpacity_h864053611"=hex(4):00,00,00,00,00,00,00,00
+"PersonalMirror.FaceMirrorOpacityDesktop_h197798841"=hex(4):00,00,00,00,00,00,\
+  f0,3f
+"PersonalMirror.FaceMirrorPosX_h1476246502"=hex(4):00,00,00,00,00,00,00,00
+"PersonalMirror.FaceMirrorPosXDesktop_h2535178964"=hex(4):00,00,00,00,00,0c,80,\
+  40
+"PersonalMirror.FaceMirrorPosY_h1476246503"=hex(4):00,00,00,00,00,00,00,00
+"PersonalMirror.FaceMirrorPosYDesktop_h3533331637"=hex(4):00,00,00,00,00,60,59,\
+  40
+"PersonalMirror.FaceMirrorScale_h1462894506"=hex(4):00,00,00,00,00,00,e0,3f
+"PersonalMirror.FaceMirrorScaleDesktop_h3046297240"=hex(4):00,00,00,00,00,00,\
+  e8,3f
+"PersonalMirror.FaceMirrorSpoutEnabled_h817545210"=dword:00000000
+"PersonalMirror.FaceMirrorZoom_h1476308997"=hex(4):00,00,00,00,00,00,e0,3f
+"PersonalMirror.FaceMirrorZoomDesktop_h2043985175"=hex(4):00,00,00,60,b8,1e,d5,\
+  3f
+"PersonalMirror.Grabbable_h1518415444"=dword:00000001
+"PersonalMirror.ImmersiveMove_h2179321036"=dword:00000000
+"PersonalMirror.MirrorOpacity_h69462026"=hex(4):00,00,00,00,00,00,00,00
+"PersonalMirror.MirrorScaleX_h1013638771"=hex(4):00,00,00,a0,99,99,b9,3f
+"PersonalMirror.MirrorScaleY_h1013638770"=hex(4):00,00,00,a0,99,99,b9,3f
+"PersonalMirror.MirrorSnapping_h3804860783"=dword:00000000
+"PersonalMirror.MovementMode_h997156426"=dword:00000001
+"PersonalMirror.ShowBorder_h1746149253"=dword:00000001
+"PersonalMirror.ShowCalibrationMirror_h2508718650"=dword:00000000
+"PersonalMirror.ShowEnvironmentInMirror_h2340098914"=dword:00000001
+"PersonalMirror.ShowFaceMirror_h3365452145"=dword:00000000
+"PersonalMirror.ShowFaceMirrorDesktop_h2519508963"=dword:00000001
+"PersonalMirror.ShowRemotePlayerInMirror_h3819163776"=dword:00000000
+"PersonalMirror.ShowUIInMirror_h1637241803"=dword:00000000
+"PIXEL_LIGHT_COUNT_h158099248"=dword:00000000
+"PREF_HAND_TRACKING_TUTORIAL_COMPLETED_h1338813193"=dword:00000000
+"RECENTLY_VISITED_HISTORY_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h3663779103"=hex:7b,\
+  22,75,73,72,5f,37,32,36,31,36,63,64,30,2d,61,35,66,62,2d,34,34,63,62,2d,61,\
+  65,35,34,2d,63,63,38,66,63,33,39,64,31,62,62,31,22,3a,22,32,30,32,36,2d,30,\
+  36,2d,30,38,54,31,39,3a,34,35,3a,35,39,2e,39,31,38,36,37,38,33,5a,22,2c,22,\
+  75,73,72,5f,32,63,65,65,30,39,34,37,2d,61,34,37,30,2d,34,66,36,64,2d,61,32,\
+  30,36,2d,35,65,31,37,31,63,62,36,61,31,64,61,22,3a,22,32,30,32,36,2d,30,36,\
+  2d,30,37,54,30,33,3a,32,31,3a,35,35,2e,38,31,34,39,33,32,31,5a,22,2c,22,75,\
+  73,72,5f,30,30,31,66,63,32,34,65,2d,65,37,66,34,2d,34,61,35,33,2d,62,32,37,\
+  63,2d,33,62,65,65,31,66,30,32,62,31,63,65,22,3a,22,32,30,32,36,2d,30,36,2d,\
+  30,37,54,30,33,3a,32,31,3a,35,35,2e,38,31,34,39,33,32,31,5a,22,2c,22,75,73,\
+  72,5f,63,32,61,63,37,34,66,38,2d,34,33,63,63,2d,34,61,66,30,2d,39,33,36,38,\
+  2d,33,33,65,33,35,65,38,61,63,38,64,34,22,3a,22,32,30,32,36,2d,30,36,2d,30,\
+  37,54,30,33,3a,33,32,3a,30,37,2e,38,30,37,39,38,32,39,5a,22,2c,22,75,73,72,\
+  5f,39,30,33,30,63,39,32,31,2d,31,66,32,30,2d,34,64,30,34,2d,62,65,61,38,2d,\
+  36,36,31,30,30,32,33,62,30,65,31,31,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,\
+  54,30,33,3a,32,33,3a,32,38,2e,33,31,31,35,30,30,38,5a,22,2c,22,75,73,72,5f,\
+  33,37,33,36,34,64,34,63,2d,62,61,36,62,2d,34,35,32,34,2d,39,32,31,38,2d,66,\
+  31,31,66,65,64,61,39,30,62,35,30,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,\
+  30,33,3a,33,32,3a,30,37,2e,38,30,37,39,38,32,39,5a,22,2c,22,75,73,72,5f,33,\
+  66,38,64,37,62,34,33,2d,61,65,32,35,2d,34,30,64,35,2d,38,35,32,31,2d,37,34,\
+  39,30,36,33,39,63,35,62,66,66,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,32,\
+  31,3a,35,30,3a,34,35,2e,35,31,34,39,34,39,32,5a,22,2c,22,75,73,72,5f,32,64,\
+  35,37,64,61,31,31,2d,33,36,32,37,2d,34,31,66,32,2d,61,34,62,66,2d,32,66,36,\
+  61,35,34,64,63,36,63,33,66,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,32,31,\
+  3a,34,30,3a,34,33,2e,33,36,39,33,35,33,34,5a,22,2c,22,75,73,72,5f,65,38,61,\
+  63,63,30,61,31,2d,65,62,35,65,2d,34,33,61,31,2d,38,39,62,39,2d,64,34,37,64,\
+  65,37,30,65,36,64,36,66,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,32,31,3a,\
+  35,39,3a,30,38,2e,38,30,33,37,33,39,38,5a,22,2c,22,75,73,72,5f,39,30,64,36,\
+  62,39,33,63,2d,39,38,63,65,2d,34,31,37,37,2d,62,39,36,62,2d,38,37,39,65,63,\
+  35,32,33,65,31,39,34,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,31,\
+  35,3a,32,39,2e,30,32,30,35,37,38,31,5a,22,2c,22,75,73,72,5f,37,65,35,64,32,\
+  37,34,36,2d,34,65,34,34,2d,34,61,66,36,2d,61,38,61,39,2d,39,63,30,63,36,34,\
+  30,39,66,66,35,30,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,32,32,3a,30,32,\
+  3a,31,33,2e,35,38,39,34,30,33,35,5a,22,2c,22,75,73,72,5f,37,65,38,37,63,36,\
+  63,64,2d,65,33,36,32,2d,34,39,37,39,2d,61,61,66,31,2d,35,62,65,31,37,31,39,\
+  32,38,39,34,32,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,33,3a,\
+  31,33,2e,30,39,36,35,30,34,33,5a,22,2c,22,75,73,72,5f,31,33,36,62,39,30,63,\
+  30,2d,61,62,32,37,2d,34,62,38,30,2d,61,62,63,61,2d,38,39,39,34,65,63,65,33,\
+  32,39,66,38,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,33,32,3a,30,\
+  37,2e,38,30,37,39,38,32,39,5a,22,2c,22,75,73,72,5f,36,61,36,35,37,30,34,38,\
+  2d,37,38,33,62,2d,34,36,61,38,2d,62,37,61,63,2d,39,33,61,62,65,61,32,66,62,\
+  36,36,32,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,33,31,3a,32,33,\
+  2e,37,39,30,35,33,39,5a,22,2c,22,75,73,72,5f,39,64,63,39,65,39,62,65,2d,38,\
+  64,39,32,2d,34,38,63,30,2d,38,31,66,33,2d,62,33,34,63,32,37,62,37,32,35,35,\
+  31,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,30,33,3a,30,37,2e,37,\
+  30,35,36,37,31,33,5a,22,2c,22,75,73,72,5f,34,33,38,37,62,64,36,35,2d,66,38,\
+  61,63,2d,34,37,36,65,2d,62,35,62,37,2d,34,37,63,33,38,62,63,37,36,39,66,32,\
+  22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,33,3a,30,33,2e,30,35,\
+  31,34,32,39,34,5a,22,2c,22,75,73,72,5f,64,30,34,32,36,63,61,34,2d,39,38,34,\
+  64,2d,34,36,36,65,2d,38,63,37,39,2d,39,37,61,61,30,65,39,32,61,63,32,65,22,\
+  3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,33,32,3a,30,37,2e,38,30,37,\
+  39,38,32,39,5a,22,2c,22,75,73,72,5f,65,30,63,39,33,38,30,31,2d,36,62,30,64,\
+  2d,34,63,35,39,2d,61,63,38,62,2d,30,38,37,61,61,32,31,36,64,36,39,37,22,3a,\
+  22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,35,3a,34,32,2e,36,33,39,31,\
+  36,32,5a,22,2c,22,75,73,72,5f,66,63,36,37,39,65,33,62,2d,62,30,64,64,2d,34,\
+  33,61,38,2d,61,30,33,38,2d,66,31,62,39,39,37,66,38,34,36,62,30,22,3a,22,32,\
+  30,32,36,2d,30,36,2d,30,37,54,30,33,3a,30,33,3a,30,37,2e,37,30,35,36,37,31,\
+  33,5a,22,2c,22,75,73,72,5f,62,63,34,35,37,34,31,32,2d,63,30,35,35,2d,34,30,\
+  33,33,2d,62,61,37,34,2d,65,35,38,33,61,66,64,66,61,61,35,65,22,3a,22,32,30,\
+  32,36,2d,30,36,2d,30,37,54,30,33,3a,31,35,3a,32,36,2e,31,32,35,36,36,37,32,\
+  5a,22,2c,22,75,73,72,5f,35,30,39,37,65,36,34,33,2d,39,66,61,35,2d,34,36,66,\
+  36,2d,61,64,38,38,2d,65,32,38,62,64,39,63,36,64,63,38,36,22,3a,22,32,30,32,\
+  36,2d,30,36,2d,30,37,54,30,33,3a,32,35,3a,34,32,2e,36,33,39,31,36,32,5a,22,\
+  2c,22,75,73,72,5f,61,37,61,37,39,33,38,38,2d,64,37,64,65,2d,34,39,34,30,2d,\
+  61,38,34,34,2d,30,33,32,62,62,33,64,36,38,33,39,34,22,3a,22,32,30,32,36,2d,\
+  30,36,2d,30,37,54,30,33,3a,32,38,3a,35,39,2e,31,35,32,37,33,36,31,5a,22,2c,\
+  22,75,73,72,5f,34,34,35,36,34,65,39,37,2d,61,64,33,39,2d,34,31,30,61,2d,62,\
+  30,61,61,2d,36,64,62,62,32,31,31,31,31,35,36,30,22,3a,22,32,30,32,36,2d,30,\
+  36,2d,30,37,54,30,33,3a,33,32,3a,30,37,2e,38,30,37,39,38,32,39,5a,22,2c,22,\
+  75,73,72,5f,34,38,31,65,31,35,63,65,2d,37,61,35,63,2d,34,35,34,62,2d,38,64,\
+  38,33,2d,66,63,30,63,30,38,62,35,66,63,30,34,22,3a,22,32,30,32,36,2d,30,36,\
+  2d,30,37,54,30,33,3a,32,38,3a,34,31,2e,37,34,31,36,30,34,37,5a,22,2c,22,75,\
+  73,72,5f,61,38,37,64,62,37,36,35,2d,37,62,32,65,2d,34,38,30,37,2d,62,35,31,\
+  37,2d,35,38,62,35,65,33,32,30,37,39,31,35,22,3a,22,32,30,32,36,2d,30,36,2d,\
+  30,37,54,30,33,3a,32,39,3a,30,30,2e,33,37,30,38,39,33,35,5a,22,2c,22,75,73,\
+  72,5f,65,30,35,36,61,39,38,39,2d,34,63,66,66,2d,34,30,33,64,2d,38,37,30,31,\
+  2d,65,62,36,66,34,39,34,66,37,61,63,32,22,3a,22,32,30,32,36,2d,30,36,2d,30,\
+  37,54,30,33,3a,33,32,3a,30,37,2e,38,30,37,39,38,32,39,5a,22,2c,22,75,73,72,\
+  5f,32,64,32,39,37,39,34,64,2d,38,63,31,30,2d,34,64,35,32,2d,61,33,65,66,2d,\
+  34,31,62,33,66,35,61,30,61,65,34,66,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,\
+  54,30,33,3a,32,39,3a,31,30,2e,32,39,32,39,32,34,32,5a,22,2c,22,75,73,72,5f,\
+  35,37,32,61,64,66,62,38,2d,65,65,37,36,2d,34,32,66,35,2d,62,33,64,33,2d,30,\
+  36,39,64,39,31,31,64,32,30,37,66,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,\
+  30,33,3a,33,32,3a,30,37,2e,38,30,37,39,38,32,39,5a,22,2c,22,75,73,72,5f,32,\
+  63,35,34,65,64,62,30,2d,62,37,31,34,2d,34,34,66,32,2d,62,32,32,36,2d,63,39,\
+  66,61,35,66,38,32,37,37,32,36,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,\
+  33,3a,32,37,3a,33,35,2e,37,33,39,39,36,33,32,5a,22,2c,22,75,73,72,5f,37,35,\
+  66,62,30,65,64,30,2d,38,37,37,32,2d,34,66,61,32,2d,38,34,63,61,2d,30,33,63,\
+  61,37,31,65,66,66,36,61,36,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,\
+  3a,33,32,3a,30,37,2e,38,30,37,39,38,32,39,5a,22,2c,22,75,73,72,5f,32,64,61,\
+  30,37,38,31,36,2d,64,38,36,34,2d,34,33,61,39,2d,38,37,36,31,2d,35,32,63,30,\
+  33,31,66,63,32,66,38,63,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,\
+  33,32,3a,30,37,2e,38,30,37,39,38,32,39,5a,22,2c,22,75,73,72,5f,36,65,35,37,\
+  38,64,31,65,2d,34,65,63,64,2d,34,34,65,38,2d,39,35,37,63,2d,37,61,62,61,37,\
+  61,36,35,39,64,63,66,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,33,\
+  32,3a,30,37,2e,38,30,37,39,38,32,39,5a,22,2c,22,75,73,72,5f,62,62,66,36,37,\
+  38,34,62,2d,38,38,32,63,2d,34,31,32,34,2d,61,35,31,33,2d,65,34,64,66,61,36,\
+  35,34,63,61,37,38,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,38,\
+  3a,33,35,2e,32,34,33,33,31,34,39,5a,22,2c,22,75,73,72,5f,64,64,35,35,39,65,\
+  38,35,2d,35,65,65,32,2d,34,37,39,32,2d,38,63,61,37,2d,62,64,61,65,32,30,32,\
+  39,65,63,36,66,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,33,30,3a,\
+  35,33,2e,37,31,37,36,38,38,34,5a,22,2c,22,75,73,72,5f,66,33,34,36,31,63,65,\
+  37,2d,35,36,64,37,2d,34,65,38,32,2d,62,35,64,32,2d,31,65,39,34,64,30,30,39,\
+  38,65,62,32,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,33,32,3a,30,\
+  37,2e,38,30,37,39,38,32,39,5a,22,2c,22,75,73,72,5f,66,34,65,37,30,61,61,66,\
+  2d,39,39,38,35,2d,34,35,31,35,2d,61,62,34,39,2d,35,33,61,61,34,32,35,30,62,\
+  35,33,63,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,35,3a,34,32,\
+  2e,36,33,39,31,36,32,5a,22,2c,22,75,73,72,5f,39,34,37,31,35,39,38,38,2d,64,\
+  34,64,66,2d,34,33,34,39,2d,62,63,64,39,2d,61,62,30,62,30,64,62,64,31,61,33,\
+  30,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,35,3a,34,32,2e,36,\
+  33,39,31,36,32,5a,22,2c,22,75,73,72,5f,33,32,31,32,66,34,37,64,2d,35,36,34,\
+  38,2d,34,31,65,39,2d,38,31,37,33,2d,66,65,61,62,31,66,32,65,38,61,61,34,22,\
+  3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,35,3a,34,32,2e,36,33,39,\
+  31,36,32,5a,22,2c,22,75,73,72,5f,63,32,34,37,61,38,35,65,2d,36,66,36,36,2d,\
+  34,37,30,34,2d,39,32,61,33,2d,63,37,35,64,65,35,31,30,31,36,32,33,22,3a,22,\
+  32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,35,3a,34,32,2e,36,33,39,31,36,\
+  32,5a,22,2c,22,75,73,72,5f,39,39,30,39,30,61,38,32,2d,39,35,65,64,2d,34,39,\
+  36,33,2d,39,66,61,30,2d,65,66,30,63,39,35,64,37,34,34,63,35,22,3a,22,32,30,\
+  32,36,2d,30,36,2d,30,37,54,30,33,3a,32,35,3a,34,32,2e,36,33,39,31,36,32,5a,\
+  22,2c,22,75,73,72,5f,64,37,31,61,33,61,36,35,2d,64,65,34,31,2d,34,61,62,62,\
+  2d,62,38,30,61,2d,61,64,33,32,38,33,35,31,34,64,34,66,22,3a,22,32,30,32,36,\
+  2d,30,36,2d,30,37,54,30,33,3a,32,39,3a,31,31,2e,37,39,35,34,32,39,32,5a,22,\
+  2c,22,75,73,72,5f,37,32,63,33,38,33,65,39,2d,63,38,30,61,2d,34,30,31,37,2d,\
+  39,31,65,39,2d,36,34,36,30,31,37,31,62,36,62,39,33,22,3a,22,32,30,32,36,2d,\
+  30,36,2d,30,37,54,30,33,3a,33,30,3a,35,31,2e,38,39,30,33,35,32,32,5a,22,2c,\
+  22,75,73,72,5f,31,37,36,62,36,61,33,38,2d,65,61,34,31,2d,34,31,38,34,2d,38,\
+  33,62,66,2d,64,32,30,63,66,61,63,31,36,35,31,63,22,3a,22,32,30,32,36,2d,30,\
+  36,2d,30,37,54,30,33,3a,32,39,3a,30,36,2e,39,37,33,34,31,31,33,5a,22,2c,22,\
+  75,73,72,5f,30,34,34,36,36,66,31,31,2d,30,66,37,64,2d,34,37,37,38,2d,38,37,\
+  61,35,2d,39,64,61,31,38,63,36,62,36,31,66,39,22,3a,22,32,30,32,36,2d,30,36,\
+  2d,30,37,54,30,33,3a,33,32,3a,30,37,2e,38,30,37,39,38,32,39,5a,22,2c,22,75,\
+  73,72,5f,37,36,36,30,36,33,30,38,2d,33,63,34,31,2d,34,31,31,66,2d,61,33,39,\
+  35,2d,37,62,35,31,36,33,35,38,32,65,33,65,22,3a,22,32,30,32,36,2d,30,36,2d,\
+  30,37,54,30,33,3a,33,31,3a,30,31,2e,37,35,39,30,32,33,38,5a,22,2c,22,75,73,\
+  72,5f,31,63,35,33,39,33,63,61,2d,64,31,38,32,2d,34,36,64,34,2d,39,65,30,65,\
+  2d,34,32,61,34,31,65,32,33,31,65,32,31,22,3a,22,32,30,32,36,2d,30,36,2d,30,\
+  38,54,31,39,3a,34,34,3a,35,36,2e,37,30,37,38,30,34,34,5a,22,2c,22,75,73,72,\
+  5f,35,39,63,61,31,38,35,62,2d,33,35,61,63,2d,34,31,61,35,2d,62,36,35,61,2d,\
+  66,37,30,39,35,39,64,61,35,34,35,30,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,\
+  54,30,33,3a,33,32,3a,30,37,2e,38,30,37,39,38,32,39,5a,22,2c,22,75,73,72,5f,\
+  31,61,38,39,62,34,39,31,2d,66,62,39,66,2d,34,61,36,30,2d,38,61,34,36,2d,63,\
+  61,61,32,38,30,37,32,64,33,38,38,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,\
+  30,33,3a,33,32,3a,30,37,2e,38,30,37,39,38,32,39,5a,22,2c,22,75,73,72,5f,64,\
+  37,33,31,39,30,30,38,2d,39,33,37,66,2d,34,36,64,36,2d,39,31,64,66,2d,65,38,\
+  65,65,33,62,37,33,37,34,63,36,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,\
+  33,3a,33,32,3a,30,37,2e,38,30,37,39,38,32,39,5a,22,2c,22,75,73,72,5f,35,65,\
+  34,30,38,66,39,63,2d,62,31,62,38,2d,34,34,61,63,2d,38,62,66,64,2d,32,30,61,\
+  61,62,61,32,62,35,32,38,33,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,31,39,\
+  3a,34,35,3a,34,30,2e,31,33,31,31,37,37,31,5a,22,2c,22,75,73,72,5f,36,31,32,\
+  65,33,39,32,34,2d,66,63,30,32,2d,34,30,38,34,2d,39,65,63,66,2d,35,66,38,33,\
+  36,39,31,33,63,38,32,30,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,31,39,3a,\
+  34,35,3a,34,30,2e,31,33,31,31,37,37,31,5a,22,2c,22,75,73,72,5f,36,66,35,62,\
+  32,62,36,34,2d,61,36,64,30,2d,34,66,63,30,2d,61,61,62,36,2d,61,64,32,30,38,\
+  61,63,36,39,32,61,63,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,\
+  37,3a,34,32,2e,36,35,38,36,34,35,33,5a,22,2c,22,75,73,72,5f,38,65,37,64,63,\
+  39,38,61,2d,36,62,30,31,2d,34,66,38,31,2d,38,30,66,38,2d,62,30,61,62,36,66,\
+  30,61,62,31,66,37,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,31,39,3a,34,35,\
+  3a,34,30,2e,31,33,31,31,37,37,31,5a,22,2c,22,75,73,72,5f,35,33,38,30,62,38,\
+  30,35,2d,34,34,37,30,2d,34,61,64,39,2d,39,66,31,31,2d,30,38,66,66,38,33,30,\
+  66,62,30,34,63,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,33,31,3a,\
+  30,34,2e,32,34,38,31,36,37,36,5a,22,2c,22,75,73,72,5f,62,38,35,62,35,64,65,\
+  63,2d,36,61,36,37,2d,34,35,31,32,2d,61,63,34,61,2d,32,63,33,63,32,63,31,30,\
+  35,38,33,35,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,30,33,3a,30,\
+  37,2e,37,30,35,36,37,31,33,5a,22,2c,22,75,73,72,5f,37,33,32,38,34,64,36,62,\
+  2d,31,66,30,64,2d,34,36,33,64,2d,62,34,62,35,2d,62,61,62,32,33,37,39,32,65,\
+  32,30,61,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,30,33,3a,30,37,\
+  2e,37,30,35,36,37,31,33,5a,22,2c,22,75,73,72,5f,61,39,63,33,34,65,34,65,2d,\
+  66,63,65,35,2d,34,63,39,37,2d,38,61,37,66,2d,36,34,39,39,34,36,36,32,30,31,\
+  35,62,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,30,33,3a,30,37,2e,\
+  37,30,35,36,37,31,33,5a,22,2c,22,75,73,72,5f,39,33,32,65,36,61,37,63,2d,63,\
+  61,34,34,2d,34,62,31,31,2d,38,32,66,32,2d,63,37,62,35,35,34,65,30,30,37,32,\
+  63,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,30,33,3a,30,37,2e,37,\
+  30,35,36,37,31,33,5a,22,2c,22,75,73,72,5f,61,35,35,30,34,30,36,30,2d,63,37,\
+  35,62,2d,34,35,31,64,2d,39,38,35,31,2d,39,65,31,61,39,63,30,36,34,61,34,65,\
+  22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,30,33,3a,30,37,2e,37,30,\
+  35,36,37,31,33,5a,22,2c,22,75,73,72,5f,37,38,37,63,35,61,30,30,2d,34,66,65,\
+  65,2d,34,30,64,38,2d,39,34,62,63,2d,61,64,66,34,64,35,39,66,36,30,38,61,22,\
+  3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,30,33,3a,30,37,2e,37,30,35,\
+  36,37,31,33,5a,22,2c,22,75,73,72,5f,34,65,31,39,36,32,66,66,2d,32,37,39,35,\
+  2d,34,66,35,36,2d,61,30,34,32,2d,34,34,35,63,64,31,35,61,39,63,34,33,22,3a,\
+  22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,33,32,3a,30,37,2e,38,30,37,39,\
+  38,32,39,5a,22,2c,22,75,73,72,5f,62,65,39,66,35,39,34,36,2d,32,61,64,37,2d,\
+  34,31,33,64,2d,62,65,30,33,2d,38,34,39,39,66,39,32,64,30,66,64,65,22,3a,22,\
+  32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,30,33,3a,30,37,2e,37,30,35,36,37,\
+  31,33,5a,22,2c,22,75,73,72,5f,33,63,30,65,64,66,30,37,2d,36,65,35,35,2d,34,\
+  66,36,37,2d,38,36,64,64,2d,35,66,31,62,35,62,39,32,33,65,36,64,22,3a,22,32,\
+  30,32,36,2d,30,36,2d,30,37,54,30,33,3a,30,33,3a,30,37,2e,37,30,35,36,37,31,\
+  33,5a,22,2c,22,75,73,72,5f,63,35,31,37,30,36,33,65,2d,62,34,33,63,2d,34,33,\
+  32,65,2d,39,61,61,34,2d,63,33,39,36,37,37,34,65,35,33,38,65,22,3a,22,32,30,\
+  32,36,2d,30,36,2d,30,37,54,30,33,3a,30,33,3a,30,37,2e,37,30,35,36,37,31,33,\
+  5a,22,2c,22,75,73,72,5f,35,38,39,38,34,34,33,35,2d,39,32,38,39,2d,34,31,39,\
+  64,2d,61,34,36,37,2d,65,37,30,64,33,64,36,34,30,35,37,34,22,3a,22,32,30,32,\
+  36,2d,30,36,2d,30,37,54,30,33,3a,30,33,3a,30,37,2e,37,30,35,36,37,31,33,5a,\
+  22,2c,22,75,73,72,5f,34,66,31,39,39,61,35,62,2d,35,34,39,35,2d,34,32,65,34,\
+  2d,62,65,36,66,2d,63,64,32,65,34,35,38,31,30,35,34,66,22,3a,22,32,30,32,36,\
+  2d,30,36,2d,30,38,54,31,39,3a,34,34,3a,35,32,2e,31,34,32,37,39,39,34,5a,22,\
+  2c,22,75,73,72,5f,64,39,66,35,32,36,34,62,2d,35,30,30,66,2d,34,36,34,64,2d,\
+  62,36,37,30,2d,64,66,66,63,66,64,37,31,32,62,34,39,22,3a,22,32,30,32,36,2d,\
+  30,36,2d,30,37,54,30,33,3a,32,31,3a,35,35,2e,38,31,34,39,33,32,31,5a,22,2c,\
+  22,75,73,72,5f,30,34,30,35,33,65,38,62,2d,65,30,64,36,2d,34,36,32,37,2d,61,\
+  66,65,33,2d,37,34,39,66,30,65,32,65,62,39,34,32,22,3a,22,32,30,32,36,2d,30,\
+  36,2d,30,37,54,30,33,3a,32,35,3a,34,32,2e,36,33,39,31,36,32,5a,22,2c,22,75,\
+  73,72,5f,30,64,32,63,37,64,35,63,2d,66,61,33,36,2d,34,35,33,61,2d,61,62,30,\
+  30,2d,66,35,61,38,39,30,32,37,35,61,65,32,22,3a,22,32,30,32,36,2d,30,36,2d,\
+  30,37,54,30,33,3a,32,35,3a,34,32,2e,36,33,39,31,36,32,5a,22,2c,22,75,73,72,\
+  5f,66,62,35,66,66,39,36,36,2d,62,32,38,31,2d,34,35,32,64,2d,62,34,31,36,2d,\
+  34,37,34,34,31,30,62,35,34,38,65,32,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,\
+  54,30,33,3a,32,33,3a,34,39,2e,37,31,37,35,38,37,5a,22,2c,22,75,73,72,5f,36,\
+  33,38,38,62,35,65,38,2d,31,31,37,62,2d,34,31,35,35,2d,62,36,62,62,2d,36,33,\
+  33,36,35,31,38,33,64,64,62,32,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,\
+  33,3a,32,35,3a,34,32,2e,36,33,39,31,36,32,5a,22,2c,22,75,73,72,5f,63,30,35,\
+  62,62,64,35,39,2d,36,66,31,61,2d,34,37,39,34,2d,61,30,32,61,2d,63,32,62,66,\
+  66,33,30,36,36,30,34,32,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,\
+  32,35,3a,34,32,2e,36,33,39,31,36,32,5a,22,2c,22,75,73,72,5f,35,38,32,63,62,\
+  30,38,61,2d,64,61,32,30,2d,34,66,62,33,2d,38,37,65,63,2d,36,64,64,33,30,35,\
+  66,66,32,30,64,63,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,35,\
+  3a,34,32,2e,36,33,39,31,36,32,5a,22,2c,22,75,73,72,5f,66,31,66,31,36,39,32,\
+  64,2d,31,35,31,64,2d,34,32,34,33,2d,62,62,66,32,2d,61,66,35,32,31,35,30,61,\
+  64,38,65,63,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,33,3a,34,\
+  38,2e,31,31,32,34,31,35,36,5a,22,2c,22,75,73,72,5f,35,37,66,61,66,30,64,37,\
+  2d,64,32,39,64,2d,34,33,37,35,2d,61,38,62,61,2d,63,36,36,66,65,37,33,62,65,\
+  63,37,62,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,35,3a,34,32,\
+  2e,36,33,39,31,36,32,5a,22,2c,22,75,73,72,5f,35,64,66,62,63,62,31,65,2d,38,\
+  35,63,32,2d,34,63,65,33,2d,38,39,38,64,2d,36,36,31,66,62,66,65,35,62,36,39,\
+  39,22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,34,3a,30,30,2e,34,\
+  39,39,33,35,30,36,5a,22,2c,22,75,73,72,5f,34,61,32,65,31,32,30,34,2d,36,37,\
+  66,39,2d,34,31,63,66,2d,39,31,34,36,2d,65,62,38,33,39,39,38,38,30,35,36,38,\
+  22,3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,33,3a,35,35,2e,35,36,\
+  32,30,33,37,35,5a,22,2c,22,75,73,72,5f,62,38,32,63,35,37,62,38,2d,31,62,62,\
+  63,2d,34,33,39,32,2d,38,61,37,38,2d,64,65,34,39,36,37,31,36,61,63,38,37,22,\
+  3a,22,32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,35,3a,34,32,2e,36,33,39,\
+  31,36,32,5a,22,2c,22,75,73,72,5f,31,64,65,35,37,66,30,62,2d,65,39,34,37,2d,\
+  34,65,61,35,2d,39,64,39,61,2d,35,64,62,66,34,38,34,37,31,35,34,39,22,3a,22,\
+  32,30,32,36,2d,30,36,2d,30,37,54,30,33,3a,32,35,3a,34,32,2e,36,33,39,31,36,\
+  32,5a,22,2c,22,75,73,72,5f,63,30,30,33,37,62,32,64,2d,63,61,38,61,2d,34,36,\
+  66,36,2d,39,39,35,31,2d,30,38,37,61,34,63,39,35,31,65,36,33,22,3a,22,32,30,\
+  32,36,2d,30,36,2d,30,37,54,30,33,3a,32,35,3a,34,32,2e,36,33,39,31,36,32,5a,\
+  22,2c,22,75,73,72,5f,37,61,36,32,63,31,61,32,2d,65,36,32,30,2d,34,64,36,32,\
+  2d,61,35,30,61,2d,66,63,31,61,64,34,30,30,32,64,33,30,22,3a,22,32,30,32,36,\
+  2d,30,36,2d,30,37,54,30,33,3a,32,34,3a,30,37,2e,33,36,34,32,34,31,35,5a,22,\
+  2c,22,75,73,72,5f,63,37,34,31,34,33,36,64,2d,39,37,39,37,2d,34,65,66,64,2d,\
+  39,38,35,61,2d,31,62,62,65,38,62,33,66,36,64,63,38,22,3a,22,32,30,32,36,2d,\
+  30,36,2d,30,37,54,30,33,3a,32,38,3a,31,36,2e,37,37,37,30,30,30,32,5a,22,2c,\
+  22,75,73,72,5f,31,37,32,66,35,31,65,62,2d,32,32,30,35,2d,34,35,66,62,2d,38,\
+  32,30,33,2d,35,38,64,32,31,39,35,64,39,36,37,62,22,3a,22,32,30,32,36,2d,30,\
+  36,2d,32,31,54,30,32,3a,32,32,3a,34,35,2e,32,33,39,32,32,38,5a,22,2c,22,75,\
+  73,72,5f,31,39,39,62,35,64,63,35,2d,33,31,35,37,2d,34,63,61,31,2d,39,32,33,\
+  34,2d,39,37,32,66,31,33,62,61,66,62,35,38,22,3a,22,32,30,32,36,2d,30,36,2d,\
+  30,38,54,31,39,3a,34,32,3a,33,37,2e,31,35,30,31,38,39,35,5a,22,2c,22,75,73,\
+  72,5f,64,31,38,32,31,34,30,66,2d,62,35,36,62,2d,34,31,61,33,2d,39,65,62,33,\
+  2d,38,62,37,62,31,32,63,30,66,38,63,30,22,3a,22,32,30,32,36,2d,30,36,2d,30,\
+  38,54,31,39,3a,33,37,3a,33,36,2e,32,38,35,36,34,37,36,5a,22,2c,22,75,73,72,\
+  5f,64,39,30,35,31,32,64,64,2d,33,37,63,38,2d,34,38,38,30,2d,62,33,63,35,2d,\
+  30,38,63,65,31,62,34,36,30,38,33,33,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,\
+  54,31,39,3a,34,35,3a,34,30,2e,31,33,31,31,37,37,31,5a,22,2c,22,75,73,72,5f,\
+  35,62,39,65,63,62,32,63,2d,34,34,37,32,2d,34,31,62,35,2d,61,66,34,63,2d,63,\
+  37,35,37,37,65,30,38,64,38,32,65,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,\
+  31,39,3a,34,35,3a,34,30,2e,31,33,31,31,37,37,31,5a,22,2c,22,75,73,72,5f,37,\
+  66,32,39,36,33,30,38,2d,33,62,61,61,2d,34,39,39,36,2d,61,64,64,62,2d,61,61,\
+  38,36,36,61,31,64,33,65,31,38,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,31,\
+  39,3a,34,35,3a,34,30,2e,31,33,31,31,37,37,31,5a,22,2c,22,75,73,72,5f,36,38,\
+  30,35,33,31,66,63,2d,38,36,64,39,2d,34,35,31,35,2d,38,66,65,31,2d,32,33,61,\
+  66,63,36,34,34,33,35,65,37,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,31,39,\
+  3a,34,35,3a,34,30,2e,31,33,31,31,37,37,31,5a,22,2c,22,75,73,72,5f,37,64,33,\
+  39,62,62,33,62,2d,35,39,31,33,2d,34,38,35,65,2d,62,33,64,32,2d,39,63,30,62,\
+  66,33,66,35,34,39,30,61,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,31,39,3a,\
+  34,35,3a,34,30,2e,31,33,31,31,37,37,31,5a,22,2c,22,75,73,72,5f,38,34,30,62,\
+  34,66,66,36,2d,61,61,39,32,2d,34,66,31,64,2d,62,63,66,32,2d,66,64,39,61,33,\
+  39,30,33,37,66,66,38,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,31,39,3a,34,\
+  35,3a,34,30,2e,31,33,31,31,37,37,31,5a,22,2c,22,75,73,72,5f,37,36,62,38,30,\
+  35,61,66,2d,65,63,33,36,2d,34,32,65,38,2d,62,64,38,61,2d,63,36,32,30,32,36,\
+  63,36,31,65,64,30,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,31,39,3a,34,33,\
+  3a,34,30,2e,38,36,37,32,30,35,5a,22,2c,22,75,73,72,5f,63,37,65,32,65,38,64,\
+  63,2d,36,35,36,63,2d,34,38,39,39,2d,62,32,34,61,2d,33,35,36,36,65,61,36,37,\
+  30,34,31,35,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,31,39,3a,34,35,3a,34,\
+  30,2e,31,33,31,31,37,37,31,5a,22,2c,22,75,73,72,5f,31,61,37,39,39,34,32,61,\
+  2d,64,61,38,39,2d,34,61,66,36,2d,38,35,39,35,2d,63,35,66,62,64,31,66,63,33,\
+  30,35,38,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,31,39,3a,34,33,3a,34,31,\
+  2e,35,32,37,33,36,36,36,5a,22,2c,22,75,73,72,5f,37,64,65,62,33,63,65,36,2d,\
+  38,63,64,63,2d,34,61,30,39,2d,38,64,65,35,2d,64,32,33,34,34,31,31,63,63,61,\
+  36,39,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,31,39,3a,34,35,3a,34,30,2e,\
+  31,33,31,31,37,37,31,5a,22,2c,22,75,73,72,5f,37,36,65,30,30,32,30,64,2d,34,\
+  35,36,61,2d,34,38,63,30,2d,38,62,38,66,2d,33,30,30,66,65,64,33,62,36,62,63,\
+  62,22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,31,39,3a,34,35,3a,34,30,2e,31,\
+  33,31,31,37,37,31,5a,22,2c,22,75,73,72,5f,64,65,32,61,34,34,35,35,2d,38,31,\
+  35,35,2d,34,66,31,64,2d,38,38,32,61,2d,61,65,31,62,39,31,33,65,32,66,64,33,\
+  22,3a,22,32,30,32,36,2d,30,36,2d,30,38,54,31,39,3a,34,35,3a,34,30,2e,31,33,\
+  31,31,37,37,31,5a,22,2c,22,75,73,72,5f,35,37,62,36,61,64,32,66,2d,38,31,39,\
+  31,2d,34,64,61,31,2d,61,32,36,62,2d,38,63,37,33,39,39,32,35,62,32,64,30,22,\
+  3a,22,32,30,32,36,2d,30,36,2d,30,38,54,31,39,3a,34,35,3a,34,30,2e,31,33,31,\
+  31,37,37,31,5a,22,2c,22,75,73,72,5f,39,65,33,61,30,30,33,38,2d,37,64,36,63,\
+  2d,34,63,65,66,2d,61,65,39,66,2d,37,38,30,31,63,38,38,33,33,33,66,37,22,3a,\
+  22,32,30,32,36,2d,30,36,2d,30,38,54,31,39,3a,34,35,3a,34,30,2e,31,33,31,31,\
+  37,37,31,5a,22,2c,22,75,73,72,5f,37,36,64,62,37,36,65,64,2d,31,65,61,61,2d,\
+  34,61,39,36,2d,38,61,31,63,2d,64,33,36,38,64,30,35,61,65,31,65,34,22,3a,22,\
+  32,30,32,36,2d,30,36,2d,30,38,54,32,31,3a,33,38,3a,32,37,2e,39,39,36,34,30,\
+  31,39,5a,22,7d,00
+"SavedWorldSearchesusr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h1281851379"=hex:00
+"Screenmanager Fullscreen mode Default_h401710285"=dword:00000000
+"Screenmanager Fullscreen mode_h3630240806"=dword:00000003
+"Screenmanager Resolution Height Default_h1380706816"=dword:00000300
+"Screenmanager Resolution Height_h2627697771"=dword:000003a5
+"Screenmanager Resolution Use Native Default_h1405981789"=dword:00000001
+"Screenmanager Resolution Use Native_h1405027254"=dword:00000000
+"Screenmanager Resolution Width Default_h680557497"=dword:00000400
+"Screenmanager Resolution Width_h182942802"=dword:0000052c
+"Screenmanager Resolution Window Height_h1684712807"=dword:000003a5
+"Screenmanager Resolution Window Width_h2524650974"=dword:0000052c
+"Screenmanager Stereo 3D_h1665754519"=dword:00000001
+"Screenmanager Window Position X_h4088080503"=dword:fffffffc
+"Screenmanager Window Position Y_h4088080502"=dword:ffffffe2
+"SeenIPS_SEEN_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h844163302"=hex:5b,22,\
+  69,70,73,5f,39,32,61,38,32,31,62,65,2d,65,66,66,39,2d,34,30,32,63,2d,39,32,\
+  36,30,2d,39,62,32,63,35,64,37,37,38,34,64,62,22,5d,00
+"SHADOW_QUALITY_h2860313905"=dword:00000000
+"SortSelection_AllFriends_h1381279904"=dword:00000000
+"SortSelection_Favorites0_h3880782583"=dword:00000000
+"SortSelection_FriendLocations_h3854527900"=dword:00000000
+"SortSelection_Group1_h288594318"=dword:00000000
+"SortSelection_GroupActivity_h1622071570"=dword:00000000
+"SortSelection_GroupLocations_h535141137"=dword:00000000
+"SortSelection_InRoom_h195141176"=dword:00000000
+"SortSelection_Licensed_h1840069855"=dword:00000000
+"SortSelection_PurchasesFilter_h1290936184"=dword:00000000
+"SortSelection_Recent_h473606571"=dword:00000003
+"SortSelection_Sdk_h1521550780"=dword:00000000
+"SortSelection_UGCAvatars_h76501747"=dword:00000000
+"SortSelection_UGCPlaylist1_h849225126"=dword:00000000
+"SortSelection_UGCWorlds_h557164544"=dword:00000000
+"SortSelection_WorldInstances_h1863319032"=dword:00000000
+"SortSelection_Worlds_Playlist1_h440452697"=dword:00000000
+"StartupLoadingScreenID_h3075949927"=hex:00
+"UI.Emojis.CustomGroup0_h3343644978"=hex:00
+"UI.Emojis.CustomGroup1_h3343644979"=hex:00
+"UI.Emojis.CustomGroup2_h3343644976"=hex:00
+"UI.MenuPlacementZDepthVR_h1362588766"=hex(4):00,00,00,00,00,00,00,00
+"UI.MotionSmoothingEnabled_h896528046"=dword:00000001
+"UI.Props.CustomGroup0_h4016965227"=hex:00
+"UI.RecentlyUsedEmojis_h997835737"=hex:00
+"UI.RecentlyUsedStickers_h4029642252"=hex:00
+"UI.Settings.Osc_h1043380067"=dword:00000000
+"UI.Stickers.CustomGroup0_h550487815"=hex:00
+"UI.Stickers.CustomGroup1_h550487814"=hex:00
+"UI.Stickers.CustomGroup2_h550487813"=hex:00
+"UI.usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315.WingState_h1233638000"=hex:31,5f,\
+  31,5f,31,5f,31,5f,47,72,6f,75,70,73,5f,47,72,6f,75,70,73,5f,45,78,70,6c,6f,\
+  72,65,5f,00
+"unity.cloud_userid_h2665564582"=hex:61,39,30,34,63,65,31,61,61,65,62,61,31,66,\
+  66,34,37,61,66,38,30,64,34,32,31,34,38,36,66,30,36,66,00
+"unity.player_session_count_h922449978"=hex:36,30,00
+"unity.player_sessionid_h1351336811"=hex:35,32,39,30,39,31,31,32,39,38,35,36,\
+  33,32,34,30,34,35,38,00
+"UnityGraphicsQuality_h1669003810"=dword:00000000
+"UnitySelectMonitor_h17969598"=dword:00000000
+"USER_CAMERA_RESOLUTION_h3942642307"=hex:52,65,73,5f,31,30,38,30,00
+"USER_CAMERA_ROLL_WHILE_FLYING_h3681714588"=dword:00000001
+"USER_CAMERA_SAVE_METADATA_h1915949022"=dword:00000001
+"USER_CAMERA_STREAM_RESOLUTION_h3118717280"=dword:00000001
+"USER_CAMERA_TRIGGER_TAKES_PHOTOS_h2533461762"=dword:00000000
+"UserId_h2934586105"=hex:31,30,30,35,30,34,38,38,00
+"usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_avatarProxyShowAtRange_h3506833415"=hex(4):00,\
+  00,00,40,33,33,0b,40
+"usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_avatarProxyShowAtRangeToggle_h2016199445"=dword:00000001
+"usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_BACKGROUND_MATERIAL_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h3539698047"=hex:44,\
+  65,66,61,75,6c,74,00
+"usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_DroneControllerSettings_h3632705752"=hex:7b,\
+  22,63,6f,6e,74,72,6f,6c,6c,65,72,54,79,70,65,22,3a,31,2c,22,6b,65,79,62,6f,\
+  61,72,64,41,6e,64,4d,6f,75,73,65,43,6f,6e,74,72,6f,6c,6c,65,72,54,79,70,65,\
+  22,3a,32,2c,22,64,72,6f,6e,65,53,63,72,65,65,6e,4d,6f,64,65,22,3a,31,2c,22,\
+  63,6f,6e,74,72,6f,6c,6c,65,72,49,6e,76,65,72,73,69,6f,6e,22,3a,66,61,6c,73,\
+  65,2c,22,63,6f,6e,74,72,6f,6c,6c,65,72,44,65,61,64,7a,6f,6e,65,22,3a,30,2e,\
+  31,2c,22,61,6e,67,6c,65,43,65,6e,74,65,72,65,64,54,68,72,6f,74,74,6c,65,42,\
+  65,68,61,76,69,6f,72,22,3a,30,2c,22,61,63,72,6f,43,65,6e,74,65,72,65,64,54,\
+  68,72,6f,74,74,6c,65,42,65,68,61,76,69,6f,72,22,3a,30,2c,22,63,6f,6e,74,72,\
+  6f,6c,6c,65,72,4b,65,79,62,6f,61,72,64,53,65,6e,73,69,74,69,76,69,74,79,22,\
+  3a,30,2e,36,2c,22,63,6f,6e,74,72,6f,6c,6c,65,72,52,65,6c,61,74,69,76,65,4d,\
+  6f,75,73,65,4d,6f,64,65,22,3a,66,61,6c,73,65,2c,22,63,6f,6e,74,72,6f,6c,6c,\
+  65,72,4d,6f,75,73,65,53,65,6e,73,69,74,69,76,69,74,79,22,3a,35,2e,30,2c,22,\
+  63,6f,6e,74,72,6f,6c,6c,65,72,4d,6f,75,73,65,52,65,6c,61,74,69,76,65,52,61,\
+  74,65,22,3a,31,30,2e,30,2c,22,63,6f,6e,74,72,6f,6c,6c,65,72,4d,6f,75,73,65,\
+  52,65,6c,61,74,69,76,65,43,75,72,76,65,22,3a,35,30,2e,30,2c,22,63,6f,6e,74,\
+  72,6f,6c,6c,65,72,4d,6f,75,73,65,50,6f,77,65,72,43,75,72,76,65,22,3a,31,2e,\
+  30,2c,22,66,70,76,53,63,72,65,65,6e,53,69,7a,65,22,3a,35,30,2e,30,2c,22,66,\
+  70,76,53,63,72,65,65,6e,44,69,6d,6d,69,6e,67,22,3a,39,35,2e,30,2c,22,61,75,\
+  64,69,6f,46,65,65,64,62,61,63,6b,56,6f,6c,75,6d,65,22,3a,36,30,2e,30,7d,00
+"usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_DroneFlightPresetValues_h3009584388"=hex:7b,\
+  22,53,65,6c,65,63,74,65,64,50,72,65,73,65,74,22,3a,30,2c,22,50,72,65,73,65,\
+  74,73,22,3a,7b,22,30,22,3a,7b,22,63,61,6d,65,72,61,54,69,6c,74,22,3a,31,30,\
+  2e,30,2c,22,6d,61,78,41,6e,67,6c,65,22,3a,32,30,2e,30,2c,22,65,78,70,6f,50,\
+  69,74,63,68,22,3a,30,2e,37,2c,22,65,78,70,6f,52,6f,6c,6c,22,3a,30,2e,37,2c,\
+  22,65,78,70,6f,59,61,77,22,3a,30,2e,37,2c,22,65,78,70,6f,54,68,72,6f,74,74,\
+  6c,65,22,3a,30,2e,30,2c,22,63,65,6e,74,65,72,53,65,6e,73,69,74,69,76,69,74,\
+  79,50,69,74,63,68,22,3a,35,30,2e,30,2c,22,63,65,6e,74,65,72,53,65,6e,73,69,\
+  74,69,76,69,74,79,52,6f,6c,6c,22,3a,35,30,2e,30,2c,22,63,65,6e,74,65,72,53,\
+  65,6e,73,69,74,69,76,69,74,79,59,61,77,22,3a,32,35,2e,30,2c,22,63,65,6e,74,\
+  65,72,53,65,6e,73,69,74,69,76,69,74,79,54,68,72,6f,74,74,6c,65,22,3a,30,2e,\
+  30,31,2c,22,6d,61,78,52,61,74,65,50,69,74,63,68,22,3a,34,30,30,2e,30,2c,22,\
+  6d,61,78,52,61,74,65,52,6f,6c,6c,22,3a,34,30,30,2e,30,2c,22,6d,61,78,52,61,\
+  74,65,59,61,77,22,3a,34,30,30,2e,30,2c,22,6d,61,78,52,61,74,65,54,68,72,6f,\
+  74,74,6c,65,22,3a,31,2e,30,2c,22,6d,6f,64,65,43,68,61,6e,67,65,53,6d,6f,6f,\
+  74,68,69,6e,67,54,69,6d,65,22,3a,30,2e,35,2c,22,6d,61,73,73,22,3a,30,2e,31,\
+  2c,22,64,72,61,67,22,3a,31,2e,35,2c,22,63,72,6f,73,73,53,65,63,74,69,6f,6e,\
+  41,72,65,61,22,3a,30,2e,30,35,2c,22,6d,6f,74,6f,72,50,6f,77,65,72,22,3a,33,\
+  2e,30,7d,2c,22,31,22,3a,7b,22,63,61,6d,65,72,61,54,69,6c,74,22,3a,30,2e,30,\
+  2c,22,6d,61,78,41,6e,67,6c,65,22,3a,32,37,2e,30,2c,22,65,78,70,6f,50,69,74,\
+  63,68,22,3a,30,2e,37,2c,22,65,78,70,6f,52,6f,6c,6c,22,3a,30,2e,37,2c,22,65,\
+  78,70,6f,59,61,77,22,3a,30,2e,37,2c,22,65,78,70,6f,54,68,72,6f,74,74,6c,65,\
+  22,3a,30,2e,30,2c,22,63,65,6e,74,65,72,53,65,6e,73,69,74,69,76,69,74,79,50,\
+  69,74,63,68,22,3a,31,30,2e,30,2c,22,63,65,6e,74,65,72,53,65,6e,73,69,74,69,\
+  76,69,74,79,52,6f,6c,6c,22,3a,31,30,2e,30,2c,22,63,65,6e,74,65,72,53,65,6e,\
+  73,69,74,69,76,69,74,79,59,61,77,22,3a,35,2e,30,2c,22,63,65,6e,74,65,72,53,\
+  65,6e,73,69,74,69,76,69,74,79,54,68,72,6f,74,74,6c,65,22,3a,30,2e,30,31,2c,\
+  22,6d,61,78,52,61,74,65,50,69,74,63,68,22,3a,33,30,30,2e,30,2c,22,6d,61,78,\
+  52,61,74,65,52,6f,6c,6c,22,3a,33,30,30,2e,30,2c,22,6d,61,78,52,61,74,65,59,\
+  61,77,22,3a,32,30,30,2e,30,2c,22,6d,61,78,52,61,74,65,54,68,72,6f,74,74,6c,\
+  65,22,3a,31,2e,30,2c,22,6d,6f,64,65,43,68,61,6e,67,65,53,6d,6f,6f,74,68,69,\
+  6e,67,54,69,6d,65,22,3a,31,2e,30,2c,22,6d,61,73,73,22,3a,30,2e,32,35,2c,22,\
+  64,72,61,67,22,3a,30,2e,38,2c,22,63,72,6f,73,73,53,65,63,74,69,6f,6e,41,72,\
+  65,61,22,3a,30,2e,30,34,2c,22,6d,6f,74,6f,72,50,6f,77,65,72,22,3a,37,2e,30,\
+  7d,2c,22,32,22,3a,7b,22,63,61,6d,65,72,61,54,69,6c,74,22,3a,34,35,2e,30,2c,\
+  22,6d,61,78,41,6e,67,6c,65,22,3a,34,35,2e,30,2c,22,65,78,70,6f,50,69,74,63,\
+  68,22,3a,30,2e,33,2c,22,65,78,70,6f,52,6f,6c,6c,22,3a,30,2e,33,2c,22,65,78,\
+  70,6f,59,61,77,22,3a,30,2e,33,2c,22,65,78,70,6f,54,68,72,6f,74,74,6c,65,22,\
+  3a,30,2e,30,2c,22,63,65,6e,74,65,72,53,65,6e,73,69,74,69,76,69,74,79,50,69,\
+  74,63,68,22,3a,32,30,30,2e,30,2c,22,63,65,6e,74,65,72,53,65,6e,73,69,74,69,\
+  76,69,74,79,52,6f,6c,6c,22,3a,32,30,30,2e,30,2c,22,63,65,6e,74,65,72,53,65,\
+  6e,73,69,74,69,76,69,74,79,59,61,77,22,3a,31,30,30,2e,30,2c,22,63,65,6e,74,\
+  65,72,53,65,6e,73,69,74,69,76,69,74,79,54,68,72,6f,74,74,6c,65,22,3a,30,2e,\
+  35,2c,22,6d,61,78,52,61,74,65,50,69,74,63,68,22,3a,35,30,30,2e,30,2c,22,6d,\
+  61,78,52,61,74,65,52,6f,6c,6c,22,3a,35,30,30,2e,30,2c,22,6d,61,78,52,61,74,\
+  65,59,61,77,22,3a,34,30,30,2e,30,2c,22,6d,61,78,52,61,74,65,54,68,72,6f,74,\
+  74,6c,65,22,3a,31,2e,30,2c,22,6d,6f,64,65,43,68,61,6e,67,65,53,6d,6f,6f,74,\
+  68,69,6e,67,54,69,6d,65,22,3a,30,2e,31,2c,22,6d,61,73,73,22,3a,30,2e,32,35,\
+  2c,22,64,72,61,67,22,3a,30,2e,38,2c,22,63,72,6f,73,73,53,65,63,74,69,6f,6e,\
+  41,72,65,61,22,3a,30,2e,30,33,35,2c,22,6d,6f,74,6f,72,50,6f,77,65,72,22,3a,\
+  31,32,2e,30,7d,2c,22,33,22,3a,7b,22,63,61,6d,65,72,61,54,69,6c,74,22,3a,32,\
+  35,2e,30,2c,22,6d,61,78,41,6e,67,6c,65,22,3a,34,35,2e,30,2c,22,65,78,70,6f,\
+  50,69,74,63,68,22,3a,30,2e,35,2c,22,65,78,70,6f,52,6f,6c,6c,22,3a,30,2e,35,\
+  2c,22,65,78,70,6f,59,61,77,22,3a,30,2e,35,2c,22,65,78,70,6f,54,68,72,6f,74,\
+  74,6c,65,22,3a,30,2e,30,2c,22,63,65,6e,74,65,72,53,65,6e,73,69,74,69,76,69,\
+  74,79,50,69,74,63,68,22,3a,31,30,2e,30,2c,22,63,65,6e,74,65,72,53,65,6e,73,\
+  69,74,69,76,69,74,79,52,6f,6c,6c,22,3a,31,30,2e,30,2c,22,63,65,6e,74,65,72,\
+  53,65,6e,73,69,74,69,76,69,74,79,59,61,77,22,3a,35,2e,30,2c,22,63,65,6e,74,\
+  65,72,53,65,6e,73,69,74,69,76,69,74,79,54,68,72,6f,74,74,6c,65,22,3a,30,2e,\
+  30,31,2c,22,6d,61,78,52,61,74,65,50,69,74,63,68,22,3a,38,30,30,2e,30,2c,22,\
+  6d,61,78,52,61,74,65,52,6f,6c,6c,22,3a,38,30,30,2e,30,2c,22,6d,61,78,52,61,\
+  74,65,59,61,77,22,3a,35,30,30,2e,30,2c,22,6d,61,78,52,61,74,65,54,68,72,6f,\
+  74,74,6c,65,22,3a,31,2e,30,2c,22,6d,6f,64,65,43,68,61,6e,67,65,53,6d,6f,6f,\
+  74,68,69,6e,67,54,69,6d,65,22,3a,30,2e,33,33,2c,22,6d,61,73,73,22,3a,30,2e,\
+  32,35,2c,22,64,72,61,67,22,3a,30,2e,38,2c,22,63,72,6f,73,73,53,65,63,74,69,\
+  6f,6e,41,72,65,61,22,3a,30,2e,30,33,35,2c,22,6d,6f,74,6f,72,50,6f,77,65,72,\
+  22,3a,31,32,2e,30,7d,7d,7d,00
+"usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_GiftDropNoRefundAfterUsageAgreeToggle_h3994287534"=dword:00000000
+"usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_LastExpiredSubscription_h3258779981"=hex:00
+"usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_OpenedQuickMenu_h2386549968"=dword:0000000a
+"usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_OpenMenuHelpShownCount_h2923798891"=dword:00000003
+"usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_PromotionData_h2658435664"=hex:7b,22,\
+  50,72,6f,6d,6f,74,69,6f,6e,44,61,74,61,48,61,6e,64,6c,65,72,73,22,3a,5b,7b,\
+  22,c3,8d,c3,8d,c3,8c,c3,8f,c3,8e,c3,8f,c3,8e,c3,8f,c3,8f,c3,8c,c3,8d,c3,8d,\
+  c3,8f,c3,8f,c3,8c,c3,8f,c3,8c,c3,8f,c3,8c,c3,8e,c3,8f,c3,8f,c3,8d,22,3a,22,\
+  70,72,6f,6d,6f,2d,75,70,67,72,61,64,65,22,2c,22,c3,8d,c3,8e,c3,8d,c3,8c,c3,\
+  8d,c3,8d,c3,8e,c3,8e,c3,8f,c3,8c,c3,8e,c3,8c,c3,8e,c3,8c,c3,8e,c3,8d,c3,8f,\
+  c3,8e,c3,8f,c3,8c,c3,8d,c3,8f,c3,8d,22,3a,31,2c,22,c3,8f,c3,8f,c3,8c,c3,8d,\
+  c3,8d,c3,8c,c3,8e,c3,8c,c3,8d,c3,8f,c3,8d,c3,8c,c3,8f,c3,8f,c3,8f,c3,8e,c3,\
+  8c,c3,8d,c3,8d,c3,8d,c3,8d,c3,8c,c3,8c,22,3a,22,32,30,32,36,2d,30,36,2d,32,\
+  33,54,30,30,3a,34,31,3a,31,34,2e,36,33,37,35,33,30,39,2b,30,38,3a,30,30,22,\
+  2c,22,c3,8d,c3,8f,c3,8e,c3,8d,c3,8e,c3,8c,c3,8e,c3,8c,c3,8f,c3,8c,c3,8e,c3,\
+  8d,c3,8e,c3,8d,c3,8f,c3,8e,c3,8c,c3,8d,c3,8c,c3,8d,c3,8f,c3,8d,c3,8f,22,3a,\
+  32,34,2c,22,c3,8f,c3,8c,c3,8d,c3,8d,c3,8f,c3,8d,c3,8d,c3,8d,c3,8d,c3,8d,c3,\
+  8e,c3,8f,c3,8e,c3,8c,c3,8f,c3,8c,c3,8d,c3,8f,c3,8f,c3,8d,c3,8d,c3,8c,c3,8d,\
+  22,3a,30,2c,22,c3,8d,c3,8c,c3,8e,c3,8d,c3,8f,c3,8c,c3,8f,c3,8c,c3,8e,c3,8f,\
+  c3,8f,c3,8e,c3,8c,c3,8f,c3,8c,c3,8d,c3,8e,c3,8f,c3,8d,c3,8c,c3,8f,c3,8f,c3,\
+  8c,22,3a,66,61,6c,73,65,7d,2c,7b,22,c3,8d,c3,8d,c3,8c,c3,8f,c3,8e,c3,8f,c3,\
+  8e,c3,8f,c3,8f,c3,8c,c3,8d,c3,8d,c3,8f,c3,8f,c3,8c,c3,8f,c3,8c,c3,8f,c3,8c,\
+  c3,8e,c3,8f,c3,8f,c3,8d,22,3a,22,65,76,65,72,67,72,65,65,6e,2d,61,63,63,65,\
+  73,73,6f,72,69,65,73,2d,68,61,74,73,2d,67,6c,61,73,73,65,73,2d,6a,75,6e,65,\
+  32,36,22,2c,22,c3,8d,c3,8e,c3,8d,c3,8c,c3,8d,c3,8d,c3,8e,c3,8e,c3,8f,c3,8c,\
+  c3,8e,c3,8c,c3,8e,c3,8c,c3,8e,c3,8d,c3,8f,c3,8e,c3,8f,c3,8c,c3,8d,c3,8f,c3,\
+  8d,22,3a,32,2c,22,c3,8f,c3,8f,c3,8c,c3,8d,c3,8d,c3,8c,c3,8e,c3,8c,c3,8d,c3,\
+  8f,c3,8d,c3,8c,c3,8f,c3,8f,c3,8f,c3,8e,c3,8c,c3,8d,c3,8d,c3,8d,c3,8d,c3,8c,\
+  c3,8c,22,3a,22,32,30,32,36,2d,30,36,2d,32,33,54,30,30,3a,32,37,3a,35,34,2e,\
+  30,38,34,32,31,39,33,2b,30,38,3a,30,30,22,2c,22,c3,8d,c3,8f,c3,8e,c3,8d,c3,\
+  8e,c3,8c,c3,8e,c3,8c,c3,8f,c3,8c,c3,8e,c3,8d,c3,8e,c3,8d,c3,8f,c3,8e,c3,8c,\
+  c3,8d,c3,8c,c3,8d,c3,8f,c3,8d,c3,8f,22,3a,32,34,2c,22,c3,8f,c3,8c,c3,8d,c3,\
+  8d,c3,8f,c3,8d,c3,8d,c3,8d,c3,8d,c3,8d,c3,8e,c3,8f,c3,8e,c3,8c,c3,8f,c3,8c,\
+  c3,8d,c3,8f,c3,8f,c3,8d,c3,8d,c3,8c,c3,8d,22,3a,30,2c,22,c3,8d,c3,8c,c3,8e,\
+  c3,8d,c3,8f,c3,8c,c3,8f,c3,8c,c3,8e,c3,8f,c3,8f,c3,8e,c3,8c,c3,8f,c3,8c,c3,\
+  8d,c3,8e,c3,8f,c3,8d,c3,8c,c3,8f,c3,8f,c3,8c,22,3a,66,61,6c,73,65,7d,5d,7d,\
+  00
+"usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_UI.Emojis.CustomGroup0_h1883368036"=hex:7b,\
+  22,6e,61,6d,65,22,3a,22,43,75,73,74,6f,6d,20,31,22,2c,22,69,64,73,22,3a,5b,\
+  5d,7d,00
+"usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_UI.RecentlyUsedEmojis_h3318940367"=hex:7b,\
+  22,6e,61,6d,65,22,3a,22,52,65,63,65,6e,74,22,2c,22,69,64,73,22,3a,5b,5d,7d,\
+  00
+"usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_UI.RecentlyUsedStickers_h2416888602"=hex:7b,\
+  22,6e,61,6d,65,22,3a,22,52,65,63,65,6e,74,22,2c,22,69,64,73,22,3a,5b,5d,7d,\
+  00
+"usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_UI.Stickers.CustomGroup0_h3473861457"=hex:7b,\
+  22,6e,61,6d,65,22,3a,22,43,75,73,74,6f,6d,20,31,22,2c,22,69,64,73,22,3a,5b,\
+  5d,7d,00
+"VRC.UI.QuickMenu.ShowQMDebugInfo_h1745736838"=dword:00000001
+"VRC_ACTION_MENU_FLICK_SELECT_h2064861260"=dword:00000001
+"VRC_ACTION_MENU_L_MENU_OPACITY_h4016404086"=hex(4):00,00,00,00,00,00,00,00
+"VRC_ACTION_MENU_L_MENU_SIZE_PERCENTAGE_h3874913549"=hex(4):00,00,00,00,00,00,\
+  f0,3f
+"VRC_ACTION_MENU_ONE_HAND_MOVE_h3374115622"=dword:00000001
+"VRC_ACTION_MENU_R_HUD_ANGLE_X_h214254173"=hex(4):00,00,00,00,00,00,24,40
+"VRC_ACTION_MENU_R_HUD_ANGLE_Y_h214254172"=hex(4):00,00,00,00,00,00,24,40
+"VRC_ACTION_MENU_R_MENU_OPACITY_h2459220008"=hex(4):00,00,00,00,00,00,00,00
+"VRC_ACTION_MENU_R_MENU_SIZE_PERCENTAGE_h2895102035"=hex(4):00,00,00,00,00,00,\
+  f0,3f
+"VRC_ACTION_MENU_R_SHOW_ON_HUD_h578424486"=dword:00000000
+"VRC_ADVANCED_GRAPHICS_ANTIALIASING_h4197584722"=dword:00000000
+"VRC_ADVANCED_GRAPHICS_QUALITY_h811609915"=hex:4c,6f,77,00
+"VRC_AFK_ENABLED_h2146228555"=dword:00000000
+"VRC_ALLOW_AVATAR_COPYING_h4277277104"=dword:00000000
+"VRC_ALLOW_DIRECT_SHARES_h4236543863"=dword:00000001
+"VRC_ALLOW_DISCORD_FRIENDS_h1137410625"=dword:00000001
+"VRC_ALLOW_FOCUS_VIEW_h3187532037"=dword:00000001
+"VRC_ALLOW_PEDESTAL_SHARES_h3228887076"=dword:00000001
+"VRC_ALLOW_PRINTS_h1571139417"=dword:00000001
+"VRC_ALLOW_SHARED_CONNECTIONS_h1718332232"=dword:00000001
+"VRC_ALLOW_UNTRUSTED_URL_h3795044449"=dword:00000000
+"VRC_ANDROID_MIC_MODE_h4010114242"=dword:00000000
+"VRC_ASK_TO_PORTAL_h1103353099"=dword:00000000
+"VRC_AV_INTERACT_LEVEL_h3923676462"=dword:00000002
+"VRC_AV_INTERACT_SELF_h1940689668"=dword:00000001
+"VRC_AVATAR_FALLBACK_HIDDEN_h1331196586"=dword:00000000
+"VRC_AVATAR_HAPTICS_ENABLED_h221340797"=dword:00000000
+"VRC_AVATAR_MAXIMUM_DOWNLOAD_SIZE_h514967114"=dword:0c800000
+"VRC_AVATAR_MAXIMUM_UNCOMPRESSED_SIZE_h1263307426"=dword:17200000
+"VRC_AVATAR_PERFORMANCE_RATING_MINIMUM_TO_DISPLAY_h1859707483"=dword:00000005
+"VRC_BLOOM_INTENSITY_h3753063118"=hex(4):00,00,00,00,00,00,00,00
+"VRC_BOOP_EMOJI_EFFECT_ENABLED_h2188470918"=dword:00000001
+"VRC_CAMERA_NEAR_CLIP_OVERRIDE_MODE_h3993555197"=dword:00000000
+"VRC_CAMERA_THIRD_PERSON_VIEW_DISTANCE_h1982707708"=hex(4):00,00,00,00,00,00,\
+  e0,3f
+"VRC_CAMERA_THIRD_PERSON_VIEW_h931506816"=dword:00000000
+"VRC_CAMERA_THIRD_PERSON_VIEW_HORIZONTAL_h986635041"=hex(4):00,00,00,00,00,00,\
+  00,00
+"VRC_CAMERA_THIRD_PERSON_VIEW_SCROLLED_IN_h107687051"=dword:00000000
+"VRC_CAMERA_THIRD_PERSON_VIEW_VERTICAL_1_h3013919299"=hex(4):00,00,00,40,33,33,\
+  d3,3f
+"VRC_CHAT_BUBBLE_ABOVE_HEAD_V2_h380784334"=dword:00000000
+"VRC_CHAT_BUBBLE_AUDIO_ENABLED_h2657302513"=dword:00000000
+"VRC_CHAT_BUBBLE_AUDIO_VOLUME_h3897769468"=hex(4):00,00,00,00,00,00,00,00
+"VRC_CHAT_BUBBLE_AUTO_SEND_h669043409"=dword:00000001
+"VRC_CHAT_BUBBLE_OPACITY_h1582266244"=hex(4):00,00,00,00,00,00,00,00
+"VRC_CHAT_BUBBLE_POS_HEIGHT_h4224194065"=hex(4):00,00,00,00,00,00,e0,3f
+"VRC_CHAT_BUBBLE_PROFANITY_FILTER_h3200174242"=dword:00000001
+"VRC_CHAT_BUBBLE_SCALE_h399529285"=hex(4):00,00,00,00,00,00,f8,3f
+"VRC_CHAT_BUBBLE_SHOW_OWN_h3999066263"=dword:00000001
+"VRC_CHAT_BUBBLE_TIMEOUT_h2984719174"=hex(4):00,00,00,00,00,00,3e,40
+"VRC_CHAT_BUBBLE_VISIBILITY_h326857595"=dword:00000002
+"VRC_CLEAR_CACHE_ON_START_h1469307862"=dword:00000000
+"VRC_CLOCK_VARIANT_h1278072413"=dword:00000000
+"VRC_COLOR_BLINDNESS_SIMULATE_h1126230328"=dword:00000000
+"VRC_COLOR_FILTER_INTENSITY_h2776671055"=hex(4):00,00,00,00,00,00,00,00
+"VRC_COLOR_FILTER_SELECTION_h2218956640"=dword:00000000
+"VRC_COLOR_FILTER_TO_WORLD_h2345527878"=dword:00000000
+"VRC_CURRENT_LANGUAGE_h2382508793"=hex:7a,68,2d,43,4e,00
+"VRC_DEFAULT_DRONE_SKIN_PALETTE_h4096640121"=hex:7b,22,43,75,72,72,65,6e,74,22,\
+  3a,22,23,32,61,34,62,66,63,2c,23,33,38,62,62,66,66,2c,23,30,30,37,36,66,66,\
+  22,2c,22,44,65,66,61,75,6c,74,22,3a,22,23,32,61,34,62,66,63,2c,23,33,38,62,\
+  62,66,66,2c,23,30,30,37,36,66,66,22,7d,00
+"VRC_DESKTOP_RETICLE_h2017415952"=dword:00000001
+"VRC_DIRECT_SHARING_VISIBILITY_h3852670846"=dword:00000001
+"VRC_DISABLE_AVATAR_CLONING_ON_ENTER_WORLD_h2378047106"=dword:00000001
+"VRC_DOUBLE_TAP_MAIN_MENU_STEAMVR2_h2259292525"=dword:00000001
+"VRC_EARMUFF_MODE_AVATARS_h1388684338"=dword:00000001
+"VRC_EARMUFF_MODE_CONE_VALUE_h3536705187"=hex(4):00,00,00,00,00,00,00,00
+"VRC_EARMUFF_MODE_FALLOFF_h4143299544"=hex(4):00,00,00,00,00,00,00,00
+"VRC_EARMUFF_MODE_FOLLOW_HEAD_h1009145430"=dword:00000000
+"VRC_EARMUFF_MODE_h4050365647"=dword:00000000
+"VRC_EARMUFF_MODE_LOCK_ROTATION_h2094207696"=dword:00000000
+"VRC_EARMUFF_MODE_OFFSET_VALUE_h248834185"=hex(4):00,00,00,00,00,00,00,00
+"VRC_EARMUFF_MODE_RADIUS_h3767980936"=hex(4):00,00,00,00,00,00,08,40
+"VRC_EARMUFF_MODE_REDUCED_VOLUME_h3523741539"=hex(4):00,00,00,a0,99,99,c9,3f
+"VRC_EARMUFF_MODE_SHOW_ICON_IN_NAMEPLATE_h2773945451"=dword:00000001
+"VRC_EARMUFF_MODE_VISUAL_AIDE_h1038948562"=dword:00000001
+"VRC_FINGER_GRAB_SETTING_h3527088908"=dword:00000001
+"VRC_FINGER_HAPTIC_SENSITIVITY_h3615339142"=hex(4):00,00,00,00,00,00,e0,3f
+"VRC_FINGER_HAPTIC_STRENGTH_h3232094030"=hex(4):00,00,00,00,00,00,e0,3f
+"VRC_FINGER_JUMP_ENABLED_h3477451755"=dword:00000001
+"VRC_FINGER_WALK_SETTING_h2794929451"=dword:00000003
+"VRC_FINGERTRACKING_AVATARS_USE_h1326086178"=dword:00000001
+"VRC_FINGERTRACKING_SHOW_PINCHUI_h1008817888"=dword:00000001
+"VRC_FINGERTRACKING_USE_EXCLUSIVE_h3085905998"=dword:00000000
+"VRC_FINGERTRACKING_USE_GHOSTHAND_h1274811204"=dword:00000000
+"VRC_GESTURE_BAR_ENABLED_h2747941422"=dword:00000001
+"VRC_GROUP_ON_NAMEPLATE_h939169640"=hex:00
+"VRC_GROUP_ORDER_usr_ea563b0b-f2b8-4a2c-bf85-a556e88dd315_h1409373893"=hex:5b,\
+  22,67,72,70,5f,30,31,33,31,62,32,32,37,2d,35,32,37,64,2d,34,37,31,66,2d,38,\
+  36,36,39,2d,32,65,35,66,31,38,38,32,34,64,62,63,22,5d,00
+"VRC_HANDS_MENU_OPEN_MODE_h2533652086"=dword:00000001
+"VRC_HIDE_NOTIFICATION_PHOTOS_h4294716079"=dword:00000000
+"VRC_HOME_ACCESS_TYPE_h350155342"=dword:00000003
+"VRC_HOME_REGION_h1998217749"=dword:ffffffff
+"VRC_HUD_ANCHOR_h3164134786"=dword:00000001
+"VRC_HUD_MIC_OPACITY_h3335237114"=hex(4):00,00,00,00,00,00,e0,3f
+"VRC_HUD_MODE_h3039617176"=dword:00000000
+"VRC_HUD_OPACITY_h1221709026"=hex(4):00,00,00,00,00,00,e0,3f
+"VRC_HUD_SMOOTHING_Desktop_h2589019796"=dword:00000000
+"VRC_HUD_SMOOTHING_VR_h2714590178"=dword:00000000
+"VRC_IK_AVATAR_MEASUREMENT_TYPE_h2850617027"=dword:00000000
+"VRC_IK_CALIBRATION_RANGE_h210545898"=hex(4):00,00,00,a0,99,99,d9,3f
+"VRC_IK_CALIBRATION_VIS_h4101902745"=dword:00000000
+"VRC_IK_DEBUG_LOGGING_h1722378125"=dword:00000000
+"VRC_IK_DISABLE_SHOULDER_TRACKING_h902380709"=dword:00000000
+"VRC_IK_FBT_CONFIRM_CALIBRATE_h265409733"=dword:00000001
+"VRC_IK_FBT_LOCOMOTION_h2043840926"=dword:00000001
+"VRC_IK_FBT_SPINE_MODE_h4000002034"=dword:00000000
+"VRC_IK_FREEZE_TRACKING_ON_DISCONNECT_h3383048186"=dword:00000000
+"VRC_IK_HEIGHT_RATIO_h3129706017"=hex(4):00,00,00,c0,6b,09,dd,3f
+"VRC_IK_KNEE_ANGLE_h3772330779"=hex(4):00,00,00,00,00,00,00,00
+"VRC_IK_LEGACY_CALIBRATION_h3326892512"=dword:00000000
+"VRC_IK_ONE_HANDED_CALIBRATION_h1441143116"=dword:00000000
+"VRC_IK_PER_AVATAR_CALIBRATION_ADJUSTMENT_h3760727148"=dword:00000000
+"VRC_IK_SHOULDER_WIDTH_COMPENSATION_h2128578700"=dword:00000001
+"VRC_IK_TRACKER_MODEL_h2318382088"=dword:00000000
+"VRC_IK_USE_METRIC_HEIGHT_h3069935960"=dword:00000000
+"VRC_IK_WRIST_ANGLE_h3558076085"=hex(4):00,00,00,00,00,00,00,00
+"VRC_IMPOSTOR_WHEN_AVAILABLE_h287131121"=dword:00000001
+"VRC_INPUT_COMFORT_TURNING_h2182102264"=dword:00000001
+"VRC_INPUT_DAYDREAM_h413117399"=dword:00000001
+"VRC_INPUT_DISABLE_MIC_BUTTON_h1777337009"=dword:00000000
+"VRC_INPUT_EMBODIED_h369838749"=dword:00000001
+"VRC_INPUT_GAZE_h2077319149"=dword:00000000
+"VRC_INPUT_GENERIC_h1962514789"=dword:00000001
+"VRC_INPUT_HPMOTION_h190123858"=dword:00000000
+"VRC_INPUT_LOCOMOTION_METHOD_h1414739397"=dword:00000000
+"VRC_INPUT_MIC_DEVICE_NAME_Desktop_h2596021377"=hex:00
+"VRC_INPUT_MIC_DEVICE_NAME_VR_h2729556311"=hex:00
+"VRC_INPUT_MIC_ENABLED_h1348812137"=dword:00000000
+"VRC_INPUT_MIC_LEVEL_DESK_h3150270844"=hex(4):00,00,00,a0,99,99,d9,3f
+"VRC_INPUT_MIC_LEVEL_VR_h1442437185"=hex(4):00,00,00,a0,99,99,e9,3f
+"VRC_INPUT_MIC_MODE_h2152931183"=dword:00000001
+"VRC_INPUT_MIC_NOISE_GATE_h1714811770"=hex(4):00,00,00,40,08,ac,8c,3f
+"VRC_INPUT_MIC_NOISE_SUPPRESSION_h2093770996"=dword:00000000
+"VRC_INPUT_MIC_ON_JOIN_h1952602480"=dword:00000000
+"VRC_INPUT_MOBILE_INTERACTION_MODE_h2241581933"=dword:00000000
+"VRC_INPUT_OPENXR_h3348095050"=dword:00000000
+"VRC_INPUT_OSC_h1104161515"=dword:00000001
+"VRC_INPUT_PERSONAL_SPACE_h2484208791"=dword:00000001
+"VRC_INPUT_QUEST_HANDS_h4125242269"=dword:00000001
+"VRC_INPUT_SELECTED_SAFETY_RANK_h2383440951"=hex:55,6e,74,72,75,73,74,65,64,00
+"VRC_INPUT_SHOW_TOOLTIPS_h2626405966"=dword:00000001
+"VRC_INPUT_STEAMVR2_h3800904780"=dword:00000001
+"VRC_INPUT_TALK_DEFAULT_ON_h3020434060"=dword:00000001
+"VRC_INPUT_TALK_TOGGLE_h4177681451"=dword:00000001
+"VRC_INPUT_THIRD_PERSON_ROTATION_h1300348630"=dword:00000000
+"VRC_INPUT_TOUCH_h4109827025"=dword:00000001
+"VRC_INPUT_VALVE_INDEX_h3652608509"=dword:00000000
+"VRC_INPUT_VIVE_ADVANCED_h1503440857"=dword:00000000
+"VRC_INPUT_VIVE_h2076719896"=dword:00000000
+"VRC_INPUT_WAVE_h2076745073"=dword:00000000
+"VRC_INTERACT_HAPTICS_ENABLED_h3393058910"=dword:00000001
+"VRC_INVERT_CONTROLLER_VERTICAL_LOOK_h655279289"=dword:00000000
+"VRC_INVERTED_MOUSE_h371555472"=dword:00000000
+"VRC_IS_BOOPING_ENABLED_h3716293392"=dword:00000001
+"VRC_LANDSCAPE_FOV_h3103793630"=hex(4):00,00,00,00,00,00,4e,40
+"VRC_LIMIT_PARTICLE_SYSTEMS_h1481531850"=dword:00000001
+"VRC_MAIN_MENU_MOVEMENT_LOCKED_h1046269715"=dword:00000001
+"VRC_MIC_ICON_VISIBILITY_h2339236183"=dword:00000001
+"VRC_MIC_TOGGLE_VOLUME_h863439808"=hex(4):00,00,00,00,00,00,e0,3f
+"VRC_MIRROR_RESOLUTION_h4279880629"=dword:00000000
+"VRC_MM_FREE_PLACEMENT_ENABLED_h18715258"=dword:00000001
+"VRC_MOBILE_AUTO_HOLD_ENABLED_h4020356327"=dword:00000001
+"VRC_MOBILE_AUTO_WALK_ENABLED_h3465067929"=dword:00000000
+"VRC_MOBILE_DPI_SCALING_h3654096573"=hex(4):00,00,00,00,00,00,49,40
+"VRC_MOBILE_NOTIFICATIONS_SERVICE_ENABLED_h1282430308"=dword:00000001
+"VRC_MOBILE_PERFORMANCE_SECONDARY_UI_ENABLED_h1810506022"=dword:00000000
+"VRC_MOBILE_QUICK_SELECT_ENABLED_h4199380106"=dword:00000000
+"VRC_MOUSE_SENSITIVITY_h864189870"=hex(4):00,00,00,00,00,00,00,00
+"VRC_NAMEPLATE_FALLBACK_ICON_VISIBLE_h1423137440"=dword:00000001
+"VRC_NAMEPLATE_MODE_h1996516522"=dword:00000001
+"VRC_NAMEPLATE_OPACITY_h3607418576"=hex(4):00,00,00,00,00,00,00,00
+"VRC_NAMEPLATE_QUICK_MENU_INFO_h2920495537"=dword:00000001
+"VRC_NAMEPLATE_SCALE_V2_h191075274"=dword:00000004
+"VRC_NAMEPLATE_STATUS_MODE_h3911907425"=dword:00000000
+"VRC_ONLY_SHOW_FRIEND_JOIN_LEAVE_PORTAL_NOTIFICATIONS_h2041396875"=dword:00000001
+"VRC_PEDESTAL_SHARING_VISIBILITY_h1567854125"=dword:00000000
+"VRC_PLAY_NOTIFICATION_AUDIO_h3787789186"=dword:00000001
+"VRC_PLAYER_GESTURE_TOGGLE_h2603271707"=dword:00000001
+"VRC_PORTAL_MODE_V2_h1207488718"=dword:00000000
+"VRC_PORTRAIT_FOV_h2841329674"=hex(4):00,00,00,00,00,00,54,40
+"VRC_PREFERRED_TIMEZONE_2_h1854653697"=hex:00
+"VRC_PRINT_VISIBILITY_h2092280245"=dword:00000000
+"VRC_RANDOMIZE_DRONE_h593570237"=dword:00000000
+"VRC_RANDOMIZE_LOADING_SCREEN_h1562257786"=dword:00000000
+"VRC_RANDOMIZE_PORTAL_h3155893243"=dword:00000000
+"VRC_RANDOMIZE_WARP_EFFECT_h3878154451"=dword:00000000
+"VRC_REDUCE_ANIMATIONS_h2283109607"=dword:00000000
+"VRC_SAFETY_LEVEL_h215562216"=dword:00000002
+"VRC_SCREEN_BRIGHTNESS_h779104839"=hex(4):00,00,00,60,66,66,d6,3f
+"VRC_SCREEN_CONTRAST_h3918435212"=hex(4):00,00,00,00,00,00,00,00
+"VRC_SELECTED_NETWORK_REGION_h4193729042"=dword:00000002
+"VRC_SHOW_COMMUNITY_LAB_WORLDS_IN_SEARCH_h2234095397"=dword:00000000
+"VRC_SHOW_COMMUNITY_LABS_h939850385"=dword:00000000
+"VRC_SHOW_COMPATIBILITY_WARNINGS_h1338583913"=dword:00000000
+"VRC_SHOW_FRIEND_REQUESTS_h4086929838"=dword:00000001
+"VRC_SHOW_GO_BUTTON_IN_LOAD_h2825223361"=dword:00000000
+"VRC_SHOW_GROUP_BADGE_TO_OTHERS_h3326692840"=dword:00000001
+"VRC_SHOW_GROUP_BADGES_h3905607703"=dword:00000001
+"VRC_SHOW_INVITES_NOTIFICATION_h2044224361"=dword:00000001
+"VRC_SHOW_JOIN_NOTIFICATIONS_h3231893122"=dword:00000001
+"VRC_SHOW_LEAVE_NOTIFICATIONS_h890489659"=dword:00000001
+"VRC_SHOW_PORTAL_NOTIFICATIONS_h3954406036"=dword:00000000
+"VRC_SHOW_SOCIAL_RANK_h197998419"=dword:00000001
+"VRC_SLIDER_SNAPPING_h372519771"=dword:00000001
+"VRC_STORE_LAST_SEEN_SHELF_UPDATE_h1281538320"=hex:32,30,32,36,2d,30,36,2d,30,\
+  36,54,30,35,3a,30,30,3a,31,33,2e,30,35,36,30,30,30,30,2b,30,38,3a,30,30,00
+"VRC_STREAMER_MODE_ENABLED_h2220544112"=dword:00000000
+"VRC_THIRD_PERSON_NUM_TIMES_DISMISSED_NOTIFICATION_2_h2802664255"=dword:00000000
+"VRC_TIME_FORMAT_MODE_h2868083080"=dword:00000000
+"VRC_TOUCH_AUTO_ROTATE_SPEED_h1407864758"=hex(4):00,00,00,00,00,00,2e,40
+"VRC_TOUCH_SENSITIVITY_h4266013482"=hex(4):00,00,00,e0,7a,14,be,3f
+"VRC_TRACKING_CAN_SHOW_SELFIE_FACE_TRACKING_POPUP_h634119785"=dword:00000000
+"VRC_TRACKING_CAN_SHOW_TRY_WEBCAM_FACE_TRACKING_BUTTON_h2375214202"=dword:00000000
+"VRC_TRACKING_DISABLE_EYELIDTRACKING_h3930116433"=dword:00000000
+"VRC_TRACKING_DISABLE_EYELOOKTRACKING_h4116852663"=dword:00000000
+"VRC_TRACKING_DISABLE_EYETRACKING_ON_MUTE_h673004696"=dword:00000000
+"VRC_TRACKING_DISPLAY_EYETRACKING_DEBUG_h2989052272"=dword:00000001
+"VRC_TRACKING_ENABLE_SELFIE_FACE_TRACKING_AUTO_QUALITY_h748720975"=dword:00000001
+"VRC_TRACKING_ENABLE_SELFIE_FACE_TRACKING_h4230842765"=dword:00000000
+"VRC_TRACKING_ENABLE_SELFIE_HAND_TRACKING_h2821225775"=dword:00000001
+"VRC_TRACKING_FORCE_EYETRACKING_RAYCAST_DESKTOP2_h4205275190"=dword:00000001
+"VRC_TRACKING_FORCE_EYETRACKING_RAYCAST_h804437833"=dword:00000000
+"VRC_TRACKING_GRACEFUL_QUIT_h733528550"=dword:00000000
+"VRC_TRACKING_NUM_TIMES_DISABLED_SELFIE_FACE_TRACKING_h1237361804"=dword:00000002
+"VRC_TRACKING_NUM_TIMES_ENABLED_SELFIE_FACE_TRACKING_h1097066617"=dword:00000008
+"VRC_TRACKING_NUM_TIMES_REFUSED_SELFIE_FACE_TRACKING_POPUP_h624633215"=dword:00000000
+"VRC_TRACKING_NUM_TIMES_REFUSED_SELFIE_FACE_TRACKING_POPUP_VRC_PLUS_h657805378"=dword:00000000
+"VRC_TRACKING_NUM_TIMES_SELFIE_FACE_TRACKING_POPUP_VRC_PLUS_CLICKED_h3574999867"=dword:00000000
+"VRC_TRACKING_SELFIE_FACE_TRACKING_QUALITY_LEVEL_h552326824"=dword:00000004
+"VRC_TRACKING_SELFIE_FACE_TRACKING_RECENTER_SPEED_h1070197288"=hex(4):00,00,00,\
+  00,00,00,d0,3f
+"VRC_TRACKING_SEND_VR_SYSTEM_HEAD_AND_WRIST_OSC_DATA_h4205805416"=dword:00000000
+"VRC_TRACKING_SHOULD_SHOW_OSC_TRACKING_DATA_REMINDER_h1197116246"=dword:00000001
+"VRC_TRACKING_TRACKER_PREDICTION_h717710431"=hex(4):00,00,00,00,00,00,00,00
+"VRC_UI_HAPTICS_ENABLED_h3454413680"=dword:00000001
+"VRC_UI_HEADER_CLICK_SCROLL_RESET_ENABLED_h3974911282"=dword:00000001
+"VRC_USE_COLOR_FILTER_h409466403"=dword:00000000
+"VRC_USE_GENERIC_INSTANCE_NAMES_h3396955725"=dword:00000001
+"VRC_USE_OUTLINE_MIC_ICON_h3135516813"=dword:00000000
+"VRC_USE_PIXEL_SHIFTING_HUD_h2883719856"=dword:00000000
+"VRC_WEBCAM_DEVICE_NAME_h1675525917"=hex:49,6e,74,65,67,72,61,74,65,64,20,43,\
+  61,6d,65,72,61,3a,20,49,6e,74,65,67,72,61,74,65,64,20,43,00
+"VRC_WING_PERSISTENCE_ENABLED_h2157755736"=dword:00000001
+"VRC_WORLD_TOOLTIP_MODE_h184416713"=dword:00000003
+"Wing_Left_Groups_Selected_Group_h1988611443"=hex:67,72,70,5f,30,31,33,31,62,\
+  32,32,37,2d,35,32,37,64,2d,34,37,31,66,2d,38,36,36,39,2d,32,65,35,66,31,38,\
+  38,32,34,64,62,63,00
