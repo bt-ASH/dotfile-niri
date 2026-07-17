@@ -1,0 +1,56 @@
+{
+   "checksum": "2cc77522c41f788be5c3b998d90123a8",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13417381414732172",
+               "date_last_used": "0",
+               "guid": "9327331c-7330-4c4a-a990-1db5e93a885c",
+               "id": "5",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "打怪升级",
+               "type": "url",
+               "url": "http://154.40.45.28:8000/"
+            } ],
+            "date_added": "13417381511658966",
+            "date_last_used": "0",
+            "date_modified": "13417381511659063",
+            "guid": "19fbeba8-3fe5-43a7-b13b-b6cb740a6c00",
+            "id": "6",
+            "name": "Game",
+            "type": "folder"
+         } ],
+         "date_added": "13417381394999466",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13417381394999466",
+         "date_last_used": "0",
+         "date_modified": "13417381414732172",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13417381394999466",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

@@ -1,0 +1,213 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 20,
+    "spacing": 1,
+    "margin": 0,
+    "modules-left": ["custom/power", "niri/workspaces", "custom/quote", "custom/music"],
+    "modules-right": ["clock", "pulseaudio", "backlight", "network", "cpu", "memory", "temperature", "power-profiles-daemon", "battery", "tray"],
+
+	    "custom/power": {
+        "format": "  ", // 电源图标
+        "tooltip": false,
+        "on-click": "~/.config/niri/scripts/powermenu", // 推荐安装 wlogout 这种带动效的注销界面
+        },
+	"niri/workspaces": {
+			"disable-scroll": true,
+			"all-outputs": false,
+			"format": "{icon}",
+			"format-icons": {
+					"1:web": "",
+					"2:code": "",
+					"3:term": "",
+					"4:work": "",
+					"5:music": "",
+					"6:docs": "",
+			}
+	},
+
+    "custom/music": {
+    "format-icons": {
+        // "Playing": " ", // Uncomment if not using caway
+        "Paused": " ",
+        "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
+    },
+    "escape": true,
+    "tooltip": true,
+    "exec": "~/.config/waybar/caway",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl previous",
+    "on-scroll-down": "playerctl next",
+    "on-click-right": "g4music",
+    "max-length": 35
+},
+	"wlr/taskbar": {
+			"format": "{icon}",
+			"tooltip-format": "{title} | {app_id}",
+			"on-click": "activate",
+			"on-click-middle": "close",
+			"on-click-right": "fullscreen"
+	},
+        
+        "power-profiles-daemon": {
+			"format": "{icon}",
+			"tooltip-format": "当前模式: {profile}\n驱动: {driver}","tooltip": true,
+			"format-icons": {
+					"performance": "󱐋",
+					"balanced": "☯",
+					"power-saver": ""
+                        }
+        },
+
+    "custom/playerctl": {
+        "format": " 󰐊 {}",
+        "return-type": "json",
+        "max-length": 40,
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl next",
+    },
+
+
+    "custom/quote": {
+        "format": "󰚛 {}",
+        "interval": 3600,
+        "exec": "fortune -s",
+        "on-click": "fortune | yad --text-info --width=400 --height=200 --title='Fortune'",
+        "tooltip": true
+    },
+
+  /*  "custom/updates": {
+        "format": "󰚰 {}",
+        "exec": "checkupdates | wc -l",
+        "interval": 3600,
+        "on-click": "kitty -e sudo pacman -Syyu",
+        "signal": 8
+    },
+*/
+    "custom/uptime": {
+        "format": "󰔟 {}",
+        "exec": "uptime -p | sed 's/up //; s/ days/d/; s/ hours/h/; s/ minutes/m/'",
+        "interval": 60
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰈈",
+            "deactivated": "󰈉"
+        },
+        "tooltip": true
+    },
+
+    "clock": {
+        "format": "󰥔  {:%H:%M}",
+        "format-alt": "󰃮  {:%Y-%m-%d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode"          : "month",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "on-click-right": "mode",
+            "format": {
+                "months":     "<span color='#d3c6aa'><b>{}</b></span>",
+                "days":       "<span color='#e67e80'>{}</span>",
+                "weeks":      "<span color='#a7c080'><b>W{}</b></span>",
+                "weekdays":   "<span color='#7fbbb3'><b>{}</b></span>",
+                "today":      "<span color='#dbbc7f'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+
+    "cpu": {
+        "format": "󰍛  {usage}%",
+        "tooltip": true,
+        "interval": 1,
+        "on-click": "kitty -e btop"
+    },
+
+    "memory": {
+        "format": "󰘚  {}%",
+        "interval": 1,
+        "on-click": "kitty -e btop"
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["󱃃", "󰔏", "󱃂"],
+        "on-click": "kitty -e s-tui"
+    },
+    
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "<span color='#f0bc96'>{icon}</span>   {capacity}%",
+        "format-charging": "<span color='#ffb0cd'> </span> {capacity}%{time}",
+        "format-plugged":  "<span color='#e1bdc8'>{icon}  </span>   {capacity}%",
+        "format-discharging": "<span color='#f0bc96'>{icon}</span>   {capacity}% ({time})",
+        "format-icons": ["", "", "", "", ""]
+	},
+
+    "network": {
+        "format-wifi": "󰖩  {essid} ({signalStrength}%)",
+        "format-ethernet": "󰈀  {ifname}",
+        "format-linked": "󰈀  {ifname} (No IP)",
+        "format-disconnected": "󰖪   Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click": "kitty --app-id nmtui -e nmtui"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "󰂰 {volume}%",
+        "format-bluetooth-muted": "󰂲 {icon}",
+        "format-muted": "󰝟",
+        "formaticons": {
+            "headphone": "󰋋",
+            "hands-free": "󰥰",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰄝",
+            "car": "󰄋",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol",
+        "on-click": "kitty --app-id wiremix -e wiremix",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%"
+    },
+    "backlight": {
+        "device": "intel_backlight", // 或者是 "amd_backlight"，根据你的硬件调整
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
+        "on-scroll-up": "brightnessctl set +1%",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "on-click": "kitty -e musicfox"
+    },
+
+    //"disk": {
+     //   "interval": 30,
+      //  "format": "󰋊 {percentage_used}%",
+       // "path": "/",
+        //"on-click": "kitty -e gdu /"
+    //},
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 5
+    }
+}

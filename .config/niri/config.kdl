@@ -1,8 +1,13 @@
+// PolKit 认证代理（GUI 密码弹窗）
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+
 // This config is in the KDL format: https://kdl.dev
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
 
+// 快捷键已整合到下方的 binds 块中
+// include "binds.kdl"
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://yalter.github.io/niri/Configuration:-Input
@@ -60,8 +65,8 @@ output "eDP-1" {
     focus-at-startup
 }
 output "DP-1" {
-    scale 1.4
-    mode "2240x1400@60"
+    scale 1.2
+    mode "1920x1200@60"
  //   transform "180"
     position x=0 y=0
 }
@@ -75,8 +80,8 @@ output "HDMI-A-2" {
 }
 
 // debug {
-//    render-drm-device "/dev/dri/renderD128"
-//}
+ //   render-drm-device "/dev/dri/renderD128"
+// }
 
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
@@ -133,16 +138,20 @@ layout {
  //   background-color "transparent"
 }
 
+// 动态窗口边框颜色（由 Matugen 壁纸取色生成）
+include "colors.kdl"
+
 spawn-at-startup "nm-applet"
 spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
-///spawn-at-startup "awww-daemon" "-n" "overview"
+spawn-at-startup "awww-daemon" "-n" "overview"
 spawn-at-startup "awww-daemon"
-//spawn-at-startup "awww img ~/Pictures/Wallpapers/wallhaven-l3x1ky.jpg -n overview"
-//spawn-at-startup "awww img ~/Pictures/Wallpapers/wallhaven-l3x1ky.jpg"
 spawn-at-startup "fcitx5 --replace -d"
+spawn-at-startup "showmethekey-gtk" "-k" "-A" "-C"
+spawn-at-startup "~/.config/niri/scripts/restore-wallpaper.sh"
 //spawn-at-startup "~/.config/niri/scripts/wall.sh"
 spawn-at-startup "~/.config/niri/scripts/swayidle.sh"
+spawn-at-startup "~/.config/niri/scripts/blur-overview.sh"
 spawn-sh-at-startup "clipse --listen"
 spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=niri & /usr/lib/xdg-desktop-portal-gnome"
 
@@ -157,45 +166,22 @@ hotkey-overlay {
 prefer-no-csd
 //screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-// https://yalter.github.io/niri/Configuration:-Animations 
-animations {
-        horizontal-view-movement {
-        spring damping-ratio=0.8 stiffness=400 epsilon=0.0001
-    }
-    overview-open-close {
-        spring damping-ratio=0.8 stiffness=400 epsilon=0.0001
-    }
-    workspace-switch {
-	spring damping-ratio=0.8 stiffness=400 epsilon=0.0001
-    }
-    window-resize{
-	spring damping-ratio=0.8 stiffness=400 epsilon=0.0001
-    }
-    window-movement{
-	spring damping-ratio=0.8 stiffness=400 epsilon=0.0001
-    }
-    window-open {
-        duration-ms 150
-        curve "ease-out-expo"
-    }
-    window-close {
-        duration-ms 150
-        curve "ease-out-quad"
-    }
-    //on
-    //slowdown 1.0 //延迟
-}
+// 完整动画配置
+include "animations.kdl"
 
 // https://yalter.github.io/niri/Configuration:-Window-Rules
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 blur {
-   passes 1
+  passes 1
   offset 3
   noise 0.72
   saturation 1.5
  }
-
+window-rule {
+    match is-floating=true
+    baba-is-float false
+}
 window-rule {
     geometry-corner-radius 5
     clip-to-geometry true
@@ -228,14 +214,22 @@ window-rule {
                 open-floating true
                 default-column-width {}
             }
-
+            window-rule{
+                    match app-id="baidunetdisk"
+                    default-floating-position x=20 y=20 relative-to="top-right"
+}
+            window-rule{
+                match app-id="one.alynx.showmethekey"
+                open-floating true
+                default-floating-position x=20 y=20 relative-to="bottom-right"
+}
             window-rule{
                 match app-id="clipse"
                 match app-id="bluetui"
                 match app-id="nmtui"
                 open-floating true
                 default-column-width { proportion 0.4; }
-    default-window-height { proportion 0.6; }
+                default-window-height { proportion 0.6; }
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
@@ -310,7 +304,7 @@ binds {
     Mod+Shift+Q {spawn "waypaper"; }
     Mod+Shift+W { spawn "killall" "-SIGUSR2" "waybar"; }
     Mod+Shift+M { spawn "bash" "/home/ash/.config/niri/scripts/remako.sh"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn-sh "hyprlock -c ~/.config/niri/hyprlock.conf || swaylock"; }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "volumeosd" "up"; }
@@ -467,6 +461,17 @@ binds {
 
     Mod+Shift+E { quit; }
     Mod+alt+P { power-off-monitors; }
+
+    // ===== Shorin Niri 功能快捷键（合并自 binds.kdl）=====
+    // 随机切换壁纸（Super+F10）
+    Mod+F10 hotkey-overlay-title="随机切换壁纸 Random wallpaper" { spawn "waypaper" "--random"; }
+    // 随机下载动漫壁纸
+    Mod+Shift+F10 hotkey-overlay-title="随机下载动漫壁纸 Random download anime wallpaper" { spawn "~/.config/scripts/random-anime-wallpaper.sh"; }
+    // 切换壁纸
+    Mod+Alt+W hotkey-overlay-title="切换壁纸 Change wallpaper" { spawn "waypaper"; }
+    // 切换颜色策略
+    Mod+Alt+M hotkey-overlay-title="切换颜色策略 Change color strategy" { spawn "~/.config/scripts/matugen-select-type.sh"; }
+    Mod+Alt+T hotkey-overlay-title="切换颜色策略 Change color strategy" { spawn "~/.config/scripts/matugen-select-type.sh"; }
 }
 
 // Additions
@@ -483,11 +488,17 @@ layer-rule {
     place-within-backdrop true
 }
 
-//overview {
- //   workspace-shadow {
+overview {
+    workspace-shadow {
   //      on
-   // }
-//}
+    }
+    zoom 0.5
+    // overview 背景模糊方案：
+    // niri 不支持 overview 原生模糊，但通过 blur-overview.sh 脚本用 ImageMagick 生成
+    // 模糊版壁纸后发送给独立的 awww-daemon -n overview 显示，实现模糊效果
+    // 脚本路径: ~/.config/niri/scripts/blur-overview.sh
+    // 换壁纸时自动触发（通过 waypaper post_command）
+}
 
 gestures {
     hot-corners {
@@ -529,5 +540,29 @@ recent-windows {
         Mod+Shift+Tab   { previous-window; }
         Mod+grave       { next-window     filter="app-id"; }
         Mod+Shift+grave { previous-window filter="app-id"; }
+    }
+}
+
+// Gaming optimization - disable blur/effects for fullscreen windows
+window-rule {
+    match app-id="Wuthering Waves.exe"
+    match title=r#"^Wuthering|^鸣潮|^ww"#
+    // 游戏全屏，隐藏所有特效
+    open-fullscreen true
+    // 禁用背景模糊（通过 background-effect 节点控制）
+    background-effect {
+        blur false
+    }
+    // 禁用装饰：窗口四角、圆角裁剪、边框
+    geometry-corner-radius 0
+    clip-to-geometry false
+    focus-ring {
+        off
+    }
+    // 优化透明度，减少合成开销
+    opacity 1.0
+    // 无阴影
+    shadow {
+        off
     }
 }

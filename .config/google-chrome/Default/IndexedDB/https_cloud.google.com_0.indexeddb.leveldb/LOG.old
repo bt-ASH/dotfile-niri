@@ -1,0 +1,6 @@
+2026/01/04-05:14:39.753 2344a Creating DB /home/ash/.config/google-chrome/Default/IndexedDB/https_cloud.google.com_0.indexeddb.leveldb since it was missing.
+2026/01/04-05:14:39.766 2344a Reusing MANIFEST /home/ash/.config/google-chrome/Default/IndexedDB/https_cloud.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/01/04-05:15:11.771 2344a Level-0 table #5: started
+2026/01/04-05:15:11.774 2344a Level-0 table #5: 1268 bytes OK
+2026/01/04-05:15:11.779 2344a Delete type=0 #3
+2026/01/04-05:15:11.780 2344a Manual compaction at level-0 from (begin) .. (end); will stop at (end)

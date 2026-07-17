@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=鸣潮 极限帧率
+Comment=鸣潮极限帧率优化启动
+Exec=/home/ash/Games/Wuwu-config/run_ww_framebuster.sh
+Icon=/home/ash/Games/ww/pfx/drive_c/Program Files/Wuthering Waves/Wuthering Waves.exe
+Terminal=true
+Type=Application
+Categories=Game;

@@ -1,0 +1,13 @@
+[Unit]
+Description=BaiduNetdisk float sticky (niri)
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=niri-float-sticky -app-id baidunetdisk
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target

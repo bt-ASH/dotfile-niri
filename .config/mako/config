@@ -1,0 +1,15 @@
+# Mako Config
+# Generated with Matugen - Dynamic Colors
+layer=top
+border-size=2
+border-radius=8
+default-timeout=5000
+font=Noto Sans CJK SC 12
+progress-color=over #313244
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+background-color=#3b383e
+text-color=#e7e0e8
+border-color=#958e99
+
+[urgency=high]
+border-color=#958e99

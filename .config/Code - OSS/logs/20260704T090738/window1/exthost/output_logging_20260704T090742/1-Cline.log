@@ -1,0 +1,33 @@
+[Cline] Setting up VS Code host...
+LOG [DistinctId] initialized:
+DEBUG [AgentConfigLoader] Loaded 0 agent config(s) from disk.
+LOG PostHog client initialized
+LOG [BannerService] initialized
+LOG [Controller] ClineProvider instantiated
+DEBUG Token expired or expiring soon, attempting refresh (attempt 1/3). API Base URL: https://api.cline.bot
+LOG [Cline] extension activated in 522.0235860000003 ms
+LOG [OTEL] Creating MeterProvider with exporters: otlp
+LOG [OTEL] OTLP metrics reader created (http/json, interval: 60000ms)
+LOG [OTEL] MeterProvider initialized with 1 reader(s)
+LOG [OTEL] Creating LoggerProvider with exporters: otlp
+LOG [OTEL] OTLP logs exporter created (http/json)
+LOG [OTEL] Log batch processor configured: maxQueue=2048, batchSize=512, timeout=5000ms
+LOG [OTEL] LoggerProvider initialized
+LOG [OTEL DEBUG] OpenTelemetry initialization complete
+LOG [OTEL] Provider initialized - Logger: true, Meter: true
+INFO TelemetryProviderFactory: Created providers - PostHogTelemetryProvider, OpenTelemetryProvider
+INFO [TelemetryService] Initialized with 2 telemetry provider(s)
+LOG [VscodeWebviewProvider] Webview view resolved
+LOG FileContextTracker: Processed 3 tasks, found 0 pending warnings, 0 orphaned, deleted 0, took 3362ms
+DEBUG Token refresh successful
+LOG [DistinctId] Updating...
+LOG [DEBUG] sending OpenRouter models event
+LOG No Groq API key found, using static models as fallback
+ERROR Error fetching Baseten models:
+ERROR Baseten API Error:
+LOG Vercel AI Gateway models fetched and saved
+LOG OpenRouter models fetched and saved
+LOG [BannerService] Raw API response: 0 items: []
+LOG [BannerService] After provider filter: 0 banners: []
+LOG [BannerService] Fetched 0 banner(s) at 2026-07-04T01:07:55.118Z
+INFO [BannerService] Fetched

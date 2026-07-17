@@ -1,0 +1,3 @@
+/submit/firefox-desktop/usage-reporting/1/56ea53f0-356d-4ed0-b0d1-748bb455577d
+{"metrics":{"counter":{"browser.engagement.active_ticks":1},"uuid":{"usage.profile_id":"28d50460-3a3f-4d65-8fcf-db9a2e9497bf","usage.profile_group_id":"3591a63b-5821-4816-a096-826a7dfb583b"},"string":{"usage.distribution_id":"nixos","usage.app_build":"20260511200624","usage.app_channel":"default","usage.os_version":"7.0.8","usage.app_display_version":"150.0.3","usage.os":"Linux"},"boolean":{"usage.is_default_browser":false},"datetime":{"usage.first_run_date":"2026-03-31+08:00"}}}
+{"headers":{},"body_has_info_sections":false,"ping_name":"usage-reporting","uploader_capabilities":[]}

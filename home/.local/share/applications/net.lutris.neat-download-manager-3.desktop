@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Type=Application
+Name=Neat Download Manager
+Icon=lutris_neat-download-manager
+Exec=env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/3
+Categories=Game
+TryExec=lutris

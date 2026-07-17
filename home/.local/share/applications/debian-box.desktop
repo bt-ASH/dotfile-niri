@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Debian-box
+GenericName=Terminal entering Debian-box
+Comment=Terminal entering Debian-box
+Categories=Distrobox;System;Utility
+Exec=/usr/bin/distrobox enter  debian-box
+Icon=/home/ash/.local/share/icons/distrobox/debian.png
+Keywords=distrobox;
+NoDisplay=false
+Terminal=true
+TryExec=/usr/bin/distrobox
+Type=Application
+Actions=Remove;
+
+[Desktop Action Remove]
+Name=Remove Debian-box from system
+Exec=/usr/bin/distrobox rm  debian-box

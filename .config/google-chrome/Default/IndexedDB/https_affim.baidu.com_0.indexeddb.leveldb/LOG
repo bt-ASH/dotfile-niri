@@ -1,0 +1,7 @@
+2026/04/26-18:56:12.652 39788 Reusing MANIFEST /home/ash/.config/google-chrome/Default/IndexedDB/https_affim.baidu.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/26-18:56:12.652 39788 Recovering log #3
+2026/04/26-18:56:12.653 39788 Reusing old log /home/ash/.config/google-chrome/Default/IndexedDB/https_affim.baidu.com_0.indexeddb.leveldb/000003.log 
+2026/04/26-18:56:15.489 3978b Level-0 table #5: started
+2026/04/26-18:56:15.493 3978b Level-0 table #5: 1616 bytes OK
+2026/04/26-18:56:15.497 3978b Delete type=0 #3
+2026/04/26-18:56:15.498 3978b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

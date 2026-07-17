@@ -1,0 +1,369 @@
+[keyboard-bqn]
+Description="Keyboard - BQN"
+Language=en
+Label=bqn
+
+[keyboard-apl]
+Description="Keyboard - APL"
+Language=en
+Label=apl
+
+[keyboard-apl-dyalog]
+Description="Keyboard - APL - APL symbols (Dyalog APL)"
+Language=en
+Label="dlg (dyalog)"
+
+[keyboard-apl-sax]
+Description="Keyboard - APL - APL symbols (SAX, Sharp APL for Unix)"
+Language=en
+Label=sax
+
+[keyboard-apl-unified]
+Description="Keyboard - APL - APL symbols (unified)"
+Language=en
+Label="ufd (unified)"
+
+[keyboard-apl-apl2]
+Description="Keyboard - APL - APL symbols (IBM APL2)"
+Language=en
+Label=apl2
+
+[keyboard-apl-aplplusII]
+Description="Keyboard - APL - APL symbols (Manugistics APL*PLUS II)"
+Language=en
+Label="aplII (aplplusII)"
+
+[keyboard-apl-aplx]
+Description="Keyboard - APL - APL symbols (APLX unified)"
+Language=en
+Label=aplx
+
+[keyboard-ua]
+Description="Keyboard - Ukrainian"
+Language=uk
+Label=uk
+
+[keyboard-ua-phonetic]
+Description="Keyboard - Ukrainian - Ukrainian (phonetic)"
+Language=uk
+Label="ua (phonetic)"
+
+[keyboard-ua-typewriter]
+Description="Keyboard - Ukrainian - Ukrainian (typewriter)"
+Language=uk
+Label="ua (typewriter)"
+
+[keyboard-ua-winkeys]
+Description="Keyboard - Ukrainian - Ukrainian (Windows)"
+Language=uk
+Label="ua (winkeys)"
+
+[keyboard-ua-winkeysenhanced]
+Description="Keyboard - Ukrainian - Ukrainian (Windows Enhanced)"
+Language=uk
+Label="ua (winkeysenhanced)"
+
+[keyboard-ua-macOS]
+Description="Keyboard - Ukrainian - Ukrainian (macOS)"
+Language=uk
+Label="ua (macOS)"
+
+[keyboard-ua-legacy]
+Description="Keyboard - Ukrainian - Ukrainian (legacy)"
+Language=uk
+Label="ua (legacy)"
+
+[keyboard-ua-homophonic]
+Description="Keyboard - Ukrainian - Ukrainian (homophonic)"
+Language=uk
+Label="ua (homophonic)"
+
+[keyboard-ua-crh]
+Description="Keyboard - Ukrainian - Crimean Tatar (Turkish Q)"
+Language=crh
+Label=crh
+
+[keyboard-ua-crh_f]
+Description="Keyboard - Ukrainian - Crimean Tatar (Turkish F)"
+Language=crh
+Label="crh (crh_f)"
+
+[keyboard-ua-crh_alt]
+Description="Keyboard - Ukrainian - Crimean Tatar (Turkish Alt-Q)"
+Language=crh
+Label="crh (crh_alt)"
+
+[keyboard-ua-sun_type6]
+Description="Keyboard - Ukrainian - Ukrainian (Sun Type 6/7)"
+Language=uk
+Label="ua (sun_type6)"
+
+[keyboard-th]
+Description="Keyboard - Thai"
+Language=th
+Label=th
+
+[keyboard-th-tis]
+Description="Keyboard - Thai - Thai (TIS-820.2538)"
+Language=th
+Label="th (tis)"
+
+[keyboard-th-pat]
+Description="Keyboard - Thai - Thai (Pattachote)"
+Language=th
+Label="th (pat)"
+
+[keyboard-th-mnc]
+Description="Keyboard - Thai - Thai (Manoonchai)"
+Language=th
+Label="th (mnc)"
+
+[keyboard-tz]
+Description="Keyboard - Swahili (Tanzania)"
+Language=sw
+Label=sw
+
+[keyboard-latam]
+Description="Keyboard - Spanish (Latin American)"
+Language=es
+Label=es
+
+[keyboard-latam-nodeadkeys]
+Description="Keyboard - Spanish (Latin American) - Spanish (Latin American, no dead keys)"
+Language=es
+Label="latam (nodeadkeys)"
+
+[keyboard-latam-deadtilde]
+Description="Keyboard - Spanish (Latin American) - Spanish (Latin American, dead tilde)"
+Language=es
+Label="latam (deadtilde)"
+
+[keyboard-latam-dvorak]
+Description="Keyboard - Spanish (Latin American) - Spanish (Latin American, Dvorak)"
+Language=es
+Label="latam (dvorak)"
+
+[keyboard-latam-colemak]
+Description="Keyboard - Spanish (Latin American) - Spanish (Latin American, Colemak)"
+Language=es
+Label="latam (colemak)"
+
+[keyboard-sk]
+Description="Keyboard - Slovak"
+Language=sk
+Label=sk
+
+[keyboard-sk-bksl]
+Description="Keyboard - Slovak - Slovak (extra backslash)"
+Language=sk
+Label="sk (bksl)"
+
+[keyboard-sk-qwerty]
+Description="Keyboard - Slovak - Slovak (QWERTY)"
+Language=sk
+Label="sk (qwerty)"
+
+[keyboard-sk-qwerty_bksl]
+Description="Keyboard - Slovak - Slovak (QWERTY, extra backslash)"
+Language=sk
+Label="sk (qwerty_bksl)"
+
+[keyboard-sk-acc]
+Description="Keyboard - Slovak - Slovak (ACC layout, only accented letters)"
+Language=sk
+Label="sk (acc)"
+
+[keyboard-sk-sun_type6]
+Description="Keyboard - Slovak - Slovak (Sun Type 6/7)"
+Language=sk
+Label="sk (sun_type6)"
+
+[keyboard-ru]
+Description="Keyboard - Russian"
+Language=ru
+Label=ru
+
+[keyboard-ru-phonetic]
+Description="Keyboard - Russian - Russian (phonetic)"
+Language=ru
+Label="ru (phonetic)"
+
+[keyboard-ru-phonetic_winkeys]
+Description="Keyboard - Russian - Russian (phonetic, Windows)"
+Language=ru
+Label="ru (phonetic_winkeys)"
+
+[keyboard-ru-phonetic_YAZHERTY]
+Description="Keyboard - Russian - Russian (phonetic, YAZHERTY)"
+Language=ru
+Label="ru (phonetic_YAZHERTY)"
+
+[keyboard-ru-phonetic_azerty]
+Description="Keyboard - Russian - Russian (phonetic, AZERTY)"
+Language=ru
+Label="ru (phonetic_azerty)"
+
+[keyboard-ru-phonetic_dvorak]
+Description="Keyboard - Russian - Russian (phonetic, Dvorak)"
+Language=ru
+Label="ru (phonetic_dvorak)"
+
+[keyboard-ru-typewriter]
+Description="Keyboard - Russian - Russian (typewriter)"
+Language=ru
+Label="ru (typewriter)"
+
+[keyboard-ru-ruchey_ru]
+Description="Keyboard - Russian - Russian (engineering, RU)"
+Language=ru
+Label="ru (ruchey_ru)"
+
+[keyboard-ru-ruchey_en]
+Description="Keyboard - Russian - Russian (engineering, EN)"
+Language=ru
+Label="en (ruchey_en)"
+
+[keyboard-ru-legacy]
+Description="Keyboard - Russian - Russian (legacy)"
+Language=ru
+Label="ru (legacy)"
+
+[keyboard-ru-typewriter-legacy]
+Description="Keyboard - Russian - Russian (typewriter, legacy)"
+Language=ru
+Label="ru (typewriter-legacy)"
+
+[keyboard-ru-dos]
+Description="Keyboard - Russian - Russian (DOS)"
+Language=ru
+Label="ru (dos)"
+
+[keyboard-ru-mac]
+Description="Keyboard - Russian - Russian (Macintosh)"
+Language=ru
+Label="ru (mac)"
+
+[keyboard-ru-ab]
+Description="Keyboard - Russian - Abkhazian (Russia)"
+Language=ab
+Label="ru (ab)"
+
+[keyboard-ru-bak]
+Description="Keyboard - Russian - Bashkirian"
+Language=ba
+Label="ru (bak)"
+
+[keyboard-ru-cv]
+Description="Keyboard - Russian - Chuvash"
+Language=cv
+Label="ru (cv)"
+
+[keyboard-ru-cv_latin]
+Description="Keyboard - Russian - Chuvash (Latin)"
+Language=cv
+Label="ru (cv_latin)"
+
+[keyboard-ru-xal]
+Description="Keyboard - Russian - Kalmyk"
+Language=xal
+Label="ru (xal)"
+
+[keyboard-ru-kom]
+Description="Keyboard - Russian - Komi"
+Language=kv
+Label="ru (kom)"
+
+[keyboard-ru-chm]
+Description="Keyboard - Russian - Mari"
+Language=chm
+Label="ru (chm)"
+
+[keyboard-ru-os_legacy]
+Description="Keyboard - Russian - Ossetian (legacy)"
+Language=os
+Label="ru (os_legacy)"
+
+[keyboard-ru-os_winkeys]
+Description="Keyboard - Russian - Ossetian (Windows)"
+Language=os
+Label="ru (os_winkeys)"
+
+[keyboard-ru-srp]
+Description="Keyboard - Russian - Serbian (Russia)"
+Language=ru
+Label="ru (srp)"
+
+[keyboard-ru-tt]
+Description="Keyboard - Russian - Tatar"
+Language=tt
+Label="ru (tt)"
+
+[keyboard-ru-udm]
+Description="Keyboard - Russian - Udmurt"
+Language=udm
+Label="ru (udm)"
+
+[keyboard-ru-sah]
+Description="Keyboard - Russian - Yakut"
+Language=sah
+Label="ru (sah)"
+
+[keyboard-ru-chu]
+Description="Keyboard - Russian - Church Slavonic"
+Language=cu
+Label="ru (chu)"
+
+[keyboard-ru-ruu]
+Description="Keyboard - Russian - Russian (plus Ukrainian and Belarusian letters)"
+Language=ru
+Label="ru (ruu)"
+
+[keyboard-ru-rulemak]
+Description="Keyboard - Russian - Russian (Rulemak, phonetic Colemak)"
+Language=ru
+Label="ru (rulemak)"
+
+[keyboard-ru-phonetic_mac]
+Description="Keyboard - Russian - Russian (phonetic, Macintosh)"
+Language=ru
+Label="ru (phonetic_mac)"
+
+[keyboard-ru-sun_type6]
+Description="Keyboard - Russian - Russian (Sun Type 6/7)"
+Language=ru
+Label="ru (sun_type6)"
+
+[keyboard-ru-unipunct]
+Description="Keyboard - Russian - Russian (with US punctuation)"
+Language=ru
+Label="ru (unipunct)"
+
+[keyboard-ru-gost-6431-75-48]
+Description="Keyboard - Russian - Russian (GOST 6431-75)"
+Language=ru
+Label="ru (gost-6431-75-48)"
+
+[keyboard-ru-gost-14289-88]
+Description="Keyboard - Russian - Russian (GOST 14289-88)"
+Language=ru
+Label="ru (gost-14289-88)"
+
+[keyboard-ru-prxn]
+Description="Keyboard - Russian - Russian (Polyglot and Reactionary)"
+Language=ru
+Label="ru (prxn)"
+
+[keyboard-ru-winkeys-p]
+Description="Keyboard - Russian - Russian (Programmer)"
+Language=ru
+Label=winkeys-p
+
+[keyboard-ru-typo]
+Description="Keyboard - Russian - Russian (plus typographic symbols)"
+Language=ru
+Label="ru (typo)"
+
+[keyboard-ru-rtu]
+Description="Keyboard - Russian - Russian (plus Tatar letters)"
+Language=ru
+Label="ru (rtu)"

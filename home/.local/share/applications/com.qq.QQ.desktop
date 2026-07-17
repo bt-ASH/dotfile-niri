@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=QQ
+Name[zh_CN]=QQ
+Comment=QQ
+Exec=/usr/bin/flatpak run --socket=wayland --branch=stable --arch=x86_64 --command=qq com.qq.QQ
+Icon=com.qq.QQ
+Terminal=false
+Type=Application
+Categories=Network;InstantMessaging;
+StartupWMClass=QQ

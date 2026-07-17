@@ -1,0 +1,27 @@
+2026-06-16 02:27:13.528 [info] Extension host with pid 1596593 started
+2026-06-16 02:27:13.828 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-06-16 02:27:13.876 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-06-16 02:27:13.919 [info] ExtensionService#_doActivateExtension saoudrizwan.claude-dev, startup: false, activationEvent: 'onLanguage'
+2026-06-16 02:27:18.105 [info] ExtensionService#_doActivateExtension GitHub.copilot-chat, startup: false, activationEvent: 'onChatParticipant:github.copilot.editsAgent'
+2026-06-16 02:27:20.406 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2026-06-16 02:27:20.460 [error] Error calling provideChatSessionProviderOptions for handle 1: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-16 02:27:20.612 [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+2026-06-16 02:27:20.862 [error] Error calling provideChatSessionProviderOptions for handle 1: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-16 02:27:20.884 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2026-06-16 02:27:20.962 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-06-16 02:27:21.014 [error] Error calling provideChatSessionProviderOptions for handle 1: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-16 02:27:21.096 [info] Eager extensions activated
+2026-06-16 02:27:21.154 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-06-16 02:27:21.162 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-06-16 02:27:21.193 [info] ExtensionService#_doActivateExtension asvetliakov.vscode-neovim, startup: false, activationEvent: 'onStartupFinished'
+2026-06-16 02:27:21.272 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2026-06-16 02:27:24.016 [error] Error calling provideChatSessionProviderOptions for handle 1: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-16 02:27:32.940 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+2026-06-16 02:27:32.954 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2026-06-16 02:27:32.991 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+2026-06-16 02:27:33.124 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+2026-06-16 02:27:47.905 [info] Extension host terminating: received terminate message from renderer
+2026-06-16 02:27:47.992 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2026-06-16 02:27:47.994 [warning] Canceled
+2026-06-16 02:27:47.994 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2026-06-16 02:27:47.997 [warning] Canceled

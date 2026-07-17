@@ -1,0 +1,12 @@
+[Unit]
+Description=ShowMeTheKey float sticky (niri)
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=niri-float-sticky -app-id one.alynx.showmethekey
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target

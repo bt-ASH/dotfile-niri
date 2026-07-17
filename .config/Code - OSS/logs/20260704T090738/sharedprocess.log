@@ -1,0 +1,7 @@
+2026-07-04 09:07:47.259 [info] Getting Manifest... saoudrizwan.claude-dev
+2026-07-04 09:07:48.273 [info] Installing extension: saoudrizwan.claude-dev {"productVersion":{"version":"1.124.0","date":"2026-06-09T21:29:32-07:00"},"pinned":false,"operation":3,"isApplicationScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/ash/.vscode-oss/extensions/extensions.json","path":"/home/ash/.vscode-oss/extensions/extensions.json","scheme":"vscode-userdata"},"isBuiltin":false}
+2026-07-04 09:07:56.257 [info] Extension signature verification result for saoudrizwan.claude-dev: Success. Executed: true. Duration: 815ms.
+2026-07-04 09:07:58.037 [info] Extracted extension to file:///home/ash/.vscode-oss/extensions/saoudrizwan.claude-dev-4.0.6-universal: saoudrizwan.claude-dev
+2026-07-04 09:07:58.067 [info] Renamed to /home/ash/.vscode-oss/extensions/saoudrizwan.claude-dev-4.0.6-universal
+2026-07-04 09:07:58.104 [info] Marked extension as removed saoudrizwan.claude-dev-3.89.2-universal
+2026-07-04 09:07:58.119 [info] Extension installed successfully: saoudrizwan.claude-dev vscode-userdata:/home/ash/.vscode-oss/extensions/extensions.json

@@ -1,0 +1,60 @@
+2026-06-14 17:04:38.863 [info] [GitExtensionServiceImpl] Initializing Git extension service.
+2026-06-14 17:04:38.863 [info] [GitExtensionServiceImpl] Successfully activated the vscode.git extension.
+2026-06-14 17:04:38.863 [info] [GitExtensionServiceImpl] Enablement state of the vscode.git extension: true.
+2026-06-14 17:04:38.863 [info] [GitExtensionServiceImpl] Successfully registered Git commit message provider.
+2026-06-14 17:04:38.863 [info] ConversationFeature: Waiting for copilot token or BYOK model to activate conversation feature
+2026-06-14 17:04:38.863 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without a Copilot token source
+2026-06-14 17:04:38.863 [info] [CopilotCLIModels] Skipping model fetch since there is no Copilot token source
+2026-06-14 17:04:38.863 [info] BYOK: registered 9 provider(s): ollama, anthropic, gemini, xai, openai, openrouter, azure, customoai, customendpoint
+2026-06-14 17:04:38.863 [info] BYOK: fetching known models list
+2026-06-14 17:04:38.863 [info] Using the Electron fetcher.
+2026-06-14 17:04:38.863 [info] activationBlocker from 'languageModelAccess' took for 217ms
+2026-06-14 17:04:38.863 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:38.863 [error] [CopilotCLISDK] Failed to initialize logger: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:38.863 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:38.863 [error] Failed to initialize Copilot CLI Session Manager: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:38.863 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:38.863 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:38.863 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:38.863 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:38.863 [info] BYOK: Copilot Chat known models list fetched successfully.
+2026-06-14 17:04:38.863 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:38.863 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without a Copilot token source
+2026-06-14 17:04:38.863 [info] [CopilotCLI] MCP server started. Lock file: /home/ash/.copilot/ide/b27182bd-0288-4eaf-8621-22251a6bad48.lock
+2026-06-14 17:04:38.863 [info] [CopilotCLI] Server URI: unix:/tmp/mcp-qcAGMe/mcp.sock#%2Fmcp
+2026-06-14 17:04:38.900 [info] Logged in as bt-ASH
+2026-06-14 17:04:39.466 [info] Got Copilot token for bt-ASH
+2026-06-14 17:04:39.466 [info] Copilot Chat: 0.52.0, VS Code: 1.124.0
+2026-06-14 17:04:39.512 [info] [context keys] Setting context key: github.copilot-chat.activated
+2026-06-14 17:04:39.782 [info] AuthenticationService: firing onDidAuthenticationChange from handleAuthChangeEvent. Has token: true
+2026-06-14 17:04:39.782 [info] copilot token sku: free_limited_copilot
+2026-06-14 17:04:39.782 [info] ConversationFeature: Activating contributions
+2026-06-14 17:04:39.782 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2026-06-14 17:04:39.819 [info] Registering default platform agent...
+2026-06-14 17:04:39.831 [info] activationBlocker from 'conversationFeature' took for 1771ms
+2026-06-14 17:04:39.835 [info] GithubAvailableEmbeddingTypesManager: Got embeddings. Primary: metis-1024-I16-Binary. Deprecated: 
+2026-06-14 17:04:39.838 [info] WorkspaceChunkSearchService: using embedding type metis-1024-I16-Binary
+2026-06-14 17:04:39.842 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:39.842 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:39.843 [error] [CopilotCLIModels] Failed to fetch available models: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:39.913 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:39.917 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:39.921 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:40.550 [info] Fetched model metadata in 2421ms f54d9da7-df81-4220-8845-ef5d2c415e59
+2026-06-14 17:04:40.768 [info] Latest entry: ccreq:latest.copilotmd
+2026-06-14 17:04:40.770 [info] ccreq:66de224a.copilotmd | markdown
+2026-06-14 17:04:40.807 [info] ConversationFeature: BYOK models available
+2026-06-14 17:04:40.807 [info] copilot token sku: free_limited_copilot
+2026-06-14 17:05:12.571 [info] message 0 returned. finish reason: [stop]
+2026-06-14 17:05:12.575 [info] request done: requestId: [753c805e-bc49-4270-8459-f4e749ec3689] model deployment ID: []
+2026-06-14 17:05:12.582 [info] ccreq:7cf84875.copilotmd | success | gpt-4o-mini-2024-07-18 | 1426ms | [title]
+2026-06-14 17:05:12.647 [warning] [SessionTranscript] No workspace storage available, transcript will not be written
+2026-06-14 17:05:13.033 [info] message 0 returned. finish reason: [stop]
+2026-06-14 17:05:13.035 [info] request done: requestId: [dbd8845f-82d4-4904-84e1-73073c88bd79] model deployment ID: []
+2026-06-14 17:05:13.036 [info] ccreq:3c49e08b.copilotmd | success | gpt-4o-mini-2024-07-18 | 1839ms | [progressMessages]
+2026-06-14 17:05:13.046 [info] message 0 returned. finish reason: [stop]
+2026-06-14 17:05:13.049 [info] request done: requestId: [59416c40-fd08-447d-9f23-fa8321788381] model deployment ID: []
+2026-06-14 17:05:13.050 [info] ccreq:bf896a4c.copilotmd | success | gpt-4o-mini-2024-07-18 | 1862ms | [progressMessages]
+2026-06-14 17:05:39.440 [info] ccreq:780c9fb9.copilotmd | success | oswe-vscode-prime | 25861ms | [panel/editAgent]
+2026-06-14 17:05:40.222 [info] [ToolCallingLoop] Stop hook result: shouldContinue=false, reasons=undefined
+2026-06-14 17:29:44.682 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js

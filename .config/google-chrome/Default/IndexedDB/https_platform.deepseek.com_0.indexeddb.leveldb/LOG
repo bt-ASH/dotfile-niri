@@ -1,0 +1,6 @@
+2026/01/02-13:25:06.626 302e Creating DB /home/ash/.config/google-chrome/Default/IndexedDB/https_platform.deepseek.com_0.indexeddb.leveldb since it was missing.
+2026/01/02-13:25:06.634 302e Reusing MANIFEST /home/ash/.config/google-chrome/Default/IndexedDB/https_platform.deepseek.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/01/02-15:01:38.001 302e Level-0 table #5: started
+2026/01/02-15:01:38.006 302e Level-0 table #5: 1375 bytes OK
+2026/01/02-15:01:38.012 302e Delete type=0 #3
+2026/01/02-15:01:38.014 302e Manual compaction at level-0 from (begin) .. (end); will stop at (end)

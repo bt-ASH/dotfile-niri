@@ -1,0 +1,24 @@
+[Desktop Entry]
+Comment=Kingsoft Pdf Reader
+Comment[zh_CN]=WPS PDF阅读器
+Exec=env GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wpspdf --file-forwarding com.wps.Office @@ %f @@
+GenericName=Kingsoft Pdf Reader
+GenericName[zh_CN]=WPS PDF
+MimeType=application/pdf
+Name=WPS PDF
+Name[zh_CN]=WPS PDF
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=Office;WordProcessor;Qt;
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+Icon=com.wps.Office.pdfmain
+InitialPreference=3
+StartupWMClass=wpspdf
+X-Desktop-File-Install-Version=0.28
+X-Flatpak-RenamedFrom=wps-office-pdf.desktop;
+X-Flatpak-Tags=proprietary;
+X-Flatpak=com.wps.Office

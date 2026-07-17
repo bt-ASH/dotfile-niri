@@ -1,0 +1,64 @@
+2026-06-14 17:01:31.579 [info] Started local extension host with pid 616192.
+2026-06-14 17:01:33.827 [info] [AccountPolicyGate] apply: state=inactive, reason=undefined, isRestricted=false
+2026-06-14 17:01:37.546 [info] Extension host (LocalProcess pid: 616192) is unresponsive.
+2026-06-14 17:01:38.421 [info] [perf] Render performance baseline is 96ms
+2026-06-14 17:01:38.828 [info] [AccountPolicyGate] apply: state=inactive, reason=undefined, isRestricted=false
+2026-06-14 17:01:39.512 [error] [Extension Host] (node:616192) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2026-06-14 17:01:39.570 [info] Extension host (LocalProcess pid: 616192) is responsive.
+2026-06-14 17:04:30.956 [warning] [DefaultAccount] Managed settings fetch returned non-success status 404; falling back to local-only policy
+2026-06-14 17:04:38.000 [error] [Extension Host] Error: Cannot find module 'source-map-support'
+Require stack:
+- /usr/lib/code/extensions/copilot/dist/extension.js
+- /usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js
+	at Module._resolveFilename (node:internal/modules/cjs/loader:1483:15)
+	at n._resolveFilename (node:electron/js2c/utility_init:2:16269)
+	at n._resolveFilename (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:683:29133)
+	at wrapResolveFilename (node:internal/modules/cjs/loader:1056:27)
+	at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1080:10)
+	at defaultResolve (node:internal/modules/cjs/loader:1131:20)
+	at nextStep (node:internal/modules/customization_hooks:189:26)
+	at resolve (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:686:113)
+	at nextStep (node:internal/modules/customization_hooks:189:26)
+	at resolveWithHooks (node:internal/modules/customization_hooks:417:10)
+	at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1144:25)
+	at Module._load (node:internal/modules/cjs/loader:1269:25)
+	at c._load (node:electron/js2c/node_init:2:18095)
+	at i._load (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:837:6622)
+	at n._load (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:683:28855)
+	at n._load (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:675:25845)
+	at wrapModuleLoad (node:internal/modules/cjs/loader:262:19)
+	at Module.require (node:internal/modules/cjs/loader:1583:12)
+	at Module.require (/usr/lib/code/extensions/copilot/dist/extension.js:494:36345)
+	at require (node:internal/modules/helpers:153:16)
+	at Object.qas [as configureDevPackages] (/usr/lib/code/extensions/copilot/dist/extension.js:7193:1385)
+	at A_n (/usr/lib/code/extensions/copilot/dist/extension.js:1166:8324)
+	at $as (/usr/lib/code/extensions/copilot/dist/extension.js:7193:1536)
+	at Nd._callActivateOptional (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:538:18592)
+	at Nd._callActivate (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:538:18302)
+	at file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:538:16276
+	at async Lb._activate (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:534:16021)
+	at async Lb._waitForDepsThenActivate (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:534:15963)
+	at async Lb._initialize (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:534:15330)
+2026-06-14 17:04:38.554 [error] Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js: Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:873:10)
+    at defaultResolve (node:internal/modules/esm/resolve:1000:11)
+    at nextResolve (node:internal/modules/esm/hooks:785:28)
+    at resolve (data:text/javascript;base64,CglleHBvcnQgYXN5bmMgZnVuY3Rpb24gcmVzb2x2ZShzcGVjaWZpZXIsIGNvbnRleHQsIG5leHRSZXNvbHZlKSB7CgkJaWYgKHNwZWNpZmllciA9PT0gJ2ZzJykgewoJCQlyZXR1cm4gewoJCQkJZm9ybWF0OiAnYnVpbHRpbicsCgkJCQlzaG9ydENpcmN1aXQ6IHRydWUsCgkJCQl1cmw6ICdub2RlOm9yaWdpbmFsLWZzJwoJCQl9OwoJCX0KCgkJLy8gRGVmZXIgdG8gdGhlIG5leHQgaG9vayBpbiB0aGUgY2hhaW4sIHdoaWNoIHdvdWxkIGJlIHRoZQoJCS8vIE5vZGUuanMgZGVmYXVsdCByZXNvbHZlIGlmIHRoaXMgaXMgdGhlIGxhc3QgdXNlci1zcGVjaWZpZWQgbG9hZGVyLgoJCXJldHVybiBuZXh0UmVzb2x2ZShzcGVjaWZpZXIsIGNvbnRleHQpOwoJfQ==:13:10)
+    at nextResolve (node:internal/modules/esm/hooks:785:28)
+    at AsyncLoaderHooksOnLoaderHookWorker.resolve (node:internal/modules/esm/hooks:269:30)
+    at MessagePort.handleMessage (node:internal/modules/esm/worker:251:24)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:843:20)
+    at MessagePort.<anonymous> (node:internal/per_context/messageport:23:28)
+2026-06-14 17:04:39.920 [error] [ChatSessionsService] Failed to resolve sessions for provider copilotcli Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:39.920 [error] [ChatSessionsService] Failed to resolve sessions for provider copilotcli Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:39.935 [error] [ChatSessionsService] Failed to resolve sessions for provider copilotcli Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:39.935 [error] [ChatSessionsService] Failed to resolve sessions for provider copilotcli Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:04:43.121 [warning] [DefaultAccount] Managed settings fetch returned non-success status 404; falling back to local-only policy
+2026-06-14 17:29:44.688 [error] [ChatSessionsService] Failed to resolve sessions for provider copilotcli Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:29:44.689 [error] [ChatSessionsService] Failed to resolve sessions for provider copilotcli Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-14 17:30:45.534 [warning] Attempted to report in-progress status for unknown chat session type 'copilot-cloud-agent'
+2026-06-14 17:30:45.535 [warning] Attempted to report in-progress status for unknown chat session type 'copilotcli'
+2026-06-14 17:30:45.536 [warning] Attempted to report in-progress status for unknown chat session type 'claude-code'
+2026-06-14 17:30:45.722 [warning] [lifecycle] onWillShutdown is taking a long time, pending operations: join.chatEditingSession

@@ -1,0 +1,34 @@
+[Cline] Setting up VS Code host...
+LOG [DistinctId] initialized:
+DEBUG [AgentConfigLoader] Loaded 0 agent config(s) from disk.
+LOG PostHog client initialized
+LOG [BannerService] initialized
+LOG [Controller] ClineProvider instantiated
+LOG [Cline] extension activated in 879.7262790000004 ms
+LOG [OTEL] Creating MeterProvider with exporters: otlp
+LOG [OTEL] OTLP metrics reader created (http/json, interval: 60000ms)
+LOG [OTEL] MeterProvider initialized with 1 reader(s)
+LOG [OTEL] Creating LoggerProvider with exporters: otlp
+LOG [OTEL] OTLP logs exporter created (http/json)
+LOG [OTEL] Log batch processor configured: maxQueue=2048, batchSize=512, timeout=5000ms
+LOG [OTEL] LoggerProvider initialized
+LOG [OTEL DEBUG] OpenTelemetry initialization complete
+LOG [OTEL] Provider initialized - Logger: true, Meter: true
+INFO TelemetryProviderFactory: Created providers - PostHogTelemetryProvider, OpenTelemetryProvider
+INFO [TelemetryService] Initialized with 2 telemetry provider(s)
+LOG [DistinctId] Updating...
+LOG [VscodeWebviewProvider] Webview view resolved
+LOG FileContextTracker: Processed 3 tasks, found 0 pending warnings, 0 orphaned, deleted 0, took 117ms
+LOG [DEBUG] sending OpenRouter models event
+LOG No Groq API key found, using static models as fallback
+ERROR Error fetching Baseten models:
+ERROR Baseten API Error:
+LOG [BannerService] Raw API response: 2 items: [{"id":"bnr-01KSR060R4NW9KA0X60QDF0J1V","placement":"welcome","titleMd":"Opus-4.8 available via Cline provider"},{"id":"bnr-01KQ02NN40X7WTJMKQC610GS5M","placement":"welcome","titleMd":"GPT-5.5 available via Cline provider and ChatGPT S"}]
+LOG [BannerService] After provider filter: 2 banners: [{"id":"bnr-01KSR060R4NW9KA0X60QDF0J1V","placement":"welcome"},{"id":"bnr-01KQ02NN40X7WTJMKQC610GS5M","placement":"welcome"}]
+LOG [BannerService] Fetched 2 banner(s) at 2026-06-19T10:16:21.804Z
+INFO [BannerService] Fetched
+LOG Cline models source: Cline API
+LOG Cline models fetched and saved
+LOG Vercel AI Gateway models fetched and saved
+LOG OpenRouter models fetched and saved
+LOG Cline recommended models fetched and saved

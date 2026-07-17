@@ -1,0 +1,7 @@
+2026/02/26-15:15:00.093 aa05e Reusing MANIFEST /home/ash/.config/google-chrome/Default/IndexedDB/https_pgy.oray.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/02/26-15:15:00.094 aa05e Recovering log #3
+2026/02/26-15:15:00.094 aa05e Reusing old log /home/ash/.config/google-chrome/Default/IndexedDB/https_pgy.oray.com_0.indexeddb.leveldb/000003.log 
+2026/02/26-15:15:01.178 aa05c Level-0 table #5: started
+2026/02/26-15:15:01.182 aa05c Level-0 table #5: 2051 bytes OK
+2026/02/26-15:15:01.187 aa05c Delete type=0 #3
+2026/02/26-15:15:01.187 aa05c Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)

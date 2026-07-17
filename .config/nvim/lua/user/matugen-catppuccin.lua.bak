@@ -1,0 +1,175 @@
+-- Matugen generated catppuccin overrides for nvim
+-- 用 matugen 壁纸色全面覆盖 catppuccin 高亮
+local palette = {
+  bg = "#1f1f25",
+  fg = "#e4e1e9",
+  primary = "#bec2ff",
+  secondary = "#c5c4dd",
+  tertiary = "#e8b9d5",
+  error = "#ffb4ab",
+}
+
+local hl = vim.api.nvim_set_hl
+
+local function set(name, opts)
+  hl(0, name, opts)
+end
+
+-- ===== 基础文本 =====
+set("Normal",       { fg = palette.fg, bg = palette.bg })
+set("NormalFloat",  { fg = palette.fg, bg = palette.bg })
+set("FloatBorder",  { fg = palette.tertiary, bg = palette.bg, bold = true })
+
+-- ===== 语法高亮 =====
+set("Comment",       { fg = palette.secondary, italic = true })
+set("String",       { fg = palette.tertiary })
+set("Number",       { fg = palette.primary })
+set("Boolean",      { fg = palette.primary })
+set("Character",    { fg = palette.tertiary })
+set("Function",     { fg = palette.primary })
+set("Identifier",   { fg = palette.fg })
+set("Statement",    { fg = palette.primary })
+set("Conditional",  { fg = palette.primary })
+set("Repeat",       { fg = palette.primary})
+set("Label",        { fg = palette.primary })
+set("Operator",     { fg = palette.primary })
+set("Keyword",      { fg = palette.primary })
+set("Exception",    { fg = palette.error })
+set("PreProc",      { fg = palette.primary })
+set("Type",         { fg = palette.tertiary })
+set("StorageClass", { fg = palette.primary })
+set("Structure",    { fg = palette.primary })
+set("Typedef",      { fg = palette.primary })
+set("Special",      { fg = palette.tertiary })
+set("SpecialChar",  { fg = palette.tertiary })
+set("Tag",          { fg = palette.primary })
+set("Delimiter",    { fg = palette.fg })
+set("SpecialComment",{ fg = palette.secondary, bold = true })
+set("Debug",        { fg = palette.error })
+set("Underlined",   { fg = palette.primary, underline = true })
+set("Ignore",       { fg = palette.bg })
+set("Error",   { fg = palette.error, bold = true })
+
+-- ===== UI 元素 =====
+set("LineNr",          { fg = palette.secondary })
+set("CursorLineNr",    { fg = palette.primary, bold = true })
+set("CursorLine",      { bg = palette.secondary, blend = 10 })
+set("CursorColumn",    { bg = palette.secondary, blend = 10 })
+set("Cursor",          { fg = palette.bg, bg = palette.primary })
+set("Visual",          { bg = palette.secondary, fg = palette.bg })
+set("VisualNOS",       { bg = palette.secondary })
+set("Search",          { bg = palette.primary, fg = palette.bg })
+set("IncSearch",       { bg = palette.primary, fg = palette.bg })
+set("MatchParen",      { bg = palette.tertiary, fg = palette.bg, bold = true })
+set("VertSplit",       { fg = palette.secondary })
+set("WinSeparator",   { fg = palette.secondary })
+set("StatusLine",      { fg = palette.tertiary, bg = palette.bg, bold = true })
+set("StatusLineNC",    { fg = palette.secondary, bg = palette.bg })
+set("TabLine",         { fg = palette.secondary, bg = palette.bg })
+set("TabLineSel",      { fg = palette.bg, bg = palette.tertiary, bold = true })
+set("TabLineFill",     { fg = palette.secondary, bg = palette.bg })
+set("Title",           { fg = palette.primary, bold = true })
+set("Question",        { fg = palette.primary })
+set("MoreMsg",         { fg = palette.primary })
+set("ModeMsg",         { fg = palette.primary, bold = true })
+set("ErrorMsg",        { fg = palette.error, bold = true })
+set("WarningMsg",      { fg = palette.primary })
+set("Directory",       { fg = palette.primary })
+set("Conceal",         { fg = palette.tertiary })
+set("NonText",         { fg = palette.secondary })
+set("SpecialKey",      { fg = palette.primary })
+set(" Whitespace",     { fg = palette.secondary })
+
+-- ===== 诊断 =====
+set("DiagnosticError",  { fg = palette.error, bold = true })
+set("DiagnosticWarn",   { fg = palette.primary, bold = true })
+set("DiagnosticInfo",   { fg = palette.secondary })
+set("DiagnosticHint",   { fg = palette.secondary })
+set("DiagnosticOk",     { fg = palette.tertiary })
+set("DiagnosticVirtualTextError", { fg = palette.error, italic = true })
+set("DiagnosticVirtualTextWarn",  { fg = palette.primary, italic = true })
+set("DiagnosticVirtualTextInfo",  { fg = palette.secondary, italic = true })
+set("DiagnosticVirtualTextHint",  { fg = palette.secondary, italic = true })
+
+-- ===== Git 符号 =====
+set("GitSignsAdd",    { fg = palette.tertiary })
+set("GitSignsChange", { fg = palette.primary })
+set("GitSignsDelete", { fg = palette.error })
+
+-- ===== Telescope =====
+set("TelescopeBorder",      { fg = palette.tertiary, bold = true })
+set("TelescopePromptBorder", { fg = palette.tertiary, bold = true })
+set("TelescopeResultsBorder",{ fg = palette.secondary })
+set("TelescopePreviewBorder",{ fg = palette.secondary })
+set("TelescopeSelection",   { fg = palette.primary, bold = true })
+set("TelescopeMatching",    { fg = palette.tertiary, bold = true })
+
+-- ===== Lazy.nvim =====
+set("LazyHover",       { fg = palette.fg, bg = palette.bg })
+set("LazyButton",      { fg = palette.fg, bg = palette.bg })
+set("LazyButtonActive",{ fg = palette.bg, bg = palette.primary, bold = true })
+set("LazyTitle",       { fg = palette.primary, bold = true })
+set("LazyProgressDone",{ fg = palette.tertiary })
+set("LazyProgressTodo",{ fg = palette.secondary })
+
+-- ===== Mason =====
+set("MasonNormal",      { fg = palette.fg, bg = palette.bg })
+set("MasonBorder",     { fg = palette.tertiary })
+set("MasonHighlightBlock",{ fg = palette.bg, bg = palette.primary })
+set("MasonHighlightBlockBold", { fg = palette.bg, bg = palette.primary, bold = true })
+
+-- ===== WhichKey =====
+set("WhichKey",        { fg = palette.primary, bold = true })
+set("WhichKeyFloat",   { fg = palette.fg, bg = palette.bg })
+set("WhichKeyBorder",  { fg = palette.tertiary })
+set("WhichKeySeparator",{ fg = palette.secondary })
+
+-- ===== Noice =====
+set("NoiceMini",              { fg = palette.fg, bg = palette.bg })
+set("NotifyBackground",       { fg = palette.fg, bg = palette.bg })
+set("NotifyERRORBorder",      { fg = palette.error })
+set("NotifyWARNBorder",       { fg = palette.primary })
+set("NotifyINFOBorder",       { fg = palette.secondary })
+set("NotifyDEBUGBorder",      { fg = palette.secondary })
+set("NotifyTRACEBorder",      { fg = palette.tertiary })
+
+-- ===== Snacks =====
+set("SnacksNormal",              { fg = palette.fg, bg = palette.bg })
+set("SnacksBorder",             { fg = palette.tertiary })
+set("SnacksWinBar",             { fg = palette.secondary, bg = palette.bg })
+
+-- ===== DAP (Debug Adapter Protocol) =====
+set("DapBreakpoint",       { fg = palette.error, bold = true })
+set("DapBreakpointCondition", { fg = palette.primary })
+set("DapLogPoint",        { fg = palette.tertiary })
+set("DapStopped",         { fg = palette.primary, bold = true })
+
+-- ===== Treesitter 额外覆盖 =====
+set("@variable",          { fg = palette.fg })
+set("@variable.builtin",  { fg = palette.error })
+set("@variable.parameter",{ fg = palette.fg })
+set("@string",            { fg = palette.tertiary })
+set("@string.regexp",     { fg = palette.tertiary })
+set("@number",            { fg = palette.primary })
+set("@boolean",           { fg = palette.primary })
+set("@function",          { fg = palette.primary })
+set("@function.builtin",  { fg = palette.primary })
+set("@method",            { fg = palette.primary })
+set("@keyword",           { fg = palette.primary })
+set("@keyword.return",    { fg = palette.primary, bold = true })
+set("@keyword.import",    { fg = palette.primary })
+set("@keyword.exception", { fg = palette.error })
+set("@comment.todo",      { fg = palette.primary, bold = true })
+set("@comment.note",      { fg = palette.tertiary, bold = true })
+set("@comment.error",     { fg = palette.error, bold = true })
+set("@punctuation",       { fg = palette.fg })
+set("@operator",          { fg = palette.primary })
+
+-- 每次 colorscheme 切换后自动重新应用 matugen 覆盖
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = function()
+    vim.defer_fn(function() dofile(vim.fn.stdpath("config").."/lua/user/matugen-catppuccin.lua") end, 50)
+  end,
+  desc = "Reapply matugen colors on colorscheme change",
+})
