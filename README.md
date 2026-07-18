@@ -27,6 +27,7 @@
 - Mako notifications
 - Fuzzel app launcher
 - GTK theme integration
+- Automatic wallpaper-following theme switching (see [Scripts-chan](https://github.com/bt-ASH/Scripts-chan#))
 
 ## Dependencies
 
