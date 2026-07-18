@@ -99,7 +99,7 @@
 
 This dotfiles setup uses **[matugen](https://github.com/InioX/matugen)** to automatically generate a full Material You color scheme from your current wallpaper. When the wallpaper changes, matugen extracts the dominant colors and regenerates theme files for all supported apps in one go.
 
-> Inspired by [shorinkiwata](https://space.bilibili.com/shorinkiwata) on Bilibili.
+> Inspired by [shorinkiwata](https://space.bilibili.com/9202840?spm_id_from=333.788.upinfo.detail.click) on Bilibili.
 
 **Supported apps:**
 
