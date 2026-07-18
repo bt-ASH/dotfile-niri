@@ -273,7 +273,18 @@ window-rule {
     match app-id="antsword"
     open-floating true
 }
+window-rule {
+    match app-id="mpv"
+    open-floating true
+    default-column-width { proportion 0.9; }
+    default-window-height { proportion 0.9; }
+}
 
+window-rule {
+    match app-id="scrcpy"
+    open-floating false
+    default-column-width { proportion 0.3; }
+}
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
