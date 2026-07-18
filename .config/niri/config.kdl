@@ -434,10 +434,10 @@ binds {
 
     Mod+Ctrl+C { center-visible-columns; }
 
-    Mod+Shift+H { set-column-width "-10%"; }
-    Mod+Shift+L { set-column-width "+10%"; }
-    Mod+Shift+K { set-window-height "-10%"; }
-    Mod+Shift+J { set-window-height "+10%"; }
+    Mod+Shift+H { set-column-width "-4%"; }
+    Mod+Shift+L { set-column-width "+4%"; }
+    Mod+Shift+K { set-window-height "-4%"; }
+    Mod+Shift+J { set-window-height "+4%"; }
 
     Mod+S       { toggle-window-floating; }
     Mod+E { switch-focus-between-floating-and-tiling; }
