@@ -4,9 +4,9 @@
 
 <p align="center">
    <a href="#features">Features</a> • 
-   <a href="#gallery">Gallery</a> • 
    <a href="#dependencies">Dependencies</a> • 
    <a href="#ui--icon-themes">UI & Icons</a> • 
+   <a href="#wallpaper-following-theme">Theme</a> • 
    <a href="#installation">Installation</a> • 
    <a href="#keybinds">Keybinds</a>
 </p>
@@ -27,7 +27,7 @@
 - Mako notifications
 - Fuzzel app launcher
 - GTK theme integration
-- Automatic wallpaper-following theme switching (see [Scripts-chan](https://github.com/bt-ASH/Scripts-chan#))
+- Automatic wallpaper-following theme switching via matugen
 
 ## Dependencies
 
@@ -77,6 +77,36 @@
 
 4. **Restart Niri**
    - Log out and log back in, or restart Niri to apply changes.
+
+## Wallpaper-Following Theme
+
+This dotfiles setup uses **[matugen](https://github.com/InioX/matugen)** to automatically generate a full Material You color scheme from your current wallpaper. When the wallpaper changes, matugen extracts the dominant colors and regenerates theme files for all supported apps in one go.
+
+**Supported apps:**
+
+| App | Template | Output |
+| --- | --- | --- |
+| Waybar | `colors.css` | `~/.config/waybar/colors.css` |
+| Kitty | `kitty-colors.conf` | `~/.config/kitty/themes/matugen.conf` |
+| Fuzzel | `fuzzel.ini` | `~/.config/fuzzel/colors.ini` |
+| Fcitx5 | `fcitx5-theme.conf` | `~/.local/share/fcitx5/themes/Matugen/theme.conf` |
+| Mako | `mako-colors.conf` | `~/.config/mako/colors.conf` |
+| Btop | `btop.theme` | `~/.config/btop/themes/matugen.theme` |
+| Cava | `cava-colors.ini` | `~/.cache/matugen/cava-colors.ini` |
+| Clipse | `clipse-theme.json` | `~/.cache/matugen/clipse-theme.json` |
+| Starship | `starship-colors.toml` | `~/.config/starship.toml` |
+| Yazi | `yazi-theme.toml` | `~/.config/yazi/theme.toml` |
+| GTK 3/4 | `gtk-colors.css` | `~/.config/gtk-{3,4}.0/colors.css` |
+| Pywalfox | `pywalfox-colors.json` | `~/.cache/wal/colors.json` |
+
+**Workflow:**
+
+1. Change wallpaper with `set-wallpaper.sh /path/to/wallpaper.jpg`
+2. Wallpaper is applied and overview blur is updated
+3. Matugen extracts colors and regenerates all theme files
+4. Post-hooks reload each app to pick up the new colors
+
+See [Scripts-chan](https://github.com/bt-ASH/Scripts-chan) for the full Niri environment setup including matugen configuration.
 
 ## Keybinds
 
