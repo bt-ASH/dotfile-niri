@@ -4,6 +4,7 @@
 
 <p align="center">
    <a href="#features">Features</a> • 
+   <a href="#gallery">Gallery</a> •
    <a href="#dependencies">Dependencies</a> • 
    <a href="#ui--icon-themes">UI & Icons</a> • 
    <a href="#wallpaper-following-theme">Theme</a> • 
@@ -28,6 +29,20 @@
 - Fuzzel app launcher
 - GTK theme integration
 - Automatic wallpaper-following theme switching via matugen
+
+## Gallery
+
+| Terminal                              |
+| ------------------------------------- |
+| ![Terminal](./assets/terminal-preview.png) |
+
+| Wallpaper-Following Theme             |
+| ------------------------------------- |
+| ![Theme](./assets/theme-switch.png) |
+
+| Cava & Musicfox                       |
+| ------------------------------------- |
+| ![Cava](./assets/cava-musicfox.png) |
 
 ## Dependencies
 
@@ -81,6 +96,8 @@
 ## Wallpaper-Following Theme
 
 This dotfiles setup uses **[matugen](https://github.com/InioX/matugen)** to automatically generate a full Material You color scheme from your current wallpaper. When the wallpaper changes, matugen extracts the dominant colors and regenerates theme files for all supported apps in one go.
+
+> Inspired by [shorinkiwata](https://space.bilibili.com/shorinkiwata) on Bilibili.
 
 **Supported apps:**
 
