@@ -32,10 +32,6 @@
 
 ## Gallery
 
-| Terminal                              |
-| ------------------------------------- |
-| ![Terminal](./assets/terminal-preview.png) |
-
 | Wallpaper-Following Theme             |
 | ------------------------------------- |
 | ![Theme](./assets/theme-switch.png) |
@@ -43,6 +39,10 @@
 | Cava & Musicfox                       |
 | ------------------------------------- |
 | ![Cava](./assets/cava-musicfox.png) |
+
+| Terminal                              |
+| ------------------------------------- |
+| ![Terminal](./assets/terminal-preview.png) |
 
 ## Dependencies
 
