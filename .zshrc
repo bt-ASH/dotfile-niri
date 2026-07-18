@@ -157,18 +157,7 @@ rand_on(){
   echo "eDP-1 display on"
 }
 
-# proxy_ip="http://127.0.0.1:7897"
-fre(){
-  # export http_proxy=$proxy_ip
-  # export https_proxy=$proxy_ip
-  # export all_proxy=$proxy_ip
-  echo "Proxy startup"
-  # curl ifconfig.me
-}
-fre_off(){
-  unset http_proxy https_proxy all_proxy
-  echo "Proxy stop"
-}
+
 
 vid(){
   wf-recorder -g "$(slurp -d)" -f ~/Videos/$(date +%Y-%m-%d_%H-%M-%S).mp4 \
