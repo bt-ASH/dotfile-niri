@@ -1,4 +1,0 @@
-Error in User Autocommands for "VeryLazy":
-You're using a GUI that uses ext_cmdline. Noice can't work when the GUI has ext_cmdline enabled.
-You're using a GUI that uses ext_popupmenu. Noice can't work when the GUI has ext_popupmenu enabled.
-You're using a GUI that uses ext_messages. Noice can't work when the GUI has ext_messages enabled.

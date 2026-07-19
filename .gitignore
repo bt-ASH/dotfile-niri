@@ -1,0 +1,32 @@
+# Cache
+Cache/
+CachedData/
+CachedConfigurations/
+CachedExtensionVSIXs/
+CachedProfilesData/
+Code Cache/
+Service Worker/
+Session Storage/
+Local Storage/
+DawnGraphiteCache/
+DawnWebGPUCache/
+GPUCache/
+Shared Dictionary/
+
+# Runtime
+Crashpad/
+DIPS/
+*.log
+*.log.old
+
+# Database / State
+Cookies
+Cookies-journal
+Network Persistent State
+SharedStorage
+Trust Tokens
+Trust Tokens-journal
+TransportSecurity
+
+# User data
+User/
