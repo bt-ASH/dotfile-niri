@@ -1,6 +1,0 @@
-2026/01/21-12:04:09.766 5b9b3 Creating DB /home/ash/.config/google-chrome/Default/IndexedDB/https_www.twitch.tv_0.indexeddb.leveldb since it was missing.
-2026/01/21-12:04:09.774 5b9b3 Reusing MANIFEST /home/ash/.config/google-chrome/Default/IndexedDB/https_www.twitch.tv_0.indexeddb.leveldb/MANIFEST-000001
-2026/01/21-12:04:41.794 5b9b5 Level-0 table #5: started
-2026/01/21-12:04:41.797 5b9b5 Level-0 table #5: 858 bytes OK
-2026/01/21-12:04:41.802 5b9b5 Delete type=0 #3
-2026/01/21-12:04:41.802 5b9b5 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

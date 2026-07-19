@@ -1,6 +1,0 @@
-2026/01/23-04:04:13.608 6417c Reusing MANIFEST /home/ash/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/01/23-04:04:13.609 6417c Recovering log #3
-2026/01/23-04:04:13.609 6417c Reusing old log /home/ash/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000003.log 
-2026/01/23-06:51:34.215 6417c Level-0 table #5: started
-2026/01/23-06:51:34.232 6417c Level-0 table #5: 1208325 bytes OK
-2026/01/23-06:51:34.238 6417c Delete type=0 #3
