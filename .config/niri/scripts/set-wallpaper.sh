@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # ~/.config/niri/scripts/set-wallpaper.sh
 # 一键设置壁纸，同时更新 overview 模糊背景
 # 用法：set-wallpaper.sh /path/to/wallpaper.jpg

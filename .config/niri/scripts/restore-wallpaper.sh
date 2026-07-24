@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # ~/.config/niri/scripts/restore-wallpaper.sh
 # 在 niri 启动时从 waypaper 配置读取壁纸并设置
 # 需要在 awww-daemon 启动后执行

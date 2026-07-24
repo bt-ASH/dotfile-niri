@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # =================配置区域=================
 SOUND="/usr/share/sounds/freedesktop/stereo/camera-shutter.oga"

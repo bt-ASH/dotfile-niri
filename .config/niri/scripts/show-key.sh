@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # 在屏幕上显示最近按下的键
 # 需要: yad, zenity, 或 notify-send
 

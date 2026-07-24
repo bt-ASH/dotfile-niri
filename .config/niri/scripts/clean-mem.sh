@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # ~/.config/niri/scripts/clean-mem.sh
 # 清理内存缓存和 swap，解决待机久了内存溢出问题
 # 需要 sudo 权限（执行时会弹出密码输入框）

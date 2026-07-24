@@ -80,8 +80,8 @@ output "HDMI-A-2" {
 }
 
 // debug {
- //   render-drm-device "/dev/dri/renderD128"
-// }
+//    render-drm-device "/dev/dri/renderD128"
+//}
 
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
@@ -147,6 +147,7 @@ spawn-at-startup "xwayland-satellite"
 spawn-at-startup "awww-daemon" "-n" "overview"
 spawn-at-startup "awww-daemon"
 spawn-at-startup "fcitx5 --replace -d"
+spawn-at-startup "showmethekey-gtk" "-k" "-A" "-C"
 spawn-at-startup "~/.config/niri/scripts/restore-wallpaper.sh"
 //spawn-at-startup "~/.config/niri/scripts/wall.sh"
 spawn-at-startup "~/.config/niri/scripts/swayidle.sh"
@@ -199,7 +200,6 @@ window-rule {
             }
             window-rule {
                 match app-id="steam_app_default"
-                match app-id="steam"
                 match app-id="mpv"
                 match app-id="steam_app_438100"
                 clip-to-geometry true
@@ -217,6 +217,11 @@ window-rule {
             window-rule{
                     match app-id="baidunetdisk"
                     default-floating-position x=20 y=20 relative-to="top-right"
+}
+            window-rule{
+                match app-id="one.alynx.showmethekey"
+                open-floating true
+                default-floating-position x=20 y=20 relative-to="bottom-right"
 }
             window-rule{
                 match app-id="clipse"
@@ -268,18 +273,7 @@ window-rule {
     match app-id="antsword"
     open-floating true
 }
-window-rule {
-    match app-id="mpv"
-    open-floating true
-    default-column-width { proportion 0.9; }
-    default-window-height { proportion 0.9; }
-}
 
-window-rule {
-    match app-id="scrcpy"
-    open-floating false
-    default-column-width { proportion 0.3; }
-}
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
@@ -440,10 +434,10 @@ binds {
 
     Mod+Ctrl+C { center-visible-columns; }
 
-    Mod+Shift+H { set-column-width "-4%"; }
-    Mod+Shift+L { set-column-width "+4%"; }
-    Mod+Shift+K { set-window-height "-4%"; }
-    Mod+Shift+J { set-window-height "+4%"; }
+    Mod+Shift+H { set-column-width "-10%"; }
+    Mod+Shift+L { set-column-width "+10%"; }
+    Mod+Shift+K { set-window-height "-10%"; }
+    Mod+Shift+J { set-window-height "+10%"; }
 
     Mod+S       { toggle-window-floating; }
     Mod+E { switch-focus-between-floating-and-tiling; }
@@ -478,8 +472,6 @@ binds {
     // 切换颜色策略
     Mod+Alt+M hotkey-overlay-title="切换颜色策略 Change color strategy" { spawn "~/.config/scripts/matugen-select-type.sh"; }
     Mod+Alt+T hotkey-overlay-title="切换颜色策略 Change color strategy" { spawn "~/.config/scripts/matugen-select-type.sh"; }
-    // 切换按键显示（wshowkeys，跟随壁纸配色）
-    Mod+Alt+K hotkey-overlay-title="切换按键显示 Toggle keypress display" { spawn "~/.config/niri/scripts/wshowkeys-toggle.sh"; }
 }
 
 // Additions

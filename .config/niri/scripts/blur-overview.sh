@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # ~/.config/niri/scripts/blur-overview.sh
 # 
 # 从当前壁纸生成模糊版发送给 overview 总览界面
