@@ -120,9 +120,9 @@ post_hook = 'pkill swayosd && swayosd-server &'
 #input_path = '~/.config/matugen/templates/swaylock-colors'
 #output_path = '~/.config/swaylock/config'
 
-#[templates.fastfetch]
-#input_path = '~/.config/matugen/templates/fastfetch-config.jsonc'
-#output_path = '~/.config/fastfetch/config.jsonc'
+[templates.fastfetch]
+input_path = '~/.config/matugen/templates/fastfetch-config.jsonc'
+output_path = '~/.config/fastfetch/config.jsonc'
 
 
 [templates.neovim]
@@ -160,9 +160,18 @@ output_path = '~/.config/obs-studio/themes/matugen.obt'
 #post_hook =  'adwaita-steam-gtk -i'
 
 
+[templates.fzf]
+input_path = '~/.config/matugen/templates/fzf-colors.sh'
+output_path = '~/.cache/matugen/fzf-colors.sh'
+pre_hook = 'mkdir -p ~/.cache/matugen'
+
 [templates.musicfox]
 input_path = '~/.config/matugen/templates/musicfox-primary.txt'
 output_path = '~/.cache/matugen/musicfox-primary.txt'
 pre_hook = 'mkdir -p ~/.cache/matugen'
 post_hook = "bash ~/.config/matugen/scripts/inject-go-musicfox-color.sh"
 
+[templates.wshowkeys]
+input_path = '~/.config/matugen/templates/wshowkeys-colors.sh'
+output_path = '~/.config/wshowkeys/colors.sh'
+pre_hook = 'mkdir -p ~/.config/wshowkeys'
