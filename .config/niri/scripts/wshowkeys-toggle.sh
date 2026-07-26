@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Toggle wshowkeys with matugen-generated colors
 
-CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
+CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config/niri}"
 COLORS_FILE="$CONFIG_DIR/wshowkeys/colors.sh"
 WKEYS_BG='#00000099'
 WKEYS_FG='#FFFFFFFF'
