@@ -176,8 +176,8 @@ fs(){
 }
 
 if [[ $(tty) == '/dev/tty1' ]];then
-  niri-session
   pyenv shell system
+  niri-session
 fi
 
 [[ -s /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.zsh
