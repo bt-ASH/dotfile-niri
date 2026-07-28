@@ -1,49 +1,142 @@
-// --- NIRI BLUR START ---
-// 顶层的blur配置，细节调整blur的效果
 blur {
-    passes 3
-    offset 3
-    noise 0.02
-    saturation 1.5
-}
-// 全局窗口规则。让所有普通窗口以xray的形式显示blur。xray仅渲染一次模糊版本的背景，然后将其以类似“壁纸”的形式显示在窗口后面，不是实时渲染模糊，所以完全没有性能消耗。
-window-rule {
-    background-effect {
-        xray true
-        blur true
-    }
-}
-// 浮动窗口禁用xray可以实时渲染模糊效果但是性能消耗高，开启xray会穿过浮动窗口底下的窗口直接透视到桌面。看个人喜好选择禁用与否吧。
+  passes 1
+  offset 3
+  noise 0.72
+  saturation 1.5
+ }
 window-rule {
     match is-floating=true
-    background-effect {
-        xray true
-        blur true
-    }
+    baba-is-float false
 }
-// fuzzle专属的layer规则
-layer-rule {
-    match namespace="^launcher$"
-    geometry-corner-radius 8
-    background-effect {
-        xray false
-	blur true
-    }
-}
-// blur 窗口的弹出窗口
 window-rule {
-    match app-id="thunar"
-    match app-id="Nautilus"
-    opacity 0.92
+    geometry-corner-radius 5
+    clip-to-geometry true
+    opacity 0.95
+    background-effect {
+        blur false
+    }
+    draw-border-with-background false
+}
+window-rule {
+    match app-id="code-oss"
+    geometry-corner-radius 5
+    clip-to-geometry true
+    opacity 0.94
+    draw-border-with-background false
+            }
+            window-rule {
+                match app-id="steam_app_default"
+                match app-id="steam"
+                match app-id="mpv"
+                match app-id="steam_app_438100"
+                clip-to-geometry true
+                opacity 1.0
+                draw-border-with-background false
+            }
+            window-rule {
+                // This regular expression is intentionally made as specific as possible,
+                // since this is the default config, and we want no false positives.
+                // You can get away with just app-id="wezterm" if you want.
+                match app-id=r#"^org\.wezfurlong\.wezterm$"#
+                open-floating true
+                default-column-width {}
+            }
+            window-rule{
+                    match app-id="baidunetdisk"
+                    default-floating-position x=20 y=20 relative-to="top-right"
+}
+            window-rule{
+                match app-id="clipse"
+                match app-id="bluetui"
+                match app-id="nmtui"
+                open-floating true
+                default-column-width { proportion 0.4; }
+                default-window-height { proportion 0.6; }
+}
 
-    popups {
-        geometry-corner-radius 15
-        opacity 0.92
-        background-effect {
-            blur true
-	    xray false
-        }
+window-rule {
+    match app-id="Conky"
+    open-floating true
+    open-focused false
+    focus-ring{
+        off
+    }
+    border {
+        off
+    }
+    shadow {
+        off
     }
 }
-// --- NIRI BLUR END ---
+window-rule {
+    // This app-id regular expression will work for both:
+    // - host Firefox (app-id is "firefox")
+    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    //match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id="navicat"
+    open-floating true
+}
+
+// Prevent --kiosk mode opening in fullscreen, requires full-screen-api.ignore-widgets=true in about:config 
+window-rule {
+    match app-id="org.mozilla.firefox"
+    match app-id="firefox"
+    open-fullscreen false
+}
+
+window-rule {
+    match app-id="waypaper"
+    default-column-width { proportion 0.6; }
+}
+
+window-rule {
+    match app-id="pot"
+    open-floating true
+    default-column-width { proportion 0.2; }
+    default-window-height { proportion 0.5; }
+}
+
+window-rule{
+    match app-id="wiremix"
+    open-floating true
+    default-column-width { proportion 0.5; }
+    default-window-height { proportion 0.4; }
+}
+
+window-rule {
+    match app-id="QQ"
+    match app-id="antsword"
+    open-floating true
+}
+window-rule {
+    match app-id="mpv"
+    open-floating true
+    default-column-width { proportion 0.9; }
+    default-window-height { proportion 0.9; }
+}
+
+window-rule {
+    match app-id="scrcpy"
+    open-floating false
+    default-column-width { proportion 0.3; }
+}
+
+// Example: block out two password managers from screen capture.
+// (This example rule is commented out with a "/-" in front.)
+/-window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+    block-out-from "screen-capture"
+
+    // Use this instead if you want them visible on third-party screenshot tools.
+    // block-out-from "screencast"
+}
+
+// Example: enable rounded corners for all windows.
+// (This example rule is commented out with a "/-" in front.)
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
 
