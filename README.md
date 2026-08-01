@@ -77,7 +77,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/bt-ASH/dotfile-niri.git ~/dotfile-niri
+   git clone -b dotfile https://github.com/bt-ASH/dotfile-niri.git ~/dotfile-niri
    ```
 
 2. **Copy configs**
