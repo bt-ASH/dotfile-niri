@@ -17,7 +17,7 @@
 ## Features
 
 - Niri wayland compositor with custom scripts
-- eww  status bar with Win11-like layout
+- eww  status bar
 - Matugen dynamic color scheme generation
 - Fcitx5 input method
 - Kitty terminal
@@ -105,7 +105,7 @@ This dotfiles setup uses **[matugen](https://github.com/InioX/matugen)** to auto
 
 | App | Template | Output |
 | --- | --- | --- |
-| eww | `colors.css` | `~/.config/waybar/colors.scss` |
+| eww | `colors.css` | `~/.config/eww/colors.scss` |
 | Kitty | `kitty-colors.conf` | `~/.config/kitty/themes/matugen.conf` |
 | Fuzzel | `fuzzel.ini` | `~/.config/fuzzel/colors.ini` |
 | Fcitx5 | `fcitx5-theme.conf` | `~/.local/share/fcitx5/themes/Matugen/theme.conf` |
@@ -142,7 +142,7 @@ See [Scripts-chan](https://github.com/bt-ASH/Scripts-chan) for the full Niri env
 - Configured for Arch Linux with Niri wayland compositor
 - Color schemes are dynamically generated using Matugen
 - Custom scripts are located in `~/.config/niri/scripts/`
-- eww  has two variants: default and Win11-like layout
+- eww  has two variants
 
 ## License
 
