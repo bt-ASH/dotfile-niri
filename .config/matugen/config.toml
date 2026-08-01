@@ -6,6 +6,7 @@ input_path = '~/.config/matugen/templates/colors.css'
 output_path = '~/.config/waybar/colors.css'
 post_hook='rm ~/.config/waybar-niri-Win11Like/colors.css && ln -s ~/.config/waybar/colors.css ~/.config/waybar-niri-Win11Like/colors.css && bash ~/.config/scripts/darken-primary.sh'
 
+
 [templates.pywalfox]
 input_path = '~/.config/matugen/templates/pywalfox-colors.json'
 output_path = '~/.cache/wal/colors.json'
@@ -175,3 +176,19 @@ post_hook = "bash ~/.config/matugen/scripts/inject-go-musicfox-color.sh"
 input_path = '~/.config/matugen/templates/wshowkeys-colors.sh'
 output_path = '~/.config/wshowkeys/colors.sh'
 pre_hook = 'mkdir -p ~/.config/wshowkeys'
+
+#[templates.regulus]
+#input_path = '~/.config/matugen/templates/regulus-colors.conf'
+#output_path = '~/.cache/matugen/regulus-colors.conf'
+#pre_hook = 'mkdir -p ~/.cache/matugen'
+#post_hook = 'bash ~/.config/matugen/scripts/inject-conky-regulus.sh'
+
+#[templates.mirach]
+#input_path = '~/.config/matugen/templates/mirach-colors.conf'
+#output_path = '~/.cache/matugen/mirach-colors.conf'
+#pre_hook = 'mkdir -p ~/.cache/matugen'
+#post_hook = 'bash ~/.config/matugen/scripts/inject-conky-mirach.sh && (killall conky 2>/dev/null; sleep 1; conky -c ~/.config/conky/Regulus/Regulus.conf &> /dev/null & conky -c ~/.config/conky/Mirach/Mirach.conf &> /dev/null &)'
+[templates.eww]
+input_path = '~/.config/matugen/templates/colors-eww.scss'
+output_path = '~/.config/eww/color.scss'
+# post_hook = "eww reload"

@@ -1,0 +1,5 @@
+(defwidget power []
+    (button :class "power" :timeout "10s" :onclick "~/.config/niri/scripts/powermenu"
+        ""
+    )
+)

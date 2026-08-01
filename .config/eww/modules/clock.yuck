@@ -1,0 +1,5 @@
+(defwidget clock []
+    (button :class "clock" :timeout "5s" :onclick "scripts/toggle_clock.sh"
+        "󰥔 ${time}"
+    )
+)

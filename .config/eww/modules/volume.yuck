@@ -1,0 +1,10 @@
+(defwidget volume []
+    (eventbox :onscroll "scripts/scroll_volume.sh {}"
+        (button :class {volume == "muted" ? "volume muted" : "volume"}
+            :timeout "2s"
+            :onclick "scripts/open_wiremix.sh"
+            :onrightclick "scripts/toggle_mute.sh"
+            {volume == "muted" ? "󰝟  muted" : volume < 33 ? "󰕿  " + volume + "%" : volume < 67 ? "󰖀  " + volume + "%" : "󰕾  " + volume + "%"}
+        )
+    )
+)

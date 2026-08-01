@@ -1,0 +1,9 @@
+(defwidget backlight []
+    (eventbox :onscroll "scripts/scroll_backlight.sh {}"
+        (button :class "backlight"
+            :timeout "2s"
+            :onclick "kitty -e musicfox"
+            {bl > 66 ? "󰃠  " + bl + "%" : bl > 33 ? "󰃟  " + bl + "%" : "󰃞  " + bl + "%"}
+        )
+    )
+)
