@@ -4,8 +4,8 @@ set -euo pipefail
 
 CYAN='\033[0;36m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; NC='\033[0m'
 
-VRCDIR="/home/ash/.local/share/Steam/steamapps/common/VRChat"
-PREFIX="/home/ash/.local/share/Steam/steamapps/compatdata/438100"
+VRCDIR="/home/ash/Games/SteamLibrary/steamapps/common/VRChat"
+PREFIX="/home/ash/Games/SteamLibrary/steamapps/compatdata/438100/"
 DXVK_DIR="$PREFIX/pfx/drive_c/users/steamuser/AppData/Local/dxvk"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
@@ -28,7 +28,7 @@ echo -e "${GREEN}✅ boot.config${NC}"
 # 3. Registry FPS + quality
  echo -e "${CYAN}[3/6]${NC} FPS 解封 + 质量最低化..."
 python3 << 'PY'
-rp = '/home/ash/.local/share/Steam/steamapps/compatdata/438100/pfx/user.reg'
+rp = '/home/ash/Games/SteamLibrary/steamapps/compatdata/438100/pfx/user.reg'
 with open(rp, 'r', encoding='utf-8', errors='replace') as f:
     d = f.read()
 d = d.replace('"FPS_LIMIT_h3202401354"=dword:00000014', '"FPS_LIMIT_h3202401354"=dword:00000048')
@@ -45,7 +45,7 @@ echo -e "${GREEN}✅ 注册表${NC}"
 # 4. Resolution
 echo -e "${CYAN}[4/6]${NC} 分辨率 → 800x450..."
 python3 << 'PY'
-rp = '/home/ash/.local/share/Steam/steamapps/compatdata/438100/pfx/user.reg'
+rp = '/home/ash/Games/SteamLibrary/steamapps/compatdata/438100/pfx/user.reg'
 with open(rp, 'r', encoding='utf-8', errors='replace') as f:
     d = f.read()
 d = d.replace('"Screenmanager Resolution Width_h182942802"=dword:00000380', '"Screenmanager Resolution Width_h182942802"=dword:00000320')
