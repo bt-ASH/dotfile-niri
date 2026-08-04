@@ -20,12 +20,7 @@ mkdir -p "$DXVK_DIR"
 cp "$SCRIPT_DIR/dxvk.conf" "$DXVK_DIR/dxvk.conf"
 echo -e "${GREEN}✅ DXVK${NC}"
 
-# 2. boot.config
- echo -e "${CYAN}[2/6]${NC} Unity boot.config..."
-cp "$SCRIPT_DIR/boot.config" "$VRCDIR/VRChat_Data/boot.config"
-echo -e "${GREEN}✅ boot.config${NC}"
-
-# 3. Registry FPS + quality
+# 2. Registry FPS + quality
  echo -e "${CYAN}[3/6]${NC} FPS 解封 + 质量最低化..."
 python3 << 'PY'
 rp = '/home/ash/Games/SteamLibrary/steamapps/compatdata/438100/pfx/user.reg'
@@ -42,7 +37,7 @@ print('FPS/AA/SteamAudio done')
 PY
 echo -e "${GREEN}✅ 注册表${NC}"
 
-# 4. Resolution
+# 3. Resolution
 echo -e "${CYAN}[4/6]${NC} 分辨率 → 800x450..."
 python3 << 'PY'
 rp = '/home/ash/Games/SteamLibrary/steamapps/compatdata/438100/pfx/user.reg'
@@ -58,14 +53,14 @@ print('Resolution: 800x450')
 PY
 echo -e "${GREEN}✅ 分辨率${NC}"
 
-# 5. Cache clean
+# 4. Cache clean
 echo -e "${CYAN}[5/6]${NC} 清理缓存..."
 rm -rf "$PREFIX/pfx/drive_c/users/steamuser/AppData/LocalLow/VRChat/VRChat/Cache-WindowsPlayer/"* 2>/dev/null
 rm -rf "$PREFIX/pfx/drive_c/users/steamuser/AppData/LocalLow/VRChat/VRChat/TextureCache-WindowsPlayer/"* 2>/dev/null
 rm -f "$VRCDIR/VRChat.dxvk-cache" 2>/dev/null
 echo -e "${GREEN}✅ 缓存已清理${NC}"
 
-# 6. GPU
+# 5. GPU
 echo -e "${CYAN}[6/6]${NC} GPU 性能模式..."
 nvidia-settings -a "[gpu:0]/GpuPowerMizerMode=1" >/dev/null 2>&1
 nvidia-settings -a "[gpu:0]/GPUFanControlState=1" >/dev/null 2>&1
