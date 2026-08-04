@@ -75,9 +75,14 @@
 
 ## Installation
 
+>The latest niri dotfile is on the dotfile branch: [dotfile](https://github.com/bt-ASH/dotfile-niri/tree/dotfile)
+
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/bt-ASH/dotfile-niri.git ~/dotfile-niri
+   # Current dotfile 
+   git clone https://github.com/bt-ASH/dotfile-niri.git ~/dotfile-niri 
+   # Latest dotfile
+   git clone -b dotfile https://github.com/bt-ASH/dotfile-niri.git ~/dotfile-niri
    ```
 
 2. **Copy configs**
