@@ -1,0 +1,11 @@
+var:
+  last_build_time: 1785833859
+  previously_selected_schema: rime_ice
+  schema_access_time:
+    bopomofo: 1777840740
+    bopomofo_tw: 1777840678
+    double_pinyin_flypy: 1785833798
+    ice_pinyin: 1777839980
+    luna_pinyin_simp: 1785833813
+    rime_ice: 1785833852
+    terra_pinyin: 177784072

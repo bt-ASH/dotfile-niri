@@ -1,0 +1,8 @@
+# Rime user dictionary
+#@/db_name	terra_pinyin
+#@/db_type	userdb
+#@/rime_version	1.16.1
+#@/tick	2
+#@/user_id	5130af82-6fd0-4a62-b531-2f7c0e3af40e
+li3 	裏	c=1 d=1 t=2
+wu1 wu1 	嗚嗚	c=1 d=0.995012 t=2

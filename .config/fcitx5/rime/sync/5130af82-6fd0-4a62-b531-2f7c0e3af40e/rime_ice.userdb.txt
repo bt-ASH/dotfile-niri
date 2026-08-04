@@ -1,0 +1,32 @@
+# Rime user dictionary
+#@/db_name	rime_ice
+#@/db_type	userdb
+#@/rime_version	1.16.1
+#@/tick	29
+#@/user_id	5130af82-6fd0-4a62-b531-2f7c0e3af40e
+ca 	擦	c=1 d=0.995012 t=29
+cao 	草	c=2 d=2.05795 t=29
+cao ni 	操你	c=1 d=0.99005 t=29
+cao ni de 	草你的	c=1 d=0.980199 t=29
+cao ni ma 	操你妈	c=1 d=1 t=29
+dao 	到	c=1 d=0.970446 t=29
+de 	的	c=1 d=0.955997 t=29
+fa 	法	c=1 d=0.900325 t=29
+guan li qi 	管理器	c=2 d=1.76063 t=29
+guo cheng 	过程	c=1 d=0.965605 t=29
+hai shi 	还是	c=1 d=0.923116 t=29
+hao yong 	好用	c=1 d=0.927743 t=29
+lie 	咧	c=1 d=0.918512 t=29
+nan 	难	c=1 d=0.909373 t=29
+ni de 	你的	c=0 d=0.097531 t=29
+ni shi 	你是	c=1 d=0.932394 t=29
+rang 	让	c=1 d=0.941765 t=29
+ru he 	如何	c=1 d=0.937067 t=29
+shi yong 	使用	c=1 d=0.951229 t=29
+shu ru 	输入	c=2 d=1.84232 t=29
+tai 	太	c=1 d=0.904837 t=29
+wen jian 	文件	c=2 d=1.75185 t=29
+xie yi fen 	写一份	c=1 d=0.960789 t=29
+ya zi 	鸭子	c=1 d=0.878095 t=29
+yong 	用	c=1 d=0.913931 t=29
+zhe ge 	这个	c=1 d=0.891366 t=29
