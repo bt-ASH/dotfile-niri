@@ -6,8 +6,8 @@ if [ -n "$essid" ]; then
   if [ -n "$sig" ]; then
     echo "󰖩  ${essid} (${sig}%)"
   else
-    echo "󰖪  ${essid}"
+    echo "󰈀  Disconnected"
   fi
 else
-  echo "󰈀  Disconnected"
+    echo "󰖪  ${essid}"
 fi

@@ -6,6 +6,8 @@
 }
 
 @import "color.scss";
+@import "scss/lib.scss";
+@import "scss/tray.scss";
 
 .bar-widget {
     background-color: rgba(30, 30, 46, 0.7);

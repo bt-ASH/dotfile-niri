@@ -10,25 +10,25 @@
     margin: 0 0.25rem;
     transition: 0.3s;
     font-size: 0.75rem;
-    -gtk-icon-size: 6px;
 }
 
 .tray_button:hover {
-    background-color: mix($surface, $onSurface, 70%);
+    background-color: mix($surface_variant, $on_surface, 70%);
 }
 
 tooltip {
-    background-color: $surfaceVariant;
-    color: $onSurface;
+    background-color: $surface_variant;
+    color: $on_surface;
     padding: 1rem;
     border-radius: 1rem;
 }
 
 menu {
-    background-color: $surfaceVariant;
+    background-color: rgba($surface_variant, 0.80);
+    border: 2px solid $blue;
     border-radius: 1rem;
     padding: 0.75rem;
-    color: $onSurface;
+    color: $on_surface;
     font-size: 1.1rem;
 }
 
@@ -39,5 +39,5 @@ menu>menuitem {
 }
 
 menu>menuitem:hover {
-    background-color: mix($surfaceVariant, $onSurfaceVariant, 70%);
+    background-color: mix($surface_variant, $on_surface_variant, 70%);
 }
