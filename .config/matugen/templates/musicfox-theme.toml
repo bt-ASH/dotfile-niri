@@ -1,0 +1,35 @@
+name = "Miyu"
+description = "matugen 同步主题（与 kitty 配色适配）"
+
+[dark]
+# 背景色 -> kitty background (surface)
+bgColor = "{{colors.surface.default.hex}}"
+# 主色 -> kitty color8/color12 (primary)
+primaryColor = "{{colors.primary.default.hex}}" # Matugen Generated
+# 文字颜色 -> kitty foreground (on_surface)
+textColor = "{{colors.on_surface.default.hex}}"
+# 阴影颜色 -> kitty url_color (primary)
+shadowColor = "{{colors.primary.default.hex}}"
+# 频谱低频 -> kitty color2/color4 (primary)
+spectrumColorLow = "{{colors.primary.default.hex}}"
+# 频谱中频 -> kitty color14 (secondary)
+spectrumColorMid = "{{colors.secondary.default.hex}}"
+# 频谱高频 -> kitty color5 (tertiary)
+spectrumColorHigh = "{{colors.tertiary.default.hex}}"
+
+[dark.highlights]
+menuItemHover = "{{colors.primary.default.hex}}"
+selectedItem = "{{colors.primary.default.hex}}"
+selectedItemHover = "{{colors.primary.default.hex}}"
+
+[dark.notification]
+# 通知背景 -> kitty background (surface)
+surface = "{{colors.surface.default.hex}}"
+# 信息边框 -> 主色 (primary)
+infoBorder = "{{colors.primary.default.hex}}"
+# 成功边框（播放下一首） -> 主色 (primary)
+successBorder = "{{colors.primary.default.hex}}"
+# 警告边框 -> 第三色 (tertiary)
+warningBorder = "{{colors.tertiary.default.hex}}"
+# 错误边框 -> error 色
+errorBorder = "{{colors.error.default.hex}}"

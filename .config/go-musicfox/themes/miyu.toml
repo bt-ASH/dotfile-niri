@@ -1,0 +1,35 @@
+name = "Miyu"
+description = "matugen 同步主题（与 kitty 配色适配）"
+
+[dark]
+# 背景色 -> kitty background (surface)
+bgColor = "#1a1111"
+# 主色 -> kitty color8/color12 (primary)
+primaryColor = "#ffb3b0" # Matugen Generated
+# 文字颜色 -> kitty foreground (on_surface)
+textColor = "#f0dedd"
+# 阴影颜色 -> kitty url_color (primary)
+shadowColor = "#ffb3b0"
+# 频谱低频 -> kitty color2/color4 (primary)
+spectrumColorLow = "#ffb3b0"
+# 频谱中频 -> kitty color14 (secondary)
+spectrumColorMid = "#e6bdba"
+# 频谱高频 -> kitty color5 (tertiary)
+spectrumColorHigh = "#e3c28c"
+
+[dark.highlights]
+menuItemHover = "#ffb3b0"
+selectedItem = "#ffb3b0"
+selectedItemHover = "#ffb3b0"
+
+[dark.notification]
+# 通知背景 -> kitty background (surface)
+surface = "#1a1111"
+# 信息边框 -> 主色 (primary)
+infoBorder = "#ffb3b0"
+# 成功边框（播放下一首） -> 主色 (primary)
+successBorder = "#ffb3b0"
+# 警告边框 -> 第三色 (tertiary)
+warningBorder = "#e3c28c"
+# 错误边框 -> error 色
+errorBorder = "#ffb4ab"
