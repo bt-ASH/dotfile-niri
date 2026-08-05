@@ -9,7 +9,20 @@
                 :timeout "2s"
                 :onclick "scripts/open_wiremix.sh"
                 :onrightclick "scripts/toggle_mute.sh"
-                {volume == "muted" ? "󰝟  muted" : volume < 33 ? "󰕿  " + volume + "%" : volume < 67 ? "󰖀  " + volume + "%" : "󰕾  " + volume + "%"}
+                (box :orientation "h" :spacing 2 :space-evenly false
+                    (label :text {volume == "muted" && volume_dev == "bt" ? "󰂲  "
+                                  : volume_dev == "bt" ? "󰂰  "
+                                  : volume == "muted" ? "󰝟"
+                                  : volume_dev == "headphone" ? "󰋋  "
+                                  : volume_dev == "hands-free" ? "󰥰  "
+                                  : volume_dev == "headset" ? "󰋎  "
+                                  : volume_dev == "phone" ? "󰏲  "
+                                  : volume_dev == "portable" ? "󰄝  "
+                                  : volume_dev == "car" ? "󰄋  "
+                                  : volume < 33 ? "󰕿  " : volume < 67 ? "󰖀  " : "󰕾  "}
+                    )
+                    (label :text {volume == "muted" ? "" : volume + "%"})
+                )
             )
             (revealer :transition "slideleft" :reveal open_volume :duration {ANIM_DURATION}
                 (scale :class "volume-scale-bar"

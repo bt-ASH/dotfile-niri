@@ -24,5 +24,6 @@
 
 (defpoll workspaces :interval "1s" :initial "[{\"id\":1,\"focused\":true}]" "scripts/workspaces.sh")
 (defpoll volume :interval "1s" :initial "0" "scripts/volume.sh")
+(defpoll volume_dev :interval "2s" :initial "default" "scripts/volume_dev.sh")
 (deflisten mpris :initial "{\"text\":\"\",\"title\":\"\",\"artist\":\"\",\"status\":\"Stopped\"}" "scripts/caway.sh")
 (defpoll network :interval "1s" :initial "󰖪   Disconnected" "scripts/network.sh")
