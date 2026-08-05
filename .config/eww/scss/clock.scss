@@ -1,9 +1,18 @@
 .clock {
     border-radius: 1rem;
     padding: 0 0.5rem;
-    margin: 0 0.25rem;
+    margin: 0;
     transition: 0.3s;
     font-size: 1.5rem;
+}
+
+.clock-date {
+    border-radius: 1rem;
+    padding: 0 0.5rem;
+    margin: 0;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    color: $clock-color;
 }
 
 .big_clock_box {

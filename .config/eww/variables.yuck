@@ -1,11 +1,17 @@
 ; VARS
 
 (defvar open_tray false)
+(defvar tray_pending false)
+(defvar open_date false)
+(defvar open_volume false)
+(defvar open_backlight false)
+(defvar open_power false)
 (defvar ANIM_DURATION "200ms")
 
 ; POLLS
 
 (defpoll time :interval "1s" :initial "--:--" "scripts/clock.sh")
+(defpoll date_str :interval "60s" :initial "----" "date +%Y-%m-%d")
 (defpoll cpu :interval "2s" :initial "0" "scripts/cpu.sh")
 (defpoll memory :interval "2s" :initial "0" "scripts/memory.sh")
 (defpoll temperature :interval "5s" :initial "50" "scripts/temperature.sh")

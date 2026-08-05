@@ -1,5 +1,18 @@
 (defwidget power []
-    (button :class "power" :timeout "10s" :onclick "~/.config/niri/scripts/powermenu"
-        ""
+    (eventbox :onhover "eww update open_power=true"
+              :onhoverlost "eww update open_power=false"
+        (box :class "power" :orientation "h" :space-evenly false :halign "start"
+            (label :class "power-trigger" :text "󰣇")
+            (revealer :transition "slideleft" :reveal open_power :duration {ANIM_DURATION}
+                (box :class "power-menu" :orientation "h" :space-evenly false
+                    (button :class "power-menu-button" :onclick "sleep 0.1 && gtklock &" "")
+                    (button :class "power-menu-button" :onclick "systemctl poweroff" "󰐥")
+                    (button :class "power-menu-button" :onclick "niri msg action quit" "󰗼")
+                    (button :class "power-menu-button" :onclick "sleep 0.1 && gtklock & systemctl suspend &" "󰤄")
+                    (button :class "power-menu-button" :onclick "systemctl reboot" "󰜉")
+                    (button :class "power-menu-button" :onclick "systemctl poweroff" "󰤆")
+                )
+            )
+        )
     )
 )

@@ -16,14 +16,14 @@
 }
 
 /* ===== common module style ===== */
+/* ===== common module style ===== */
 .power, .music, .clock, .volume, .backlight, .network,
 .cpu, .memory, .temperature, .ppd, .battery, .tray {
     padding: 0 10px;
-    margin: 0 2px;
+    margin: 0;
     box-shadow: inset 0 -2px 0 0 transparent;
     background-color: transparent;
 }
-
 /* ===== hover (waybar style: background-light on hover) ===== */
 .music:hover, .clock:hover, .volume:hover,
 .network:hover, .cpu:hover, .memory:hover, .temperature:hover,
@@ -128,6 +128,61 @@
 .tray {
     color: $clock-color;
     box-shadow: inset 0 -2px 0 0 $clock-color;
+}
+
+.tray-trigger {
+    color: $clock-color;
+    box-shadow: inset 0 -2px 0 0 $clock-color;
+    padding: 0 0.25rem 0 0.25rem;
+}
+
+.tray-trigger:hover {
+    background: $background-light;
+}
+
+/* ===== hover slide-out scales (volume/backlight) ===== */
+.volume-scale-bar trough,
+.backlight-scale-bar trough {
+    background-color: $surface_variant;
+    border-radius: 1rem;
+    min-height: 0.35rem;
+    min-width: 6rem;
+    margin: 0 0.25rem;
+}
+
+.volume-scale-bar trough highlight {
+    background-color: $backlight-color;
+    border-radius: 1rem;
+    min-height: 0.35rem;
+}
+
+.backlight-scale-bar trough highlight {
+    background-color: $backlight-color;
+    border-radius: 1rem;
+    min-height: 0.35rem;
+}
+
+/* ===== power hover slide-out menu ===== */
+.power-menu {
+    background-color: transparent;
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+    padding: 0 0.25rem;
+}
+
+.power-menu-button {
+    background-color: transparent;
+    color: $power-color;
+    border-radius: 0.35rem;
+    padding: 0 0.3rem;
+    min-width: 1.6rem;
+    min-height: 1.6rem;
+    transition: 0.2s;
+}
+
+.power-menu-button:hover {
+    background-color: $background-light;
+    color: $power-color;
 }
 
 /* ===== workspaces (waybar #workspaces) ===== */
