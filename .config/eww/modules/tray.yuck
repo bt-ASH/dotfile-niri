@@ -3,7 +3,7 @@
         (box :class "tray-wrapper" :orientation "h" :space-evenly false
             (label :text "󰇥" :class "tray-trigger")
             (revealer :transition "slideleft" :reveal open_tray :duration {ANIM_DURATION}
-                (systray :class "tray" :orientation "h" :icon-size 18 :spacing 5)
+                (systray :class "tray" :orientation "h" :icon-size 14 :spacing 5)
             )
         )
     )

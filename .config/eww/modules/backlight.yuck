@@ -7,7 +7,7 @@
             :space-evenly false
             (button :class "backlight-button"
                 :timeout "2s"
-                :onclick "kitty -e musicfox"
+                :onclick "scripts/toggle_bl_osd.sh"
                 {bl > 66 ? "󰃠  " + bl + "%" : bl > 33 ? "󰃟  " + bl + "%" : "󰃞  " + bl + "%"}
             )
             (revealer :transition "slideleft" :reveal open_backlight :duration {ANIM_DURATION}
