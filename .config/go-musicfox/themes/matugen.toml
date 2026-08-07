@@ -1,0 +1,93 @@
+name = "matugen"
+description = "matugen 同步主题（与 kitty 配色适配）"
+
+[dark]
+# 主色 -> kitty color8/color12 (primary)
+primary = "#ffb3b0" # Matugen Generated
+# 次色 -> kitty color14 (secondary)
+secondary = "#e6bdba"
+# 强调色 -> kitty color5 (tertiary)
+accent = "#e3c28c"
+# 成功色
+success = "#e3c28c"
+# 警告色
+warning = "#e3c28c"
+# 错误色 -> matugen error
+error = "#ffb4ab"
+# 信息色
+info = "#ffb3b0"
+# 弱化文字
+muted = "#a08c8b"
+# 快捷键提示
+hintKey = "#a08c8b"
+# 背景色 -> kitty background (surface)
+background = "#1a1111"
+# 前景色 -> kitty foreground (on_surface)
+foreground = "#f0dedd"
+# 边框色
+border = "#a08c8b"
+# 表面色（卡片/浮层背景）
+surface = "#1a1111"
+# 菜单选中分隔符
+menuSelectedSepLeft = " "
+menuSelectedSepRight = " "
+
+[dark.highlights]
+# 菜单标题
+menuTitle = "#ffb3b0"
+# 菜单项文字
+menuItem = "#f0dedd"
+# 鼠标悬停
+menuItemHover = "#ffb3b0"
+# 方向键选中
+selectedItem = "#ffb3b0"
+# 选中+悬停
+selectedItemHover = "#ffb3b0"
+# 选中项背景
+selectedItemBg = "transparent"
+
+[dark.popup]
+surface = "#1a1111"
+border = "#a08c8b"
+
+[dark.notification]
+surface = "#1a1111"
+infoBorder = "#ffb3b0"
+successBorder = "#ffb3b0"
+warningBorder = "#e3c28c"
+errorBorder = "#ffb4ab"
+
+[dark.statusBar]
+nuggetLabelFg = "#ffb3b0"
+nuggetLabelBg = "transparent"
+timeSepLeft = " "
+breadcrumbSepRight = " "
+breadcrumbHover = "#ffb3b0"
+
+[dark.markdown]
+dark = "dark"
+light = "light"
+
+[dark.app]
+# 歌词配色
+lyricActive = "#f0dedd"
+lyricTransition = "#e6bdba"
+lyricInactive = "#a08c8b"
+lyricHighlight = "#ffb3b0"
+# 播放栏
+playbarMode = "#e3c28c"
+playbarVolume = "#ffb3b0"
+playbarPlaying = "#ffb3b0"
+playbarPaused = "#e6bdba"
+playbarHeartLiked = "#ffb3b0"
+playbarHeartUnliked = "#a08c8b"
+playbarArtist = "#a08c8b"
+# 频谱
+visualizerColorStart = "#ffb3b0"
+visualizerColorEnd = "#e3c28c"
+# 背景类
+background = "transparent"
+contextMenuBg = "transparent"
+spectrumVerticalBg = "transparent"
+desktopLyricsBg = "transparent"
+configTableSelectedBg = "transparent"

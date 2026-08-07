@@ -174,9 +174,9 @@ fontSize = 24
 # 字体名称（留空使用系统默认字体）
 fontName = ""
 # 文字颜色（十六进制）
-textColor = "#efdee1"
+textColor = "#e5e1e9"
 # 文字阴影颜色（十六进制）
-shadowColor = "#ffb1c3"
+shadowColor = "#c7bfff"
 # 阴影模糊半径（像素）
 shadowRadius = 1.0
 # 背景颜色（十六进制）
@@ -211,11 +211,11 @@ spectrumStyle = "line"
 # 频谱整体透明度（0.0-1.0，默认 0.8）
 spectrumOpacity = 0.8
 # 低频颜色（十六进制）
-spectrumColorLow = "#ffb1c3"
+spectrumColorLow = "#c7bfff"
 # 中频颜色（十六进制）
-spectrumColorMid = "#e4bdc4"
+spectrumColorMid = "#c8c3dc"
 # 高频颜色（十六进制）
-spectrumColorHigh = "#edbe92"
+spectrumColorHigh = "#ecb8cf"
 
 # Go性能分析工具pprof的相关设置
 [main.pprof]
@@ -232,7 +232,7 @@ neteaseCookie = ""
 [theme]
 # 活跃主题名称（对应主题文件中的 name 字段，默认 "Default"）
 # 主题文件存放于 embed/themes/（内置）和 ~/.config/go-musicfox/themes/（用户自定义）
-activeTheme = "Miyu"
+activeTheme = "matugen"
 # 是否在界面顶部显示标题
 showTitle = true
 # 菜单加载时显示的提示文字
@@ -249,7 +249,7 @@ centerEverything = true
 # 随机
 # primaryColor = "random"
 # 经典网易云音乐红
-primaryColor = "#ffb1c3" # Matugen Generated
+primaryColor = "#c7bfff" # Matugen Generated
 # 是否显示底部状态栏（面包屑导航路径 + 时间）
 statusBar = true
 # 无障碍模式：高对比度主题 + 强调样式
