@@ -1,19 +1,19 @@
 #!/bin/bash
-# matugen 渲染 miyu.toml 后，将配色同步到 go-musicfox config.toml
-# 包括: primaryColor / textColor / shadowColor / spectrum 三色
+# matugen 渲染 themes/matugen.toml 后，将新版主题字段同步到 go-musicfox config.toml 旧字段
+# 新版字段: primary/foreground/secondary/accent -> 旧字段: primaryColor/textColor/shadowColor/spectrum*
 
-THEME_FILE="$HOME/.config/go-musicfox/themes/miyu.toml"
+THEME_FILE="$HOME/.config/go-musicfox/themes/matugen.toml"
 CONFIG_FILE="$HOME/.config/go-musicfox/config.toml"
 
 [ -f "$THEME_FILE" ] || exit 0
 
-# 从主题文件提取颜色值
-PRIMARY_COLOR=$(grep -oP '^menuItemHover\s*=\s*"\K[^"]+' "$THEME_FILE" | head -1)
-TEXT_COLOR=$(grep -oP '^textColor\s*=\s*"\K[^"]+' "$THEME_FILE" | head -1)
-SHADOW_COLOR=$(grep -oP '^shadowColor\s*=\s*"\K[^"]+' "$THEME_FILE" | head -1)
-SPECTRUM_LOW=$(grep -oP '^spectrumColorLow\s*=\s*"\K[^"]+' "$THEME_FILE" | head -1)
-SPECTRUM_MID=$(grep -oP '^spectrumColorMid\s*=\s*"\K[^"]+' "$THEME_FILE" | head -1)
-SPECTRUM_HIGH=$(grep -oP '^spectrumColorHigh\s*=\s*"\K[^"]+' "$THEME_FILE" | head -1)
+# 从新版主题文件提取颜色值
+PRIMARY_COLOR=$(grep -oP '^primary\s*=\s*"\K[^"]+' "$THEME_FILE" | head -1)
+TEXT_COLOR=$(grep -oP '^foreground\s*=\s*"\K[^"]+' "$THEME_FILE" | head -1)
+SHADOW_COLOR=$(grep -oP '^primary\s*=\s*"\K[^"]+' "$THEME_FILE" | head -1)
+SPECTRUM_LOW=$(grep -oP '^primary\s*=\s*"\K[^"]+' "$THEME_FILE" | head -1)
+SPECTRUM_MID=$(grep -oP '^secondary\s*=\s*"\K[^"]+' "$THEME_FILE" | head -1)
+SPECTRUM_HIGH=$(grep -oP '^accent\s*=\s*"\K[^"]+' "$THEME_FILE" | head -1)
 
 # 备份
 cp "$CONFIG_FILE" "$CONFIG_FILE.bak"

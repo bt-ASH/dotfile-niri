@@ -168,7 +168,7 @@ pre_hook = 'mkdir -p ~/.cache/matugen'
 
 [templates.musicfox]
 input_path = '~/.config/matugen/templates/musicfox-theme.toml'
-output_path = '~/.config/go-musicfox/themes/miyu.toml'
+output_path = '~/.config/go-musicfox/themes/matugen.toml'
 pre_hook = 'mkdir -p ~/.config/go-musicfox/themes'
 post_hook = "bash ~/.config/matugen/scripts/inject-go-musicfox-color.sh"
 
