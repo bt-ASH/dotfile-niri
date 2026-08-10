@@ -1,5 +1,5 @@
 window {
-    background-color: rgba(24, 18, 12, 0.90);
+    background-color: rgba(26, 17, 17, 0.90);
 }
 button:hover {
     background-image: none;
@@ -15,7 +15,7 @@ button:hover>image {
 .highlighted-button {
     background-image: none;
     box-shadow: none;
-    background-color: rgba(24, 18, 12, 0.60);
+    background-color: rgba(26, 17, 17, 0.60);
 }
 
 .highlighted-button>image, .highlighted-button:hover>image {
