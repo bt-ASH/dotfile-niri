@@ -217,14 +217,14 @@
 [color]
 gradient = 1
 
-gradient_color_1 = '#513c73'
-gradient_color_2 = '#d5bbfc'
-gradient_color_3 = '#f1b7c3'
-gradient_color_4 = '#cec2db'
-gradient_color_5 = '#4b4357'
-gradient_color_6 = '#643b45'
-gradient_color_7 = '#ffb4ab'
-gradient_color_8 = '#ecdcff'
+gradient_color_1 = '#d0bcff'
+gradient_color_2 = '#d0bcff'
+gradient_color_3 = '#ccc2dc'
+gradient_color_4 = '#ccc2dc'
+gradient_color_5 = '#ccc2dc'
+gradient_color_6 = '#f2b8b5'
+gradient_color_7 = '#f2b8b5'
+gradient_color_8 = '#e6e0e9'
 [smoothing]
 
 # Percentage value for integral smoothing. Takes values from 0 - 100.
