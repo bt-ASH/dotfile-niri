@@ -83,17 +83,10 @@ ps1_command_tip() {
   } | sed '1d;/^$/d'
 }
 
-# Show prompt header (fortune / command tip)
+# Show prompt header (fortune / command tip) — disabled
 prompt_header() {
-  local header=$(
-    case "${ENABLE_COMMAND_TIP:-}" in
-    true) ps1_command_tip ;;
-    *) ps1_fortune ;;
-    esac
-  )
-
-  # Make sure to quote % so that they're not expanded by the prompt
-  echo -n "${header:gs/%/%%}"
+  # Disabled: no fortune quotes or command tips
+  echo -n ""
 }
 
 # Context: user@directory or just directory
