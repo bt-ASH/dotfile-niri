@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ================= 默认配置 =================
-API_URL="https://t.alcy.cc/pc/"
+API_URL="https://t.alcy.cc/img"
 SAVE_DIR="$HOME/Pictures/Wallpapers/api-random-download"
 
 # [新增配置] 自动清理时保留最近多少张图片？
