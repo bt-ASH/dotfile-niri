@@ -164,7 +164,7 @@ spinDuration = 6
 # 桌面歌词设置（目前仅支持 macOS）
 [main.lyric.desktopLyrics]
 # 是否启用桌面歌词
-enable = true
+enable = false
 # X 位置系数（0.0-1.0，0.5 表示居中，0.0 最左，1.0 最右）
 xPositionFactor = 0.5
 # Y 位置系数（0.0-1.0，0.0 底部，1.0 顶部，默认 0.5 居中）
@@ -176,7 +176,7 @@ fontName = ""
 # 文字颜色（十六进制）
 textColor = "#e5e1e9"
 # 文字阴影颜色（十六进制）
-shadowColor = "#c6bfff"
+shadowColor = "#c7bfff"
 # 阴影模糊半径（像素）
 shadowRadius = 1.0
 # 背景颜色（十六进制）
@@ -211,11 +211,11 @@ spectrumStyle = "line"
 # 频谱整体透明度（0.0-1.0，默认 0.8）
 spectrumOpacity = 0.8
 # 低频颜色（十六进制）
-spectrumColorLow = "#c6bfff"
+spectrumColorLow = "#c7bfff"
 # 中频颜色（十六进制）
 spectrumColorMid = "#c8c3dc"
 # 高频颜色（十六进制）
-spectrumColorHigh = "#ebb8cf"
+spectrumColorHigh = "#ecb8cf"
 
 # Go性能分析工具pprof的相关设置
 [main.pprof]
@@ -249,7 +249,7 @@ centerEverything = true
 # 随机
 # primaryColor = "random"
 # 经典网易云音乐红
-primaryColor = "#c6bfff" # Matugen Generated
+primaryColor = "#c7bfff" # Matugen Generated
 # 是否显示底部状态栏（面包屑导航路径 + 时间）
 statusBar = true
 # 无障碍模式：高对比度主题 + 强调样式
@@ -367,16 +367,16 @@ playlist = "no"
 offset = 0
 # 播放模式
 # 可选: "listLoop", "order", "singleLoop", "random"（无视offset）, "intelligent"（心动）, "last"（上次退出时的模式）
-mode = "last"
+mode = "intelligent"
 
 
 # UNM (Unlock NetEase Music) 相关配置，用于解锁灰色或无版权歌曲
 [unm]
 # 是否启用 UNM 功能
-enable = false
+enable = true
 # 音源匹配来源，可配置多个，用逗号分隔
 # 可选: "kuwo", "kugou", "migu", "qq"
-sources = ["kuwo"]
+sources = ["kuwo", "kugou", "migu", "qq"]
 # UNM搜索其他平台限制 0-3
 searchLimit = 0
 # 解除会员限制
