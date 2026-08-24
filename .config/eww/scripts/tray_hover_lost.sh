@@ -6,7 +6,7 @@
 
 eww update tray_pending=true
 
-sleep 0.7
+sleep 1.7
 
 if [ "$(eww get tray_pending)" = "true" ]; then
     eww update tray_pending=false open_tray=false
