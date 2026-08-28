@@ -1,0 +1,239 @@
+---
+name: Run tests
+on:
+  pull_request: ~
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+env:
+  # renovate: datasource=git-refs-master packageName=https://github.com/neovim/neovim
+  NEOVIM_NIGHTLY_COMMIT: 7f8175dc48f9fbceb2d89f0646f03e2e18f9debb
+  # renovate: datasource=git-refs packageName=https://github.com/sxyazi/yazi
+  YAZI_NIGHTLY_COMMIT: 58f1013348c969538352e3105f58e8d8e870a092
+
+jobs:
+  build-neovim-nightly:
+    name: Build pinned Neovim nightly
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Build pinned Neovim nightly
+        uses: mikavilpas/neovim-action/build-nightly@4f1c9a2235ee7428930602c0ba3e4f20377b61d8 # v3.3.0
+        with:
+          commit: ${{ env.NEOVIM_NIGHTLY_COMMIT }}
+
+  build-yazi-nightly:
+    name: Build pinned Yazi nightly
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Build pinned Yazi nightly
+        uses: mikavilpas/yazi-action/build-nightly@5e57d5ee3a257857d39c2310e0c81f756523df52 # v1.1.1
+        with:
+          commit: ${{ env.YAZI_NIGHTLY_COMMIT }}
+
+  busted:
+    name: "Busted (neovim ${{ matrix.neovim.name }})"
+    runs-on: ubuntu-24.04
+    needs:
+      - build-neovim-nightly
+    permissions:
+      contents: read
+    strategy:
+      matrix:
+        neovim:
+          - name: nightly
+          - name: stable
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Download pinned Neovim nightly
+        if: matrix.neovim.name == 'nightly'
+        uses: mikavilpas/neovim-action/restore-nightly@4f1c9a2235ee7428930602c0ba3e4f20377b61d8 # v3.3.0
+        with:
+          commit: ${{ env.NEOVIM_NIGHTLY_COMMIT }}
+
+      - name: Install stable Neovim
+        if: matrix.neovim.name == 'stable'
+        uses: rhysd/action-setup-vim@febef33995d6649302e9d88dda81e071b68f16a7 # v1.6.1
+        with:
+          neovim: true
+          version: stable
+
+      - name: Run tests
+        uses: mikavilpas/neovim-action/busted@4f1c9a2235ee7428930602c0ba3e4f20377b61d8 # v3.3.0
+
+  e2e:
+    name: "E2E (neovim ${{ matrix.neovim.name }}, yazi ${{ matrix.yazi-version.name }})"
+    runs-on: ubuntu-24.04
+    needs:
+      - build-neovim-nightly
+      - build-yazi-nightly
+    permissions:
+      contents: read
+    strategy:
+      matrix:
+        neovim:
+          - name: nightly
+          - name: stable
+        yazi-version:
+          - name: nightly
+            method: restore-nightly
+          - name: stable
+            method: download
+            # renovate: datasource=github-releases depName=sxyazi/yazi
+            version: v26.5.6
+          - name: v26.1.22
+            method: download
+            version: v26.1.22
+          - name: v26.1.4
+            method: download
+            version: v26.1.4
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install tools with UBI
+        shell: bash
+        run: |
+          mkdir -p "$HOME/.local/bin"
+          # make the tools available for subsequent steps
+          echo "$(pwd)/bin" >> "$GITHUB_PATH"
+          curl --silent --location \
+              https://raw.githubusercontent.com/houseabsolute/ubi/master/bootstrap/bootstrap-ubi.sh |
+              TARGET="$HOME/.local/bin" sh
+
+          VERSION=$(yq '.tools."github:EmmyLuaLs/emmylua-analyzer-rust".version' mise.toml)
+          ubi --project EmmyLuaLs/emmylua-analyzer-rust --tag "$VERSION" --exe emmylua_ls --matching-regex "^emmylua_ls"
+
+          VERSION=$(yq '.tools.ripgrep.version' mise.toml)
+          ubi --project BurntSushi/ripgrep --tag "$VERSION" --exe rg
+
+          VERSION=$(yq '.tools.fzf' mise.toml)
+          ubi --project junegunn/fzf --tag "v$VERSION"
+
+          VERSION=$(yq '.tools.fd' mise.toml)
+          ubi --project sharkdp/fd --tag "v$VERSION"
+          ls -alR bin
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Restore the pinned Yazi nightly
+        if: matrix.yazi-version.name == 'nightly'
+        uses: mikavilpas/yazi-action/restore-nightly@5e57d5ee3a257857d39c2310e0c81f756523df52 # v1.1.1
+        with:
+          commit: ${{ env.YAZI_NIGHTLY_COMMIT }}
+
+      - name: Download prebuilt yazi version
+        if: matrix.yazi-version.method == 'download'
+        run: |
+          ubi --project sxyazi/yazi --tag "${{ matrix.yazi-version.version }}" --extract-all
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Make sure yazi and ya are installed
+        run: |
+          echo "PATH:"
+          echo "$PATH"
+
+          yazi --version
+          ya --version
+
+      - name: Download pinned Neovim nightly
+        if: matrix.neovim.name == 'nightly'
+        uses: mikavilpas/neovim-action/restore-nightly@4f1c9a2235ee7428930602c0ba3e4f20377b61d8 # v3.3.0
+        with:
+          commit: ${{ env.NEOVIM_NIGHTLY_COMMIT }}
+
+      - name: Install stable Neovim
+        if: matrix.neovim.name == 'stable'
+        uses: rhysd/action-setup-vim@febef33995d6649302e9d88dda81e071b68f16a7 # v1.6.1
+        with:
+          neovim: true
+          version: stable
+
+      - uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6.0.9
+        with:
+          # https://github.com/pnpm/action-setup?tab=readme-ov-file#use-cache-to-reduce-installation-time
+          run_install: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: "pnpm"
+      - run: pnpm install
+
+      - name: Verify that dependencies are available
+        run: |
+          # ripgrep is a dependency of telescope and fzf-lua
+          #
+          # fd is a dependency of telescope and fzf-lua
+          # https://github.com/sharkdp/fd?tab=readme-ov-file#on-ubuntu
+          # make sure it's available as `fd` - there seems to be some conflict in Ubuntu
+          #
+          # realpath is used to resolve relative paths in yazi.nvim
+          fd --version
+          fzf --version
+          rg --version
+          which realpath || { exit 1; }
+          nvim --version
+          yazi --version
+          ya --version
+
+      - working-directory: integration-tests
+        name: Prepare Neovim for integration tests
+        run: |
+          # NVIM_APPNAME=nvim is the default, but spelled out here for clarity
+          NVIM_APPNAME=nvim pnpm tui neovim prepare
+          NVIM_APPNAME=nvim_integrations pnpm tui neovim prepare
+
+      # need to work around https://github.com/cypress-io/github-action/issues/1246
+      - run: pnpm --filter integration-tests exec cypress install
+
+      - name: Cypress test
+        uses: cypress-io/github-action@fa4a118725a8f001170d49631ea89e5d66fee626 # v7.4.1
+        with:
+          install: false
+          command: pnpm tui run
+        env:
+          # The tests related to nvim.yazi can only be run in a modern yazi nightly.
+          # Gate on this to avoid failures on older yazis.
+          YAZI_IS_NIGHTLY: ${{ matrix.yazi-version.name == 'nightly' }}
+
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        # add the line below to store screenshots only on failures
+        # if: failure()
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: integration-tests/cypress/screenshots
+          if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
+
+  ci:
+    name: ci
+    if: ${{ always() }}
+    needs:
+      - build-neovim-nightly
+      - build-yazi-nightly
+      - busted
+      - e2e
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - name: Verify all required jobs succeeded
+        if: >-
+          ${{
+            contains(needs.*.result, 'failure')
+            || contains(needs.*.result, 'cancelled')
+            || contains(needs.*.result, 'skipped')
+          }}
+        run: |
+          echo "One or more required jobs did not succeed."
+          exit 1

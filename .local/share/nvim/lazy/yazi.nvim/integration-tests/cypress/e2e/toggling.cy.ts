@@ -1,0 +1,121 @@
+import { flavors } from "@catppuccin/palette"
+import { textIsVisibleWithBackgroundColor } from "@tui-sandbox/library"
+
+import type { MyTestDirectoryFile } from "../../MyTestDirectory.js"
+import { hoverFileAndVerifyItsHovered, rgbify } from "./utils/hover-utils.js"
+import { setBufferLines } from "./utils/neovim-utils.js"
+import { assertYaziIsReady } from "./utils/yazi-utils.js"
+
+describe("toggling yazi to pseudo-continue the previous session", () => {
+  beforeEach(() => {
+    cy.visit("/")
+  })
+
+  it("can restore yazi hovering on the previously hovered file", () => {
+    cy.startNeovim({
+      filename: "initial-file.txt",
+      startupScriptModifications: ["add_yazi_context_assertions.lua", "add_command_to_reveal_a_file.lua"],
+    }).then(nvim => {
+      // wait until text on the start screen is visible
+      cy.contains("If you see this text, Neovim is ready!")
+
+      // start yazi
+      cy.typeIntoTerminal("{upArrow}")
+
+      // This should send a hover event, which should be saved as the "last
+      // hovered file"
+      hoverFileAndVerifyItsHovered(nvim, "file2.txt")
+
+      // close yazi
+      cy.typeIntoTerminal("q")
+
+      // the hovered file should not be visible any longer
+      cy.contains(nvim.dir.contents["file2.txt"].name).should("not.exist")
+
+      // start yazi again by toggling it
+      cy.typeIntoTerminal("{control+upArrow}")
+
+      // the previously hovered file should be visible again
+      cy.contains(nvim.dir.contents["file2.txt"].name)
+    })
+  })
+
+  it("can toggle yazi even if no previous session exists", () => {
+    cy.startNeovim().then(nvim => {
+      // wait until text on the start screen is visible
+      cy.contains("If you see this text, Neovim is ready!")
+
+      // toggle yazi
+      cy.typeIntoTerminal("{control+upArrow}")
+
+      // yazi should be visible, showing other files
+      cy.contains(nvim.dir.contents["file2.txt"].name)
+    })
+  })
+
+  it("can toggle yazi, hovering a directory", () => {
+    // by default in yazi, starting and hovering a directory is not supported.
+    // Yazi displays the contents of the directory instead of hovering the
+    // directory. We work around this by sending a "reveal" event to yazi to
+    // hover the directory instead.
+    cy.startNeovim({
+      filename: "dir with (parens ) and spaces/file1.txt",
+      startupScriptModifications: ["add_yazi_context_assertions.lua", "add_command_to_reveal_a_file.lua"],
+    }).then(nvim => {
+      // wait until text on the start screen is visible
+      cy.contains("this is the first file")
+
+      // toggle yazi and set up a session that hovers a directory
+      cy.typeIntoTerminal("{upArrow}")
+      cy.log("yazi should be visible, showing other files")
+      assertYaziIsReady(nvim)
+      hoverFileAndVerifyItsHovered(nvim, "dir with (parens ) and spaces/file1.txt")
+
+      // yazi should be visible, showing other files
+      cy.contains(nvim.dir.contents["file2.txt"].name)
+
+      // focus "dir with spaces" in the parent directory
+      hoverFileAndVerifyItsHovered(nvim, "dir with (parens ) and spaces")
+
+      // close yazi
+      assertYaziIsReady(nvim)
+      cy.typeIntoTerminal("q")
+
+      // toggle yazi again. It should hover the same directory.
+      cy.typeIntoTerminal("{control+upArrow}")
+      textIsVisibleWithBackgroundColor(
+        "dir with (parens ) and spaces" satisfies MyTestDirectoryFile,
+        rgbify(flavors.macchiato.colors.blue.rgb),
+      )
+    })
+  })
+})
+
+describe("before_opening_window", () => {
+  beforeEach(() => {
+    cy.visit("/")
+  })
+
+  it("can customize the window properties before opening it", () => {
+    cy.startNeovim({
+      filename: "dir with (parens ) and spaces/file1.txt",
+      startupScriptModifications: ["add_yazi_context_assertions.lua", "yazi_config/customize_window_properties.lua"],
+    }).then(nvim => {
+      // wait until text on the start screen is visible
+      cy.contains("this is the first file")
+
+      const line = "This line should be visible if the window is customized"
+      {
+        // add some text that would be hidden if the window weren't customized
+        const lines = Array<string>(15).fill(``)
+        lines.push(line)
+        setBufferLines(nvim, lines)
+      }
+
+      cy.typeIntoTerminal("{upArrow}")
+
+      assertYaziIsReady(nvim)
+      cy.contains(line)
+    })
+  })
+})

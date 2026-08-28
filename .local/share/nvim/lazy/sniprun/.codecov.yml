@@ -1,0 +1,12 @@
+coverage:
+  status:
+    patch:
+      default:
+        target: auto
+        threshold: 5
+        path: "src"
+
+    project:
+      default:
+        target: 50
+        path: "src"

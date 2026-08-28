@@ -1,0 +1,75 @@
+require("dap-view.highlight")
+require("dap-view.dap-defaults")
+require("dap-view.autocmds")
+require("dap-view.listeners")
+
+local actions = require("dap-view.actions")
+
+local M = {}
+
+---@param config dapview.Config?
+M.setup = function(config)
+    require("dap-view.setup").setup(config)
+end
+
+M.virtual_text_enable = function()
+    require("dap-view.virtual-text").set_virtual_text(true)
+end
+
+M.virtual_text_disable = function()
+    require("dap-view.virtual-text").set_virtual_text(false)
+end
+
+M.virtual_text_toggle = function()
+    require("dap-view.virtual-text").set_virtual_text(not require("dap-view.setup").config.virtual_text.enabled)
+end
+
+M.open = function()
+    actions.open()
+end
+
+---@param hide_terminal? boolean
+M.close = function(hide_terminal)
+    actions.close(hide_terminal)
+end
+
+---@param hide_terminal? boolean
+M.toggle = function(hide_terminal)
+    actions.toggle(hide_terminal)
+end
+
+---@param expr? string
+---@param enter? boolean
+---@param opts? dapview.EvaluateOpts
+M.hover = function(expr, enter, opts)
+    actions.hover(expr, enter, opts)
+end
+
+---@param expr? string
+---@param default_expanded? boolean
+M.add_expr = function(expr, default_expanded)
+    actions.add_expr(expr, default_expanded == nil or default_expanded)
+end
+
+---@param view dapview.Section
+M.jump_to_view = function(view)
+    actions.jump_to_view(view)
+end
+
+---@param view dapview.Section
+M.show_view = function(view)
+    actions.show_view(view)
+end
+
+---@param id string
+---@param section dapview.CustomSectionConfig
+M.register_view = function(id, section)
+    actions.register_view(id, section)
+end
+
+---@param opts dapview.NavigateOpts
+M.navigate = function(opts)
+    actions.navigate(opts)
+end
+
+return M

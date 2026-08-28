@@ -1,0 +1,35 @@
+local M = {}
+
+---@param config dapview.ConfigStrict
+function M.validate(config)
+    require("dap-view.setup.validate.util").validate("config", {
+        windows = { config.windows, "table" },
+        winbar = { config.winbar, "table" },
+        help = { config.help, "table" },
+        hover = { config.hover, "table" },
+        render = { config.render, "table" },
+        switchbuf = { config.switchbuf, { "string", "function" } },
+        keymaps = { config.keymaps, { "table" } },
+        icons = { config.icons, "table" },
+        virtual_text = { config.virtual_text, "table" },
+        auto_toggle = { config.auto_toggle, { "boolean", "string" } },
+        follow_tab = { config.follow_tab, { "boolean", "function" } },
+    }, config)
+
+    if
+        type(config.auto_toggle) == "string"
+        and not vim.tbl_contains({ "keep_terminal", "open_term" }, config.auto_toggle)
+    then
+        error("Unknown auto_toggle option: " .. config.auto_toggle)
+    end
+
+    require("dap-view.setup.validate.winbar").validate(config.winbar)
+    require("dap-view.setup.validate.windows").validate(config.windows)
+    require("dap-view.setup.validate.help").validate(config.help)
+    require("dap-view.setup.validate.hover").validate(config.hover)
+    require("dap-view.setup.validate.icons").validate(config.icons)
+    require("dap-view.setup.validate.virtual-text").validate(config.virtual_text)
+    require("dap-view.setup.validate.render").validate(config.render)
+end
+
+return M

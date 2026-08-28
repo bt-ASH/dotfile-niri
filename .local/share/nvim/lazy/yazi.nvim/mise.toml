@@ -1,0 +1,63 @@
+[tools]
+fzf = "0.74.1"
+# fd is a dependency of telescope and fzf-lua
+fd = "10.4.2"
+lua = "5.1"
+# ripgrep is a dependency of telescope and fzf-lua
+ripgrep = { version = "15.2.0", exe = "rg" }
+"github:JohnnyMorganz/stylua" = "2.5.2"
+"github:rvben/rumdl" = "0.2.43"
+actionlint = "1.7.12"
+zizmor = "1.28.0"
+"aqua:Kampfkarren/selene" = "0.31.0"
+
+[tools."github:EmmyLuaLs/emmylua-analyzer-rust"]
+version = "0.24.0"
+
+[tools."github:EmmyLuaLs/emmylua-analyzer-rust".platforms]
+linux-x64 = { asset_pattern = "*_ls-linux-x64*" }
+macos-x64 = { asset_pattern = "*_ls-darwin-x64*" }
+macos-arm64 = { asset_pattern = "*_ls-darwin-arm64*" }
+
+[env]
+# busted/nlua live in this project's own luarocks tree (`luarocks init` ->
+# ./lua_modules), isolated from other projects on the machine so their rock
+# versions cannot conflict. Put its bin on PATH so `.busted`'s `lua = "nlua"`
+# resolves locally. In CI, mikavilpas/neovim-action/busted provides nlua on
+# PATH instead (an ephemeral runner has no other projects to conflict with).
+_.path = ["lua_modules/bin"]
+
+[tasks]
+test = "luarocks test --local"
+test-focus = "luarocks test --local -- --filter focus"
+format = "stylua lua/ spec/ integration-tests/ ./repro.lua yazi-plugin/nvim.yazi/"
+
+[tasks.check]
+description = "Check the code for errors (lint + test + format)"
+depends = ["lint", "test", "format"]
+
+[tasks.build]
+description = "Install dependencies"
+run = """
+luarocks init --no-gitignore
+luarocks install busted 2.2.0-1
+luarocks install nlua 0.3.2-1
+
+mise tasks
+"""
+
+[tasks.lint]
+run = """
+selene ./lua/ ./spec/ ./integration-tests/test-environment/config-modifications
+
+if rg "#focus" --glob "*.lua" ./spec/; then
+  echo "\n";
+  echo "Error: {{ vars.COLOR_GREEN }}#focus{{ vars.COLOR_RESET }} tags found in the codebase.\n";
+  echo "Please remove them to prevent issues with not accidentally running all tests.";
+  exit 1; \
+fi
+"""
+
+[vars]
+COLOR_RESET = '\033[0m'
+COLOR_GREEN = '\033[1;32m'

@@ -1,0 +1,173 @@
+#:schema https://yazi-rs.github.io/schemas/theme.json
+
+[app]
+overall = { bg = "#FEEEEE" }
+
+[mgr]
+cwd = { fg = "#937C7A", italic = true }
+
+# Find
+find_keyword  = { fg = "#FEEEEE", bg = "#D05312", bold = true }
+find_position = { fg = "#0090A2", bg = "#BBC9D7", bold = true }
+
+# Symlink
+symlink_target = { italic = true }
+
+# Marker
+marker_copied   = { fg = "#569400", bg = "#569400" }
+marker_cut      = { fg = "#D04F4E", bg = "#D04F4E" }
+marker_marked   = { fg = "#BD51A4", bg = "#BD51A4" }
+marker_selected = { fg = "#0090A2", bg = "#0090A2" }
+
+# Count
+count_copied   = { fg = "#FEEEEE", bg = "#569400" }
+count_cut      = { fg = "#FEEEEE", bg = "#D04F4E" }
+count_selected = { fg = "#FEEEEE", bg = "#D04F4E" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#D04F4E" }
+
+# NOTE: can be combined with tmTheme (sublime colorshceme file) for preview code highlight
+# syntect_theme = "path/to/tmTheme"
+
+# Tab
+[tabs]
+active   = { fg = "#815654", bg = "#FEEEEE" }
+inactive = { fg = "#937C7A", bg = "#D8D6D5" }
+
+# Mode
+[mode]
+normal_main = { fg = "#FEEEEE", bg = "#0090A2", bold = true }
+normal_alt  = { fg = "#0090A2", bg = "#F9DCD1" }
+
+select_main = { fg = "#FEEEEE", bg = "#BD51A4", bold = true }
+select_alt  = { fg = "#BD51A4", bg = "#F9DCD1" }
+
+unset_main  = { fg = "#FEEEEE", bg = "#D04F4E", bold = true }
+unset_alt   = { fg = "#D04F4E", bg = "#F9DCD1" }
+
+# Indicator
+[indicator]
+parent  = { bg = "#BBC9D7" }
+current = { bg = "#BBC9D7" }
+preview = { bg = "#BBC9D7" }
+
+# Status
+[status]
+sep_right  = { open = "", close = "" }
+sep_left   = { open = "", close = "" }
+overall    = { fg = "#D0B6B6", bg = "#D0B6B6" }
+
+# Progress
+progress_label  = { fg = "#937C7A", bold = true }
+progress_normal = { fg = "#FEEEEE" }
+progress_error  = { fg = "#D04F4E" }
+
+# Permissions
+perm_type = { fg = "#0090A2" }
+perm_read = { fg = "#AC7300" }
+perm_write = { fg = "#D04F4E" }
+perm_exec = { fg = "#569400" }
+perm_sep = { fg = "#D0B6B6" }
+
+# Input
+[input]
+border   = { fg = "#D04F4E" }
+title    = { fg = "#D04F4E" }
+value    = { fg = "#BD51A4" }
+selected = { bg = "#BBC9D7" }
+
+# Completion
+[cmp]
+border   = { fg = "#D04F4E" }
+active   = { fg = "#9E7876", bg = "#BBC9D7" }
+inactive = { fg = "#9E7876" }
+
+# Icons
+icon_file    = ""
+icon_folder  = ""
+icon_command = ""
+
+# Tasks
+[tasks]
+border  = { fg = "#D04F4E" }
+title   = { fg = "#D04F4E" }
+hovered = { fg = "#9E7876", bg="#BBC9D7" }
+
+# Confirm
+[confirm]
+border  = { fg = "#D04F4E" }
+title   = { fg = "#D04F4E" }
+content = {}
+body = {}
+list    = {}
+btn_yes = { reversed = true }
+btn_no  = {}
+
+# Spot
+[spot]
+border = { fg = "#D04F4E" }
+title = { fg = "#D04F4E" }
+
+# Which
+[which]
+cols            = 3
+mask            = { bg = "#F9DCD1" }
+cand            = { fg = "#00976C" }
+rest            = { fg = "#0090A2" }
+desc            = { fg = "#BD51A4" }
+separator       = "  "
+separator_style = { fg = "#D0B6B6" }
+
+# Notify
+[notify]
+title_info  = { fg = "#D04F4E" }
+title_warn  = { fg = "#AC7300" }
+title_error = { fg = "#D04F4E" }
+
+# Icons
+icon_info = ""
+icon_warn = ""
+icon_error = ""
+
+# Pick
+[pick]
+border   = { fg = "#D04F4E" }
+active   = { fg = "#9E7876",  bg = "#BBC9D7" }
+inactive = { fg = "#9E7876" }
+
+# Help
+[help]
+on      = { fg = "#569400" }
+run     = { fg = "#BD51A4" }
+desc    = { fg = "#0090A2" }
+hovered = { bg = "#BBC9D7" }
+footer  = { fg = "#9E7876", bg = "#FEEEEE" }
+
+[filetype]
+rules = [
+	# Images
+	{ mime = "image/*", fg = "#805C00" },
+
+	# Media
+	{ mime = "{audio,video}/*", fg = "#90437A" },
+
+	# Archives
+	{ mime = "application/*zip", fg = "#A13F37" },
+	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "#A13F37" },
+
+	# Documents
+	{ mime = "application/{pdf,doc,rtf,vnd.*}", fg = "#007652" },
+
+	# Empty files
+	# { mime = "inode/x-empty", fg = "#A13F37" },
+
+	# Special files
+	{ url = "*", is = "orphan", bg = "#A13F37" },
+	{ url = "*", is = "exec"  , fg = "#467118" },
+
+	# Fallback
+	{ url = "*/", fg = "#006E89" },
+	{ url = "*", fg = "#9E7876" }
+]

@@ -1,0 +1,405 @@
+local M = {}
+
+---@class CsvView.Options.Parser
+---@field async_chunksize? integer
+---@field delimiter? CsvView.Options.Parser.Delimiter
+---@field quote_char? string
+---@field comments? string[]
+---@field comment_lines? integer
+---@field max_lookahead? integer
+---@alias CsvView.Options.Parser.Delimiter string | {ft: table<string,string>, fallbacks: string[]}| fun(bufnr:integer): string
+
+---@class CsvView.Options.View
+---@field min_column_width? integer
+---@field spacing? integer|CsvView.Options.View.Spacing
+---@field display_mode? CsvView.Options.View.DisplayMode
+---@field header_lnum? integer|false|true
+---@field sticky_header? CsvView.Options.View.StickyHeader
+---@alias CsvView.Options.View.DisplayMode "highlight" | "border"
+
+---@class CsvView.Options.View.Spacing
+---@field left? integer
+---@field right? integer
+
+---@class CsvView.Options.View.StickyHeader
+---@field enabled? boolean
+---@field separator? string|false
+
+---@class CsvView.Options.Keymaps
+---@field textobject_field_inner? CsvView.Keymap
+---@field textobject_field_outer? CsvView.Keymap
+---@field jump_next_field_start? CsvView.Keymap
+---@field jump_prev_field_start? CsvView.Keymap
+---@field jump_next_field_end? CsvView.Keymap
+---@field jump_prev_field_end? CsvView.Keymap
+---@field jump_next_row? CsvView.Keymap
+---@field jump_prev_row? CsvView.Keymap
+---@field [string] CsvView.Keymap
+---@field [number] CsvView.Keymap
+
+---@alias CsvView.Options.Actions table<string, CsvView.Action>
+
+--- @class CsvView.Options
+--- @field parser? CsvView.Options.Parser
+--- @field view? CsvView.Options.View
+--- @field keymaps? CsvView.Options.Keymaps
+--- @field actions? table<string, CsvView.Action>
+
+--- @class CsvView.InternalOptions
+M.defaults = {
+  parser = {
+    --- The number of lines that the asynchronous parser processes per cycle.
+    --- This setting is used to prevent monopolization of the main thread when displaying large files.
+    --- If the UI freezes, try reducing this value.
+    --- @type integer
+    async_chunksize = 50,
+
+    --- Specifies the delimiter character to separate columns.
+    --- This can be configured in one of three ways:
+    ---
+    --- 1. As a single string for a fixed delimiter.
+    ---    e.g., delimiter = ","
+    ---
+    --- 2. As a function that dynamically returns the delimiter.
+    ---    e.g., delimiter = function(bufnr) return "\t" end
+    ---
+    --- 3. As a table for advanced configuration:
+    ---    - `ft`: Maps filetypes to specific delimiters. This has the highest priority.
+    ---    - `fallbacks`: An ordered list of delimiters to try for automatic detection
+    ---      when no `ft` rule matches. The plugin will test them in sequence and use
+    ---      the first one that highest scores based on the number of fields in each line.
+    ---
+    --- Note: Only fixed-length strings are supported as delimiters.
+    --- Regular expressions (e.g., `\s+`) are not currently supported.
+    --- @type CsvView.Options.Parser.Delimiter
+    delimiter = {
+      ft = {
+        csv = ",",
+        tsv = "\t",
+      },
+      fallbacks = {
+        ",",
+        "\t",
+        ";",
+        "|",
+        ":",
+        " ",
+      },
+    },
+
+    --- The quote character
+    --- If a field is enclosed in this character, it is treated as a single field and the delimiter in it will be ignored.
+    --- e.g:
+    ---  quote_char= "'"
+    --- You can also specify it on the command line.
+    --- e.g:
+    --- :CsvViewEnable quote_char='
+    --- @type string
+    quote_char = '"',
+
+    --- The comment prefix characters
+    --- If the line starts with one of these characters, it is treated as a comment.
+    --- Comment lines are not displayed in tabular format.
+    --- You can also specify it on the command line.
+    --- e.g:
+    --- :CsvViewEnable comment=#
+    --- @type string[]
+    comments = {
+      -- "#",
+      -- "--",
+      -- "//",
+    },
+
+    --- The number of lines at the beginning of the file to treat as comments.
+    --- Lines from 1 to this number will be treated as comment lines regardless of their content.
+    --- This is useful for files that have a fixed header/metadata section at the top.
+    --- You can also specify it on the command line.
+    --- e.g:
+    --- :CsvViewEnable comment_lines=2
+    --- @type integer?
+    comment_lines = nil,
+
+    --- Maximum lookahead for multi-line fields
+    --- This limits how many lines ahead the parser will look when trying to find
+    --- the closing quote of a multi-line field. Setting this too high may cause
+    --- performance issues when editing files with unmatched quotes.
+    --- @type integer
+    max_lookahead = 50,
+  },
+  view = {
+    --- minimum width of a column
+    --- @type integer
+    min_column_width = 5,
+
+    --- spacing between columns.
+    --- A number keeps the legacy behavior of adding that many spaces after each column.
+    --- A table can add virtual spaces around delimiters:
+    ---   spacing = { left = 1, right = 1 }
+    --- @type integer|CsvView.Options.View.Spacing
+    spacing = 2,
+
+    --- The display method of the delimiter
+    --- "highlight" highlights the delimiter
+    --- "border" displays the delimiter with `│`
+    --- You can also specify it on the command line.
+    --- e.g:
+    --- :CsvViewEnable display_mode=border
+    ---@type CsvView.Options.View.DisplayMode
+    display_mode = "highlight",
+
+    --- The line number of the header row
+    --- Controls which line should be treated as the header for the CSV table.
+    --- This affects both visual styling and the sticky header feature.
+    ---
+    --- Values:
+    --- - `true`: Automatically detect the header line (default)
+    --- - `integer`: Specific line number to use as header (1-based)
+    --- - `false`: No header line, treat all lines as data rows
+    ---
+    --- When a header is defined, it will be:
+    --- - Highlighted with the CsvViewHeaderLine highlight group
+    --- - Used for the sticky header feature if enabled
+    --- - Excluded from normal data processing in some contexts
+    ---
+    --- See also: `view.sticky_header`
+    --- @type integer|false|true
+    header_lnum = true,
+
+    --- The sticky header feature settings
+    --- If `view.header_lnum` is set, the header line is displayed at the top of the window.
+    sticky_header = {
+      --- Whether to enable the sticky header feature
+      --- @type boolean
+      enabled = true,
+
+      --- The separator character for the sticky header window
+      --- set `false` to disable the separator
+      --- @type string|false
+      separator = "─",
+    },
+  },
+
+  --- Keymaps for csvview.
+  --- These mappings are only active when csvview is enabled.
+  --- You can assign key mappings to each action defined in `opts.actions`.
+  --- For example:
+  --- ```lua
+  --- keymaps = {
+  ---   -- Text objects for selecting fields
+  ---   textobject_field_inner = { "if", mode = { "o", "x" } },
+  ---   textobject_field_outer = { "af", mode = { "o", "x" } },
+  ---
+  ---   -- Excel-like navigation:
+  ---   -- Use <Tab> and <S-Tab> to move horizontally between fields.
+  ---   -- Use <Enter> and <S-Enter> to move vertically between rows.
+  ---   -- Note: In terminals, you may need to enable CSI-u mode to use <S-Tab> and <S-Enter>.
+  ---   jump_next_field_end = { "<Tab>", mode = { "n", "v" } },
+  ---   jump_prev_field_end = { "<S-Tab>", mode = { "n", "v" } },
+  ---   jump_next_row = { "<Enter>", mode = { "n", "v" } },
+  ---   jump_prev_row = { "<S-Enter>", mode = { "n", "v" } },
+  ---
+  ---   -- Custom key mapping example:
+  ---   { "<leader>h", function() print("hello") end, mode = "n" },
+  --- }
+  --- ```
+  --- @type CsvView.Options.Keymaps
+  keymaps = {},
+
+  --- Actions for keymaps.
+  ---@type CsvView.Options.Actions
+  actions = {
+    textobject_field_inner = {
+      function()
+        require("csvview.textobject").field(0, { include_delimiter = false })
+      end,
+      desc = "[csvview] Select the current field",
+      noremap = true,
+      silent = true,
+    },
+    textobject_field_outer = {
+      function()
+        require("csvview.textobject").field(0, { include_delimiter = true })
+      end,
+      desc = "[csvview] Select the current field with delimiter",
+      noremap = true,
+      silent = true,
+    },
+    jump_next_field_start = {
+      function()
+        for _ = 1, vim.v.count1 do
+          require("csvview.jump").next_field_start()
+        end
+      end,
+      desc = "[csvview] Jump to the next start of the field",
+      noremap = true,
+      silent = true,
+    },
+    jump_prev_field_start = {
+      function()
+        for _ = 1, vim.v.count1 do
+          require("csvview.jump").prev_field_start()
+        end
+      end,
+      desc = "[csvview] Jump to the previous start of the field",
+      noremap = true,
+      silent = true,
+    },
+    jump_next_field_end = {
+      function()
+        for _ = 1, vim.v.count1 do
+          require("csvview.jump").next_field_end()
+        end
+      end,
+      desc = "[csvview] Jump to the next end of the field",
+      noremap = true,
+      silent = true,
+    },
+    jump_prev_field_end = {
+      function()
+        for _ = 1, vim.v.count1 do
+          require("csvview.jump").prev_field_end()
+        end
+      end,
+      desc = "[csvview] Jump to the previous end of the field",
+      noremap = true,
+      silent = true,
+    },
+    jump_next_row = {
+      function()
+        require("csvview.jump").field(0, { pos = { vim.v.count1, 0 }, anchor = "end" })
+      end,
+      desc = "[csvview] Jump to the next row",
+      noremap = true,
+      silent = true,
+    },
+    jump_prev_row = {
+      function()
+        require("csvview.jump").field(0, { pos = { -vim.v.count1, 0 }, anchor = "end" })
+      end,
+      desc = "[csvview] Jump to the previous row",
+      noremap = true,
+      silent = true,
+    },
+  },
+}
+
+---@diagnostic disable-next-line: missing-fields
+M.options = {}
+
+local HL = {
+  Delimiter = "CsvViewDelimiter",
+  Comment = "CsvViewComment",
+  HeaderLine = "CsvViewHeaderLine",
+  StickyHeaderSeparator = "CsvViewStickyHeaderSeparator",
+  -- use built-in csv syntax highlight group.
+  Col0 = "CsvViewCol0",
+  Col1 = "CsvViewCol1",
+  Col2 = "CsvViewCol2",
+  Col3 = "CsvViewCol3",
+  Col4 = "CsvViewCol4",
+  Col5 = "CsvViewCol5",
+  Col6 = "CsvViewCol6",
+  Col7 = "CsvViewCol7",
+  Col8 = "CsvViewCol8",
+  -- CsvViewInfo
+  InfoTitle = "CsvViewInfoTitle",
+  InfoSection = "CsvViewInfoSection",
+  InfoLabel = "CsvViewInfoLabel",
+  InfoText = "CsvViewInfoText",
+  InfoNumber = "CsvViewInfoNumber",
+  InfoHint = "CsvViewInfoHint",
+  InfoTableHeader = "CsvViewInfoTableHeader",
+  InfoTableBorder = "CsvViewInfoTableBorder",
+  InfoPositive = "CsvViewInfoPositive",
+  InfoNegative = "CsvViewInfoNegative",
+  InfoNeutral = "CsvViewInfoNeutral",
+  InfoScoreBar = "CsvViewInfoScoreBar",
+}
+
+M.highlights = HL
+
+M._highlight_links = {
+  [HL.Delimiter] = "Delimiter",
+  [HL.Comment] = "Comment",
+  [HL.HeaderLine] = false,
+  [HL.StickyHeaderSeparator] = "Delimiter",
+  [HL.Col0] = "csvCol0",
+  [HL.Col1] = "csvCol1",
+  [HL.Col2] = "csvCol2",
+  [HL.Col3] = "csvCol3",
+  [HL.Col4] = "csvCol4",
+  [HL.Col5] = "csvCol5",
+  [HL.Col6] = "csvCol6",
+  [HL.Col7] = "csvCol7",
+  [HL.Col8] = "csvCol8",
+  [HL.InfoTitle] = "Title",
+  [HL.InfoSection] = "Statement",
+  [HL.InfoLabel] = "Identifier",
+  [HL.InfoText] = "String",
+  [HL.InfoNumber] = "Number",
+  [HL.InfoHint] = "Conceal",
+  [HL.InfoTableHeader] = "TabLineSel",
+  [HL.InfoTableBorder] = "Comment",
+  [HL.InfoPositive] = "DiagnosticOk",
+  [HL.InfoNegative] = "DiagnosticError",
+  [HL.InfoNeutral] = "Comment",
+  [HL.InfoScoreBar] = "Special",
+}
+
+--- Merge two configuration tables.
+---@param internal CsvView.InternalOptions
+---@param user CsvView.Options
+---@return CsvView.InternalOptions
+local function merge_config(internal, user)
+  local config = vim.tbl_deep_extend("force", internal, user)
+
+  -- Do not merge delimiter.ft, prioritize user settings
+  -- This considers cases like disabling the default ft mappings for csv and tsv.
+  if user.parser and type(user.parser.delimiter) == "table" then
+    if type(user.parser.delimiter.ft) == "table" then
+      config.parser.delimiter.ft = vim.deepcopy(user.parser.delimiter.ft)
+    end
+  end
+
+  return config
+end
+
+--- get config
+---@param opts? CsvView.Options
+---@return CsvView.InternalOptions
+function M.get(opts)
+  return merge_config(M.options, opts or {})
+end
+
+--- setup
+---@param opts? CsvView.Options
+function M.setup(opts)
+  -- Set colors
+  for name, link in pairs(M._highlight_links) do
+    vim.api.nvim_set_hl(0, name, { link = link and link or nil, default = true })
+  end
+
+  if vim.fn.has("nvim-0.11") ~= 1 then
+    -- fallback for nvim < 0.11
+    -- see https://github.com/neovim/neovim/blob/master/runtime/syntax/csv.vim
+    local fallback_highlights = {
+      csvCol1 = "Statement",
+      csvCol2 = "Constant",
+      csvCol3 = "Type",
+      csvCol4 = "PreProc",
+      csvCol5 = "Identifier",
+      csvCol6 = "Special",
+      csvCol7 = "String",
+      csvCol8 = "Comment",
+    }
+    for name, link in pairs(fallback_highlights) do
+      if vim.tbl_isempty(vim.api.nvim_get_hl(0, { name = name })) then
+        vim.api.nvim_set_hl(0, name, { link = link, default = true })
+      end
+    end
+  end
+
+  M.options = merge_config(M.defaults, opts or {})
+end
+
+return M
