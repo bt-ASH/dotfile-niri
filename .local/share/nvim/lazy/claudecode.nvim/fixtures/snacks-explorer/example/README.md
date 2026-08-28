@@ -1,3 +1,0 @@
-# Example
-
-A second file.

@@ -1,1 +1,0 @@
-require("astrotheme").load "astrodark"

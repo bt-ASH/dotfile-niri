@@ -1,4 +1,0 @@
-This is file A.
-
-Keep this file open.
-Ask Claude to edit b.txt (without opening b.txt in a window first).

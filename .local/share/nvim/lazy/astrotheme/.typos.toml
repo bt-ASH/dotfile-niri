@@ -1,8 +1,0 @@
-[default.extend-words]
-noice = "noice"
-iterm = "iterm"
-ba = "ba"
-aadd = "aadd"
-
-[files]
-extend-exclude = ["CHANGELOG.md", "doc/*"]
