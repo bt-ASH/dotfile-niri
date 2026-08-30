@@ -396,13 +396,11 @@ local function paste()
 end
 
 -- ref: https://www.cnblogs.com/sxrhhh/p/18234652/neovim-copy-anywhere
--- 本地环境 判断SSH_CONNECTION在tmux环境下也有用，SSH_TTY有时会失效
--- if os.getenv "SSH_TTY" == nil then
-if os.getenv "SSH_CONNECTION" == nil then
-  vim.opt.clipboard:append "unnamedplus"
-else
+-- 本地环境判断 SSH_CONNECTION 在 tmux 下也有用，SSH_TTY 有时会失效
+-- 远程环境（SSH）才走 OSC 52；本地交给系统/tmux 即可，
+-- 否则 OSC 52 的 paste provider 会在打开 buffer 时把系统剪贴板内容自动写进去。
+if os.getenv "SSH_CONNECTION" ~= nil then
   -- remote env
-  vim.opt.clipboard:append "unnamedplus"
   vim.g.clipboard = {
     name = "OSC 52",
     copy = {
@@ -449,9 +447,7 @@ vim.opt.fixeol = false
 vim.opt.fixendofline = false
 
 -- 加载动态配色（由 matugen 生成）
-pcall(vim.cmd, [[lua if pcall(dofile, vim.fn.stdpath("config").."/lua/matugen-palette.lua") then end]])
-
-pcall(vim.cmd, [[lua if pcall(dofile, vim.fn.stdpath("config").."/lua/user/matugen-catppuccin.lua") then end]])
+pcall(dofile, vim.fn.stdpath("config") .. "/lua/user/matugen-catppuccin.lua")
 
 -- Kitty 主题覆盖（在 matugen 之后加载，使 nvim 高亮匹配 current-theme.conf）
 require("kitty-theme")
