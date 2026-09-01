@@ -3,7 +3,7 @@ if status is-interactive
 end
 set fish_greeting ""
 set -p PATH ~/.local/bin
-starship init fish | source
+# starship init fish | source
 zoxide init fish --cmd cd | source
 
 function y
@@ -18,7 +18,9 @@ end
 function cat 
 	command bat $argv
 end
-
+function v
+	command nvim $argv
+end
 function ls
 	command eza --icons $argv
 end
@@ -34,7 +36,7 @@ abbr lsfg 'LSFG_PROCESS="miyu"'
 abbr fa fastfetch
 abbr reboot 'systemctl reboot'
 function sl 
-	command sl | lolcat	
+	command lolcat	
 end
 function 滚
 	sysup 
@@ -44,14 +46,13 @@ function raw
 end
 
 function 安装
-	command yay -S $argv
+	command paru -S $argv
 end
 
 function 卸载
-	command yay -Rns $argv
+	command paru -Rns $argv
 end 
 
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /home/shorin/.lmstudio/bin
 # End of LM Studio CLI section
-
