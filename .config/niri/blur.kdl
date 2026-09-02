@@ -28,6 +28,7 @@ window-rule {
                 match app-id="steam_app_default"
                 match app-id="steam"
                 match app-id="mpv"
+                match app-id="^Minecraft"
                 match app-id="steam_app_438100"
                 clip-to-geometry true
                 opacity 1.0
@@ -46,7 +47,7 @@ window-rule {
                     default-floating-position x=20 y=20 relative-to="top-right"
 }
             window-rule{
-                match app-id="clipse"
+                match app-id="clipse-gui"
                 match app-id="bluetui"
                 match app-id="nmtui"
                 open-floating true
@@ -105,6 +106,7 @@ window-rule{
 
 window-rule {
     match app-id="QQ"
+    match app-id="wechat"
     match app-id="antsword"
     open-floating true
 }

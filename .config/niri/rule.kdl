@@ -26,7 +26,7 @@ gestures {
 }
 
 cursor {
-    xcursor-theme "Yuurei-Angel"
+    xcursor-theme "YuzuhaBLZ"
     xcursor-size 16
     hide-after-inactive-ms 3000
 }
@@ -61,6 +61,9 @@ recent-windows {
         Mod+Shift+grave { previous-window filter="app-id"; }
     }
 }
+
+// glava 音频可视化：niri 26.04 不支持 XWayland 窗口放进 backdrop 背景层
+// 所以 glava 只能作为普通窗口显示（可手动挪到角落），或等 niri 支持 backdrop layer
 
 // Gaming optimization - disable blur/effects for fullscreen windows
 window-rule {
