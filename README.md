@@ -83,7 +83,6 @@
 2. **Copy configs**
    ```bash
    cp -r ~/dotfile-niri/.config/* ~/.config/
-   cp ~/dotfile-niri/.zshrc ~/.zshrc
    cp ~/dotfile-niri/.vimrc ~/.vimrc
    ```
 
