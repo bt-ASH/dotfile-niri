@@ -23,7 +23,7 @@
 - Kitty terminal
 - Neovim with full plugin setup
 - Tmux configuration
-- Fish, Zsh shell configs
+- Fish shell configs
 - MPV with custom scripts
 - Cava audio visualizer
 - Btop system monitor
@@ -83,7 +83,6 @@
 2. **Copy configs**
    ```bash
    cp -r ~/dotfile-niri/.config/* ~/.config/
-   cp ~/dotfile-niri/.zshrc ~/.zshrc
    cp ~/dotfile-niri/.vimrc ~/.vimrc
    ```
 
