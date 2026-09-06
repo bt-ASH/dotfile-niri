@@ -1,3 +1,7 @@
+if status is-login; and test (tty) = /dev/tty1
+    niri-session
+end 
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
@@ -15,9 +19,9 @@ function y
 	rm -f -- "$tmp"
 end
 
-function cat 
-	command bat $argv
-end
+#function cat 
+#	command bat $argv
+#end
 function v
 	command nvim $argv
 end
@@ -53,6 +57,7 @@ function 卸载
 	command paru -Rns $argv
 end 
 
+eval "$(zoxide init fish)"
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /home/shorin/.lmstudio/bin
 # End of LM Studio CLI section
