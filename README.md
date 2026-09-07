@@ -77,7 +77,7 @@
 
 1. **克隆仓库**
    ```bash
-   git clone -b dotfile https://github.com/bt-ASH/dotfile-niri.git ~/dotfile-niri
+   git clone https://github.com/bt-ASH/dotfile-niri.git ~/dotfile-niri
    ```
 
 2. **复制配置**
