@@ -61,3 +61,5 @@ eval "$(zoxide init fish)"
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /home/shorin/.lmstudio/bin
 # End of LM Studio CLI section
+# export
+set -x EDITOR nvim
