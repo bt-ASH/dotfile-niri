@@ -84,7 +84,18 @@ if [ -z "$WALLPAPER" ] || [ ! -f "$WALLPAPER" ]; then
     notify-send "Matugen Error" "无法找到壁纸路径。"
     exit 1
 fi
-ln -sf "$WALLPAPER" "$HOME/.cache/.current_wallpaper"
+# --- 3.5 更新 hyprlock 锁屏壁纸链接 ---
+# hyprlock 的 path 无法执行 shell 判断，因此在这里预处理：
+# 若壁纸真实格式是 webp（hyprlock 不支持加载），则删除链接，
+# 让 hyprlock 回退到 background 中配置的 color=$surface 纯色背景。
+# 注意：必须对真实路径 $WALLPAPER 检测，对符号链接本身执行 file 只会返回 "symbolic link to ..."
+CURRENT_WALL_LINK="$HOME/.cache/.current_wallpaper"
+WALL_MIME=$(file -b --mime-type "$WALLPAPER")
+if [[ "$WALL_MIME" == *"webp"* ]]; then
+    rm -f "$CURRENT_WALL_LINK"
+else
+    ln -sf "$WALLPAPER" "$CURRENT_WALL_LINK"
+fi
 
 
 # --- 4. 读取策略与模式，并判断是否需要跳过重复生成 ---
