@@ -192,3 +192,7 @@ pre_hook = 'mkdir -p ~/.config/wshowkeys'
 input_path = '~/.config/matugen/templates/colors-eww.scss'
 output_path = '~/.config/eww/color.scss'
 # post_hook = "eww reload"
+
+[templates.hexecute]
+input_path = '~/.config/matugen/templates/hexecute-colors.json'
+output_path = '~/.config/hexecute/colors.json'
