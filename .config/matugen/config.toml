@@ -196,3 +196,9 @@ output_path = '~/.config/eww/color.scss'
 [templates.hexecute]
 input_path = '~/.config/matugen/templates/hexecute-colors.json'
 output_path = '~/.config/hexecute/colors.json'
+
+[templates.bat]
+input_path = '~/.config/matugen/templates/bat-matugen.tmTheme'
+output_path = '~/.config/bat/themes/Matugen.tmTheme'
+pre_hook = 'mkdir -p ~/.config/bat/themes'
+post_hook = 'bat cache --clear && bat cache --build'
