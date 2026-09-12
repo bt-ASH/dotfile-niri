@@ -39,9 +39,6 @@ abbr lsfg 'LSFG_PROCESS="miyu"'
 # fa运行fastfetch
 abbr fa fastfetch
 abbr reboot 'systemctl reboot'
-function sl 
-	command lolcat	
-end
 function 滚
 	sysup 
 end
@@ -63,4 +60,5 @@ set -gx PATH $PATH /home/shorin/.lmstudio/bin
 # End of LM Studio CLI section
 # export
 set -x EDITOR nvim
+
 [ -f ~/.cache/matugen/fzf-colors.sh ] && source ~/.cache/matugen/fzf-colors.sh
