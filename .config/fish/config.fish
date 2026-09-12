@@ -19,9 +19,9 @@ function y
 	rm -f -- "$tmp"
 end
 
-#function cat 
-#	command bat $argv
-#end
+function cat 
+	command bat $argv
+end
 function v
 	command nvim $argv
 end
@@ -63,3 +63,4 @@ set -gx PATH $PATH /home/shorin/.lmstudio/bin
 # End of LM Studio CLI section
 # export
 set -x EDITOR nvim
+[ -f ~/.cache/matugen/fzf-colors.sh ] && source ~/.cache/matugen/fzf-colors.sh
