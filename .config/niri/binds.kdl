@@ -1,13 +1,12 @@
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+B {spawn "bgselector"; }
     Mod+M {spawn "nautilus"; }
     Mod+V {spawn "kitty" "-e" "clipse" "gui"; }
     Mod+Shift+Q {spawn "waypaper"; }
-//    Mod+Shift+W { spawn "killall" "-SIGUSR2" "waybar"; }
-    Mod+Shift+W { spawn "eww" "reload"; }
+    Mod+Shift+W { spawn-sh "eww kill; eww daemon; sleep 1 && eww open bar"; }
     Mod+Shift+M { spawn "bash" "/home/ash/.config/niri/scripts/remako.sh"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn-sh "hyprlock -c ~/.config/niri/hyprlock.conf || swaylock"; }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
@@ -25,7 +24,9 @@ binds {
     Mod+Up allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
     Mod+Down allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
    
-    Mod+O repeat=false { toggle-overview; }
+    //    Mod+O repeat=false { toggle-overview; }
+        Mod+O hotkey-overlay-title="切换总览界面 toggle overview" repeat=false { toggle-overview; }
+
     Mod+C repeat=false { close-window; }
    
     Mod+H     { focus-column-left; }
