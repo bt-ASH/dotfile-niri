@@ -1,5 +1,5 @@
 (defwidget memory []
     (button :class "memory" :timeout "10s" :onclick "kitty -e btop"
-        "󰘚  ${memory}%"
+        "󰦪  ${memory}%"
     )
 )

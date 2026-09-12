@@ -1,6 +1,6 @@
 (defwidget music []
     (button :class {mpris.status == "Playing" ? "music Playing" : mpris.status == "Paused" ? "music Paused" : "music Stopped"}
-        :onclick "playerctl play-pause"
+        :onclick "~/.local/bin/hexecute &"
         :onrightclick "kitty --detach -e musicfox"
         {mpris.status == "Playing" ? mpris.text : mpris.status == "Paused" ? "󰏤  " + mpris.title : "󰋋"}
     )
