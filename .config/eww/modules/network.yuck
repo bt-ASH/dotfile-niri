@@ -1,5 +1,5 @@
 (defwidget network []
-    (button :class "network" :timeout "10s" :onclick "kitty --app-id nmtui -e nmtui"
+    (button :class "network" :timeout "10s" :onclick "ghostty --class nmtui -e nmtui"
         {network}
     )
 )

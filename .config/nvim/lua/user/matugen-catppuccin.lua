@@ -1,10 +1,10 @@
 -- Matugen generated catppuccin overrides for nvim
 local palette = {
-  bg = "#211e24",
-  fg = "#e7e0e8",
-  primary = "#d5bbfc",
-  secondary = "#cec2db",
-  tertiary = "#f1b7c3",
+  bg = "#1f1f25",
+  fg = "#e4e1e9",
+  primary = "#bdc2ff",
+  secondary = "#c4c4dd",
+  tertiary = "#e7b9d5",
   error = "#ffb4ab",
 }
 

@@ -76,10 +76,10 @@ output_path = '~/.config/gtk-4.0/colors.css'
 #output_path = '~/.config/swaync/colors.css'
 #post_hook = 'swaync-client -rs &'
 
-#[templates.ghostty]
-#input_path = '~/.config/matugen/templates/ghostty-colors.conf'
-#output_path = '~/.config/ghostty/themes/Matugen'
-#post_hook = 'pkill -SIGUSR2 ghostty'
+[templates.ghostty]
+input_path = '~/.config/matugen/templates/ghostty-colors.conf'
+output_path = '~/.config/ghostty/themes/Matugen'
+post_hook = 'pkill -SIGUSR2 ghostty || true'
 
 #[templates.qt5ct]
 #input_path = '~/.config/matugen/templates/qtct-colors.conf'
@@ -135,6 +135,12 @@ post_hook = "bash -c 'sleep 0.5 && for s in /tmp/nvim-*; do nvim --server \"$s\"
 input_path = '~/.config/matugen/templates/tmux-catppuccin.conf'
 output_path = '~/.config/tmux/user/matugen-catppuccin.conf'
 post_hook = "tmux source ~/.config/tmux/user/matugen-catppuccin.conf 2>/dev/null && tmux run '~/.config/tmux/plugins/catppuccin/tmux/catppuccin.tmux' >/dev/null 2>&1 & || true"
+
+[templates.astroui]
+input_path = '~/.config/matugen/templates/nvim-astroui.lua'
+output_path = '~/.config/nvim/lua/user/matugen-astroui.lua'
+pre_hook = 'mkdir -p ~/.config/nvim/lua/user'
+post_hook = "bash -c 'sleep 0.3; for s in ${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/nvim.*/0 /tmp/nvim*/0; do [ -S \"$s\" ] && nvim --server \"$s\" --remote-send \"<Esc>:silent! lua require(\\\"astroui.status.heirline\\\").refresh_colors()<Enter>\" >/dev/null 2>&1; done; true'"
 
 #[templates.neovim]
 #input_path = '~/.config/matugen/templates/neovim/template.lua'

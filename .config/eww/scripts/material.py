@@ -102,7 +102,7 @@ def setup(img):
         shutil.copyfile(img, WALLPAPER_PATH)
     except shutil.SameFileError:
         pass
-    os.system("pkill -SIGUSR1 kitty")
+    os.system("pkill -SIGUSR2 ghostty || true")
     os.system("gradience-cli apply -p ~/.config/eww/scripts/colors/colors-gradience.json --gtk both")
     os.system(f"swww img {WALLPAPER_PATH} --transition-fps 75 --transition-type wipe --transition-duration 2")
 

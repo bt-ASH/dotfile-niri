@@ -9,7 +9,9 @@ layer-rule {
 
 overview {
     workspace-shadow {
-  //      on
+        on
+        softness 40
+        spread 8
     }
     zoom 0.5
     // overview 背景模糊方案：

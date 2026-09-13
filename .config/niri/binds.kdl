@@ -6,8 +6,8 @@ binds {
     Mod+M {spawn "nautilus"; }
     Mod+V {spawn "kitty" "-e" "clipse" "gui"; }
     Mod+Shift+Q {spawn "waypaper"; }
-    Mod+Shift+W { spawn-sh "eww kill; eww daemon; sleep 1 && eww open bar"; }
-    Mod+Shift+M { spawn "bash" "/home/ash/.config/niri/scripts/remako.sh"; }
+    Mod+Shift+W { spawn-sh "bash ~/.config/eww/scripts/launch.sh"; }
+    Mod+Shift+M { spawn-sh "bash ~/.config/niri/scripts/remako.sh"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn-sh "hyprlock -c ~/.config/niri/hyprlock.conf || swaylock"; }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 

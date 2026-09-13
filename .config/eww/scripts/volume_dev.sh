@@ -1,41 +1,60 @@
 #!/bin/bash
-# 输出当前默认音频设备的类型:
-#   bt          - 蓝牙设备 (format-bluetooth)
-#   headphone   - 耳机
-#   hands-free  - 免提
-#   headset     - 头戴式耳机
-#   phone       - 手机
-#   portable    - 便携设备
-#   car         - 车载
-#   default     - 其他/内置
-sink=$(pactl get-default-sink 2>/dev/null)
-[ -z "$sink" ] && { echo "default"; exit; }
+# 事件驱动监听默认音频设备类型 (配合 variables.yuck 中的 deflisten 使用)
+# 输出: bt / headphone / hands-free / headset / phone / portable / car / default
+# 当设备从非 bt 变为 bt 时, 自动执行一次: wpctl set-volume @DEFAULT_AUDIO_SINK@ 15%
 
-# 提取默认 sink 的 Properties 段
-props=$(pactl list sinks | awk -v s="$sink" '
-  $1=="Name:" && $2==s {found=1; next}
-  found && /^Sink #/ {exit}
-  found {print}
-')
-# 有线耳机: 耳机插入后 active port 切到 analog-output-headphones
-if echo "$props" | grep -q 'Active Port: analog-output-headphones'; then
-  echo "headphone"
-  exit
-fi
+detect() {
+  local sink props name
+  sink=$(pactl get-default-sink 2>/dev/null)
+  [ -z "$sink" ] && { echo "default"; return; }
 
-name=$(echo "$props" | grep -oP 'device.product.name\s*=\s*"\K[^"]+' | head -1 | tr '[:upper:]' '[:lower:]')
-if echo "$props" | grep -q 'api.bluez5.profile'; then
-  echo "bt"
-  exit
-fi
+  # 提取默认 sink 的 Properties 段
+  props=$(pactl list sinks | awk -v s="$sink" '
+    $1=="Name:" && $2==s {found=1; next}
+    found && /^Sink #/ {exit}
+    found {print}
+  ')
 
-name=$(echo "$props" | grep -oP 'device.product.name\s*=\s*"\K[^"]+' | head -1 | tr '[:upper:]' '[:lower:]')
-case "$name" in
-  *headset*)   echo "headset" ;;
-  *headphone*) echo "headphone" ;;
-  *hands-free*|*hands_free*|*handsfree*) echo "hands-free" ;;
-  *phone*)     echo "phone" ;;
-  *portable*)  echo "portable" ;;
-  *car*)       echo "car" ;;
-  *)           echo "default" ;;
-esac
+  # 有线耳机: 耳机插入后 active port 切到 analog-output-headphones
+  if echo "$props" | grep -q 'Active Port: analog-output-headphones'; then
+    echo "headphone"; return
+  fi
+
+  # 蓝牙设备
+  if echo "$props" | grep -q 'api.bluez5.profile'; then
+    echo "bt"; return
+  fi
+
+  name=$(echo "$props" | grep -oP 'device.product.name\s*=\s*"\K[^"]+' | head -1 | tr '[:upper:]' '[:lower:]')
+  case "$name" in
+    *headset*)   echo "headset" ;;
+    *headphone*) echo "headphone" ;;
+    *hands-free*|*hands_free*|*handsfree*) echo "hands-free" ;;
+    *phone*)     echo "phone" ;;
+    *portable*)  echo "portable" ;;
+    *car*)       echo "car" ;;
+    *)           echo "default" ;;
+  esac
+}
+
+prev=$(detect)
+echo "$prev"
+
+# 监听 Pulse/PipeWire 事件流, 只处理 sink / server (默认 sink 切换) 事件
+pactl subscribe 2>/dev/null | while read -r line; do
+  case "$line" in
+    *"on sink"*|*"on server"*) ;;
+    *) continue ;;
+  esac
+
+  cur=$(detect)
+  if [ "$cur" != "$prev" ]; then
+    prev="$cur"
+    echo "$cur"
+    # 变为蓝牙设备时, 自动把音量压到 15%, 每次连接只执行一次
+    if [ "$cur" = "bt" ]; then
+      wpctl set-volume @DEFAULT_AUDIO_SINK@ 15%
+      eww update volume="$(/home/ash/.config/eww/scripts/volume.sh)" 2>/dev/null
+    fi
+  fi
+done

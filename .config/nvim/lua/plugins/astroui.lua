@@ -86,20 +86,21 @@ return {
         attributes = {
           buffer_active = { bold = false, italic = false },
         },
-        colors = {
-          -- buffer_bg = "#000000",
-          buffer_fg = "#a5adce",
-          buffer_active_bg = "#a6d189",
-          buffer_active_fg = "#000000",
-          -- buffer_active_bg: 当前聚焦的 buffer（绿色）
-          -- buffer_visible_bg: 可见但非聚焦的 buffer（浅绿色，同色系更浅）
-          buffer_visible_bg = "#86a189",
-          buffer_visible_fg = "#000000",
-          -- 修改路径颜色，让它在绿色背景上更清晰可见（使用深灰色/黑色）
-          buffer_path_fg = "#51576d",
-          buffer_active_path_fg = "#51576d",
-          buffer_visible_path_fg = "#51576d",
-        },
+        colors = function(colors)
+          -- matugen 生成的配色（跟随壁纸），模板: ~/.config/matugen/templates/nvim-astroui.lua
+          local ok, matugen = pcall(dofile, vim.fn.stdpath "config" .. "/lua/user/matugen-astroui.lua")
+          local fallback = {
+            buffer_fg = "#a5adce",
+            buffer_active_bg = "#a6d189",
+            buffer_active_fg = "#000000",
+            buffer_visible_bg = "#86a189",
+            buffer_visible_fg = "#000000",
+            buffer_path_fg = "#51576d",
+            buffer_active_path_fg = "#51576d",
+            buffer_visible_path_fg = "#51576d",
+          }
+          return vim.tbl_extend("force", colors, ok and matugen or fallback)
+        end,
         components = {
           tabline_file_info = {
             file_icon = false,

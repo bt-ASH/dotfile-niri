@@ -1,128 +1,128 @@
 /* ===== matugen dynamic colors (same source as waybar/colors.css) ===== */
 
-$background: #111318;
+$background: #131318;
 
 $error: #ffb4ab;
 
 $error_container: #93000a;
 
-$inverse_on_surface: #2e3035;
+$inverse_on_surface: #303036;
 
-$inverse_primary: #3d5f90;
+$inverse_primary: #545a92;
 
-$inverse_surface: #e1e2e9;
+$inverse_surface: #e4e1e9;
 
-$on_background: #e1e2e9;
+$on_background: #e4e1e9;
 
 $on_error: #690005;
 
 $on_error_container: #ffdad6;
 
-$on_primary: #02315f;
+$on_primary: #262b61;
 
-$on_primary_container: #d5e3ff;
+$on_primary_container: #e0e0ff;
 
-$on_primary_fixed: #001c3b;
+$on_primary_fixed: #0f144b;
 
-$on_primary_fixed_variant: #234776;
+$on_primary_fixed_variant: #3d4279;
 
-$on_secondary: #273141;
+$on_secondary: #2d2f42;
 
-$on_secondary_container: #d9e3f8;
+$on_secondary_container: #e1e0f9;
 
-$on_secondary_fixed: #121c2b;
+$on_secondary_fixed: #191a2c;
 
-$on_secondary_fixed_variant: #3d4758;
+$on_secondary_fixed_variant: #444559;
 
-$on_surface: #e1e2e9;
+$on_surface: #e4e1e9;
 
-$on_surface_variant: #c4c6cf;
+$on_surface_variant: #c7c5d0;
 
-$on_tertiary: #3d2846;
+$on_tertiary: #45263c;
 
-$on_tertiary_container: #f7d8ff;
+$on_tertiary_container: #ffd7ef;
 
-$on_tertiary_fixed: #27132f;
+$on_tertiary_fixed: #2e1126;
 
-$on_tertiary_fixed_variant: #553f5d;
+$on_tertiary_fixed_variant: #5e3c53;
 
-$outline: #8d9199;
+$outline: #91909a;
 
-$outline_variant: #43474e;
+$outline_variant: #46464f;
 
-$primary: #a6c8ff;
+$primary: #bdc2ff;
 
-$primary_container: #234776;
+$primary_container: #3d4279;
 
-$primary_fixed: #d5e3ff;
+$primary_fixed: #e0e0ff;
 
-$primary_fixed_dim: #a6c8ff;
+$primary_fixed_dim: #bdc2ff;
 
 $scrim: #000000;
 
-$secondary: #bdc7dc;
+$secondary: #c4c4dd;
 
-$secondary_container: #3d4758;
+$secondary_container: #444559;
 
-$secondary_fixed: #d9e3f8;
+$secondary_fixed: #e1e0f9;
 
-$secondary_fixed_dim: #bdc7dc;
+$secondary_fixed_dim: #c4c4dd;
 
 $shadow: #000000;
 
-$source_color: #3583df;
+$source_color: #4b59ea;
 
-$surface: #111318;
+$surface: #131318;
 
-$surface_bright: #37393e;
+$surface_bright: #39393f;
 
-$surface_container: #1d2024;
+$surface_container: #1f1f25;
 
-$surface_container_high: #282a2f;
+$surface_container_high: #2a292f;
 
-$surface_container_highest: #32353a;
+$surface_container_highest: #34343a;
 
-$surface_container_low: #191c20;
+$surface_container_low: #1b1b21;
 
-$surface_container_lowest: #0c0e13;
+$surface_container_lowest: #0d0e13;
 
-$surface_dim: #111318;
+$surface_dim: #131318;
 
-$surface_tint: #a6c8ff;
+$surface_tint: #bdc2ff;
 
-$surface_variant: #43474e;
+$surface_variant: #46464f;
 
-$tertiary: #dabde2;
+$tertiary: #e7b9d5;
 
-$tertiary_container: #553f5d;
+$tertiary_container: #5e3c53;
 
-$tertiary_fixed: #f7d8ff;
+$tertiary_fixed: #ffd7ef;
 
-$tertiary_fixed_dim: #dabde2;
+$tertiary_fixed_dim: #e7b9d5;
 
 
 /* ===== semantic aliases for eww bar ===== */
-$background-light: #282a2f;
-$foreground: #e1e2e9;
-$blue: #a6c8ff;
-$pink: #dabde2;
+$background-light: #2a292f;
+$foreground: #e4e1e9;
+$blue: #bdc2ff;
+$pink: #e7b9d5;
 
 /* ===== module colors (mirror waybar style.css) ===== */
-$mode-color: #dabde2;
-$playerctl-color: #bdc7dc;
-$clock-color: #a6c8ff;
-$cpu-color: #a6c8ff;
-$memory-color: #bdc7dc;
-$temperature-color: #dabde2;
+$mode-color: #e7b9d5;
+$playerctl-color: #c4c4dd;
+$clock-color: #bdc2ff;
+$cpu-color: #bdc2ff;
+$memory-color: #c4c4dd;
+$temperature-color: #e7b9d5;
 $temperature-critical-color: #ffb4ab;
-$battery-color: #a6c8ff;
-$battery-charging-color: #a6c8ff;
+$battery-color: #bdc2ff;
+$battery-charging-color: #bdc2ff;
 $battery-warning-color: #ffb4ab;
 $battery-critical-color: #ffb4ab;
-$network-color: #a6c8ff;
+$network-color: #bdc2ff;
 $network-disconnected-color: #ffb4ab;
-$pulseaudio-color: #dabde2;
+$pulseaudio-color: #e7b9d5;
 $pulseaudio-muted-color: #ffb4ab;
-$backlight-color: #dabde2;
-$power-color: #a6c8ff;
-$workspaces-color: #e1e2e9;
+$backlight-color: #e7b9d5;
+$power-color: #bdc2ff;
+$workspaces-color: #e4e1e9;
