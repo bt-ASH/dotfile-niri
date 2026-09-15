@@ -414,6 +414,10 @@ if os.getenv "SSH_CONNECTION" ~= nil then
   }
 end
 
+-- 禁用中键粘贴：ghostty copy-on-select 会让拖选文本进入 primary selection，
+-- 随后在 nvim 窗格中的中键点击（含触摸板多指点击）会把刚复制的内容粘进 buffer
+vim.keymap.set({ "n", "i", "v", "x", "s", "t" }, "<MiddleMouse>", "<Nop>", { desc = "Disable middle-click paste" })
+
 -- ref: help jumplist-stack
 -- ref: https://www.bilibili.com/video/BV132qUY4EhS/
 vim.opt.jumpoptions = "stack"

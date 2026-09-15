@@ -3,15 +3,15 @@
 -- 用法见 ~/.config/nvim/lua/plugins/astroui.lua 中的 status.colors 函数
 return {
   -- 普通不可见 buffer 的文字
-  buffer_fg = "#c7c5d0",
+  buffer_fg = "#d6c2c5",
   -- 当前聚焦 buffer（主题色背景）
-  buffer_active_bg = "#bdc2ff",
-  buffer_active_fg = "#262b61",
+  buffer_active_bg = "#ffb1c3",
+  buffer_active_fg = "#551d2e",
   -- 可见但未聚焦 buffer（同色系弱化版）
-  buffer_visible_bg = "#3d4279",
-  buffer_visible_fg = "#e0e0ff",
+  buffer_visible_bg = "#713344",
+  buffer_visible_fg = "#ffd9e0",
   -- 路径颜色（在主题色背景上仍需可读）
-  buffer_path_fg = "#91909a",
-  buffer_active_path_fg = "#3d4279",
-  buffer_visible_path_fg = "#91909a",
+  buffer_path_fg = "#9e8c8f",
+  buffer_active_path_fg = "#713344",
+  buffer_visible_path_fg = "#9e8c8f",
 }
