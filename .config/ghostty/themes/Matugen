@@ -1,0 +1,37 @@
+# Ghostty 配色, 由 matugen 随壁纸生成 (与 kitty 模板 kitty-colors.conf 保持一致)
+# 输出: ~/.config/ghostty/themes/Matugen, 由 config.ghostty 中 theme = Matugen 加载
+
+# kitty: cursor / cursor_text_color
+cursor-color = #e4bdc4
+cursor-text = #d6c2c5
+
+# kitty: foreground / background
+foreground = #efdee1
+background = #191113
+selection-foreground = #43292f
+selection-background = #e4bdc4
+# kitty: url_color #ffb1c3 (ghostty 1.3 暂无链接颜色选项)
+
+palette = 0=#4c4c4c
+# red
+palette = 1=#ac8a8c
+# green (与 blue 同色, 跟随主色)
+palette = 2=#ffb1c3
+# yellow
+palette = 3=#aca98a
+# blue
+palette = 4=#ffb1c3
+# magenta
+palette = 5=#edbe92
+# cyan (绑定次要色, 利用 fixed_dim 原生实现"调暗"效果)
+palette = 6=#e4bdc4
+# white
+palette = 7=#f0f0f0
+palette = 8=#9e8c8f
+palette = 9=#c49ea0
+palette = 10=#a39ec4
+palette = 11=#c4c19e
+palette = 12=#a39ec4
+palette = 13=#ffdcbe
+palette = 14=#e4bdc4
+palette = 15=#e7e7e7

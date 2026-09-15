@@ -1,0 +1,138 @@
+# 由 kitty 配置迁移而来 (~/.config/kitty/kitty.conf + current-theme.conf)
+# kitty 有而 ghostty 无对应实现的项, 以注释形式标注在相应位置
+
+# ==== 字体 ====
+font-family = Noto-Sans-CJK-SC
+font-family-bold = Noto-Sans-CJK-SC
+font-family-italic = Noto-Sans-CJK-SC
+font-family-bold-italic = Noto-Sans-CJK-SC
+# kitty: font_features Noto Sans CJK SC +cv01 +ss02 +ss04 +ss05 +zero
+font-feature = cv01
+font-feature = ss02
+font-feature = ss04
+font-feature = ss05
+font-feature = zero
+font-size = 9
+# kitty 的 symbol_map (Maple Mono NF 图标字符映射) ghostty 不支持,
+# 会走系统字体自动回退, 如缺图标建议把终端字体换成 Nerd Font
+
+# ==== 光标 ====
+# kitty current-theme.conf: cursor / cursor_text_color
+cursor-color = #ddbecf
+cursor-text = #d2c2ca
+# kitty: cursor_shape block
+cursor-style = block
+# kitty: cursor_blink_interval 0.5 (ghostty 只能开/关, 不能调间隔)
+cursor-style-blink = true
+# kitty 的 cursor_stop_blinking_after 15.0 / cursor_beam_thickness 5 / cursor_trail 3 无对应项
+
+# ==== 滚动 ====
+# kitty: scrollback_lines 2000 (ghostty 单位为字节, 1MB 远够 2000 行)
+scrollback-limit = 1048576
+# kitty: wheel_scroll_multiplier 1.0
+mouse-scroll-multiplier = 1
+
+# ==== 鼠标 / 剪贴板 ====
+# kitty: copy_on_select yes
+copy-on-select = true
+# kitty: detect_urls yes
+link-url = true
+# kitty: clipboard_control write-clipboard write-primary read-clipboard-ask read-primary-ask
+clipboard-read = ask
+clipboard-write = allow
+# kitty 的 url_style straight / select_by_word_characters / click_interval 无对应项
+
+# ==== 窗口 ====
+# kitty: background_opacity 0.9
+background-opacity = 0.9
+# kitty: window_padding_width 10 10
+window-padding-x = 10
+window-padding-y = 10
+# kitty: hide_window_decorations yes
+window-decoration = none
+# kitty: initial_window_width 640 / initial_window_height 400 (px)
+# ghostty 单位为单元格, 按字号 9pt 折算的近似值
+window-width = 90
+window-height = 26
+# kitty 的 remember_window_size / window_border_width / draw_minimal_borders /
+# inactive_text_alpha / repaint_delay / sync_to_monitor / opengl_backend 无对应项
+
+# ==== Tab 栏 ====
+# kitty: tab_bar_edge bottom (默认)
+gtk-tabs-location = bottom
+# kitty 的 tab_bar_style separator / tab_title_template 模板样式 ghostty 不支持,
+# tab 样式跟随 GTK 主题
+
+# ==== 响铃 ====
+# kitty: enable_audio_bell yes + bell_path
+bell-features = audio,attention
+bell-audio-path = /usr/share/sounds/freedesktop/stereo/bell.oga
+# kitty: visual_bell_duration 0.0 / bell_on_tab (ghostty 无视觉铃时长/铃图标)
+
+# ==== 配色 (matugen 随壁纸自动生成: ~/.config/ghostty/themes/Matugen) ====
+# 模板: ~/.config/matugen/templates/ghostty-colors.conf, 与 kitty 配色同源
+theme = Matugen
+# ghostty 收到 SIGUSR2 信号会自动重载配置, matugen post_hook 已配置
+
+# ==== 快捷键 (kitty_mod = ctrl+shift) ====
+# 剪贴板: ctrl+shift+c / ctrl+shift+v 与 ghostty 默认一致, 无需显式绑定
+# kitty: map kitty_mod+s paste_from_selection
+keybind = ctrl+shift+s=paste_from_selection
+# kitty: map shift+insert paste_from_selection (ghostty 默认已含)
+
+# 滚动
+# kitty: map kitty_mod+k scroll_line_up / kitty_mod+j scroll_line_down
+keybind = ctrl+shift+k=scroll_page_lines:-1
+keybind = ctrl+shift+j=scroll_page_lines:1
+# kitty: map kitty_mod+page_up/page_down scroll_page_up/down
+keybind = ctrl+shift+page_up=scroll_page_up
+keybind = ctrl+shift+page_down=scroll_page_down
+# kitty: map kitty_mod+home/end scroll_home/scroll_end
+keybind = ctrl+shift+home=scroll_to_top
+keybind = ctrl+shift+end=scroll_to_bottom
+# kitty: map kitty_mod+h show_scrollback (ghostty 用内置搜索替代)
+keybind = ctrl+shift+h=start_search
+
+# 窗口/分屏 (kitty 的 window ≈ ghostty 的 split)
+# kitty: map kitty_mod+enter new_window
+keybind = ctrl+shift+enter=new_split:right
+# kitty: map kitty_mod+n new_os_window
+keybind = ctrl+shift+n=new_window
+# kitty: map kitty_mod+w close_window
+keybind = ctrl+shift+w=close_window
+# kitty: map kitty_mod+] next_window / kitty_mod+[ previous_window
+keybind = ctrl+shift+]=goto_split:next
+keybind = ctrl+shift+[=goto_split:previous
+# kitty: map kitty_mod+1..0 first_window..tenth_window
+# (ghostty 的 split 不支持数字跳转, 此处改为跳转第 N 个 tab)
+keybind = ctrl+shift+1=goto_tab:1
+keybind = ctrl+shift+2=goto_tab:2
+keybind = ctrl+shift+3=goto_tab:3
+keybind = ctrl+shift+4=goto_tab:4
+keybind = ctrl+shift+5=goto_tab:5
+keybind = ctrl+shift+6=goto_tab:6
+keybind = ctrl+shift+7=goto_tab:7
+keybind = ctrl+shift+8=goto_tab:8
+keybind = ctrl+shift+9=goto_tab:9
+keybind = ctrl+shift+0=goto_tab:10
+
+# Tab
+# kitty: map kitty_mod+t new_tab / kitty_mod+right next_tab / kitty_mod+left previous_tab
+# (以上均为 ghostty 默认, 无需绑定)
+# kitty: map kitty_mod+q close_tab (覆盖 ghostty 默认的 quit)
+keybind = ctrl+shift+q=close_tab
+
+# 字号
+# kitty: map kitty_mod+equal +2 / kitty_mod+minus -2 / kitty_mod+backspace reset
+keybind = ctrl+shift+equal=increase_font_size:2
+keybind = ctrl+shift+minus=decrease_font_size:2
+keybind = ctrl+shift+backspace=reset_font_size
+
+# kitty 的 move_window_forward/backward、move_window_to_top、start_resizing_window、
+# next_layout (ghostty 无 layout 概念) 无对应项
+
+# ==== 终端标识 ====
+# kitty: TERM xterm-kitty — ghostty 下保留默认 xterm-ghostty
+# (ghostty 只自带 xterm-ghostty 的 terminfo, 改成 xterm-kitty 会缺 terminfo 报错;
+#  如确需一致性, 请手动安装 xterm-kitty 的 terminfo 后取消下行注释)
+# term = xterm-kitty

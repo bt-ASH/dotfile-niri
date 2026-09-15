@@ -1,0 +1,2 @@
+# ghostty 默认只加载本文件 (config), 实际配置写在 config.ghostty 中
+config-file = /home/ash/.config/ghostty/config.ghostty
