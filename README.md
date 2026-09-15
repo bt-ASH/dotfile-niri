@@ -31,6 +31,7 @@
 - Fuzzel 应用启动器
 - GTK 主题联动
 - 基于 Matugen 的壁纸跟随主题自动切换
+ostty 1.3.1-arch2  abbr l eza
 
 ## 展示
 
@@ -41,11 +42,6 @@
 | Cava 与 Musicfox                      |
 | ------------------------------------- |
 | ![Cava](./assets/cava-musicfox.png) |
-
-| 终端                                  |
-| ------------------------------------- |
-| ![Terminal](./assets/terminal-preview.png) |
-
 ## 依赖
 
 | 名称 | 用途 | 链接 |
