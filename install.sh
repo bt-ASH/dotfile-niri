@@ -1,20 +1,8 @@
 #!/usr/bin/env bash
-# ── Oh My Zsh Installer ─────────────────────────────────
-#
-# Clones Oh My Zsh and optionally sets zsh as the login shell.
-# An existing ~/.zshrc is never read, written, moved or replaced.
-#
-# Usage:
-#   bash install.sh
-#   bash install.sh --unattended
-#   bash install.sh --skip-chsh
-#
-# Environment:
-#   ZSH     - path to the Oh My Zsh folder (default: $HOME/.oh-my-zsh)
-#   REMOTE  - git remote to clone from (default: gitee mirror)
-#   BRANCH  - branch to check out (default: master)
-#   CHSH    - 'no' leaves the login shell unchanged
-#   RUNZSH  - 'no' does not start zsh when the installer finishes
+# ╔═══════════════════════════════════════════════════════╗
+# ║           dotfile-niri Installer v1.0                 ║
+# ║           Niri Desktop Dotfiles Setup                 ║
+# ╚═══════════════════════════════════════════════════════╝
 
 set -euo pipefail
 
@@ -22,217 +10,363 @@ set -euo pipefail
 CRED='\033[0;31m'
 CGRN='\033[0;32m'
 CYLW='\033[0;33m'
+CBLE='\033[0;34m'
 CBLD='\033[1m'
 CDEF='\033[0m'
 
-# ── Defaults ────────────────────────────────────────────
-USER="${USER:-$(id -u -n)}"
-HOME="${HOME:-$(getent passwd "$USER" 2>/dev/null | cut -d: -f6)}"
-HOME="${HOME:-$(eval echo "~$USER")}"
+# ── Paths ───────────────────────────────────────────────
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BACKUP_DIR="$HOME/.dotfiles-backup-$(date +%Y%m%d-%H%M%S)"
 
-custom_zsh="${ZSH:+yes}"
-ZSH="${ZSH:-$HOME/.oh-my-zsh}"
-REMOTE="${REMOTE:-https://gitee.com/caiguang_cc/ohmyzsh.git}"
-BRANCH="${BRANCH:-master}"
-CHSH="${CHSH:-yes}"
-RUNZSH="${RUNZSH:-yes}"
+# ── Defaults ────────────────────────────────────────────
+SHELL_CHOICE="fish"      # fish | zsh
+TERM_CHOICE="ghostty"    # ghostty | kitty
+DO_PKGS=1
+DO_FILES=1
+DO_SYSTEM=0
+FORCE=0
+UNATTENDED=0
+AUR_HELPER=""
 
 # ── Helpers ─────────────────────────────────────────────
-command_exists() {
-    command -v "$1" &>/dev/null
+info()    { echo -e "  ${CBLE}>>${CDEF} $*"; }
+ok()      { echo -e "  ${CGRN}>>${CDEF} $*"; }
+warn()    { echo -e "  ${CYLW}>> 警告:${CDEF} $*"; }
+err()     { echo -e "  ${CRED}>> 错误:${CDEF} $*" >&2; }
+die()     { err "$*"; exit 1; }
+separator() { echo "  ───────────────────────────────────────────────────"; }
+
+command_exists() { command -v "$1" &>/dev/null; }
+
+confirm() {
+    # confirm <提示> — unattended 模式一律跳过
+    [[ "$UNATTENDED" == "1" ]] && return 1
+    read -r -p "  $1 [y/N] " reply
+    [[ "$reply" =~ ^[Yy]$ ]]
 }
 
-user_can_sudo() {
-    command_exists sudo || return 1
-    ! LANG= sudo -n -v 2>&1 | grep -q "may not run sudo"
+# ── Banner ──────────────────────────────────────────────
+show_banner() {
+    echo -e "${CBLD}${CYLW}"
+    echo "╔═══════════════════════════════════════════════════════╗"
+    echo "║           dotfile-niri Installer v1.0                 ║"
+    echo "║           Niri Desktop Dotfiles Setup                 ║"
+    echo "╚═══════════════════════════════════════════════════════╝"
+    echo -e "${CDEF}"
 }
 
-# ── Clone Oh My Zsh ─────────────────────────────────────
-setup_ohmyzsh() {
-    echo -e "${CGRN}>> Cloning Oh My Zsh...${CDEF}"
-    echo "  ───────────────────────────────────────────────────"
-
-    if ! command_exists git; then
-        echo -e "${CRED}>> git is not installed.${CDEF}"
-        exit 1
-    fi
-
-    # Keep the cloned repository from having insecure permissions, otherwise
-    # compinit fails with "command not found: compdef" for umasks like 002.
-    umask g-w,o-w
-
-    if ! git init --quiet "$ZSH"; then
-        echo -e "${CRED}>> Could not initialise $ZSH.${CDEF}"
-        exit 1
-    fi
-
-    git -C "$ZSH" config core.eol lf
-    git -C "$ZSH" config core.autocrlf false
-    git -C "$ZSH" config fsck.zeroPaddedFilemode ignore
-    git -C "$ZSH" config fetch.fsck.zeroPaddedFilemode ignore
-    git -C "$ZSH" config receive.fsck.zeroPaddedFilemode ignore
-    git -C "$ZSH" config oh-my-zsh.remote origin
-    git -C "$ZSH" config oh-my-zsh.branch "$BRANCH"
-    git -C "$ZSH" remote add origin "$REMOTE"
-
-    echo -e "${CYLW}  fetching ${BRANCH} from ${REMOTE}${CDEF}"
-
-    if ! git -C "$ZSH" fetch --depth=1 origin \
-        || ! git -C "$ZSH" checkout -b "$BRANCH" "origin/$BRANCH"; then
-        rm -rf "$ZSH"
-        echo -e "${CRED}>> Failed to clone oh-my-zsh.${CDEF}"
-        exit 1
-    fi
-
-    echo -e "${CGRN}>> Oh My Zsh cloned to ${ZSH}${CDEF}"
-    echo ""
-}
-
-# ── Default Shell ───────────────────────────────────────
-setup_shell() {
-    # Skip if the user asked for it, or if stdin is not interactive
-    if [[ "$CHSH" == "no" ]]; then
-        return
-    fi
-
-    # Nothing to do when zsh already is the login shell
-    if [[ "$(basename -- "${SHELL:-}")" == "zsh" ]]; then
-        return
-    fi
-
-    if ! command_exists chsh; then
-        echo -e "${CYLW}>> chsh not found, change your default shell manually.${CDEF}"
-        return
-    fi
-
-    echo -e "${CBLD}${CYLW}>> Change your default shell to zsh?${CDEF}"
-    echo "  ───────────────────────────────────────────────────"
-    read -rp "  [Y/n] > " opt || opt=""
-
-    case "$opt" in
-        y*|Y*|"") ;;
-        n*|N*) echo -e "${CYLW}>> Shell change skipped.${CDEF}"; return ;;
-        *) echo -e "${CYLW}>> Invalid choice, shell change skipped.${CDEF}"; return ;;
-    esac
-
-    echo ""
-    echo -e "${CGRN}>> Changing your default shell to zsh...${CDEF}"
-    echo "  ───────────────────────────────────────────────────"
-
-    # ── Locate the zsh binary ───────────────────────────
-    local zsh_bin="zsh"
-
-    # Termux ships zsh from its own prefix, no /etc/shells lookup needed
-    case "${PREFIX:-}" in
-        *com.termux*) ;;
-        *)
-            local shells_file
-            if [[ -f /etc/shells ]]; then
-                shells_file=/etc/shells
-            elif [[ -f /usr/share/defaults/etc/shells ]]; then
-                shells_file=/usr/share/defaults/etc/shells
-            else
-                echo -e "${CRED}>> Could not find /etc/shells, change your shell manually.${CDEF}"
-                return
-            fi
-
-            # Prefer the zsh that comes first on $PATH, but only if it is
-            # actually listed as a valid login shell
-            if ! zsh_bin="$(command -v zsh)" || ! grep -qx "$zsh_bin" "$shells_file"; then
-                zsh_bin="$(grep '^/.*/zsh$' "$shells_file" | tail -n 1)"
-                if [[ ! -f "$zsh_bin" ]]; then
-                    echo -e "${CRED}>> No zsh binary found in ${shells_file}.${CDEF}"
-                    echo -e "${CRED}>> Change your default shell manually.${CDEF}"
-                    return
-                fi
-            fi
-            ;;
-    esac
-
-    # ── Back up the current shell ───────────────────────
-    if [[ -n "${SHELL:-}" ]]; then
-        echo "$SHELL" > ~/.shell.pre-oh-my-zsh
+# ── Choose Shell & Terminal ─────────────────────────────
+choose_options() {
+    echo -e "  ${CBLD}Choose Shell:${CDEF}"
+    separator
+    echo -e "  ${CGRN}1)${CDEF}  fish    (default)"
+    echo -e "  ${CGRN}2)${CDEF}  zsh     (配合 ohmyzsh.sh 使用)"
+    separator
+    if [[ "$UNATTENDED" == "1" ]]; then
+        echo -e "  ${CYLW}unattended, 使用默认: fish${CDEF}"
     else
-        grep "^$USER:" /etc/passwd | awk -F: '{print $7}' > ~/.shell.pre-oh-my-zsh
+        read -rp "  Select > " choice
+        case "$choice" in
+            ""|1) SHELL_CHOICE="fish" ;;
+            2)    SHELL_CHOICE="zsh" ;;
+            *)    warn "无效选项, 使用默认: fish" ;;
+        esac
     fi
+    ok "Shell 配置: $SHELL_CHOICE"
 
-    # ── Apply the change ────────────────────────────────
-    # sudo without a password prompt where possible, plain chsh otherwise
-    local chsh_cmd=(chsh -s "$zsh_bin" "$USER")
-    if user_can_sudo; then
-        chsh_cmd=(sudo -k chsh -s "$zsh_bin" "$USER")
-    fi
-
-    if "${chsh_cmd[@]}"; then
-        export SHELL="$zsh_bin"
-        echo -e "${CGRN}>> Shell changed to ${zsh_bin}${CDEF}"
+    echo ""
+    echo -e "  ${CBLD}Choose Terminal Emulator:${CDEF}"
+    separator
+    echo -e "  ${CGRN}1)${CDEF}  ghostty  (default)"
+    echo -e "  ${CGRN}2)${CDEF}  kitty"
+    separator
+    if [[ "$UNATTENDED" == "1" ]]; then
+        echo -e "  ${CYLW}unattended, 使用默认: ghostty${CDEF}"
     else
-        echo -e "${CRED}>> chsh failed, change your default shell manually.${CDEF}"
+        read -rp "  Select > " choice
+        case "$choice" in
+            ""|1) TERM_CHOICE="ghostty" ;;
+            2)    TERM_CHOICE="kitty" ;;
+            *)    warn "无效选项, 使用默认: ghostty" ;;
+        esac
+    fi
+    ok "终端模拟器: $TERM_CHOICE"
+    separator
+    echo ""
+}
+
+# ── Args ────────────────────────────────────────────────
+show_help() {
+    cat <<'EOF'
+用法:
+  bash install.sh                 # 交互式: 选择 shell/终端 + 备份旧配置 + 部署 + 可选装依赖
+  bash install.sh --no-pkg        # 只部署配置文件, 不安装软件包
+  bash install.sh --pkg-only      # 只安装软件包, 不动配置
+  bash install.sh --system        # 额外部署 /etc 下的系统配置 (keyd)
+  bash install.sh --force         # 覆盖已有文件时不做备份
+  bash install.sh --unattended    # 无人值守 (shell=fish, 终端=ghostty, 不询问)
+
+说明:
+  - Games/ 不会部署 (按需求跳过)
+  - .local/share/nvim (lazy.nvim 插件缓存) 不复制, 由 lazy.nvim 自动同步
+  - 已存在的目标文件会备份到 ~/.dotfiles-backup-<时间戳>/
+  - fish/zsh 和 ghostty/kitty 二选一, 未被选中的配置不会部署
+EOF
+}
+
+for arg in "$@"; do
+    case "$arg" in
+        --no-pkg)     DO_PKGS=0 ;;
+        --pkg-only)   DO_PKGS=1; DO_FILES=0 ;;
+        --system)     DO_SYSTEM=1 ;;
+        --force)      FORCE=1 ;;
+        --unattended) UNATTENDED=1 ;;
+        -h|--help)
+            show_help
+            exit 0 ;;
+        *) die "未知参数: $arg" ;;
+    esac
+done
+
+# ── Preflight ───────────────────────────────────────────
+preflight() {
+    echo -e "${CBLD}>> Preflight${CDEF}"
+    separator
+
+    [[ -d "$SCRIPT_DIR/.config" ]] || die "请在仓库内运行: $SCRIPT_DIR 缺少 .config/"
+    [[ -f /etc/os-release ]] && grep -qi arch /etc/os-release \
+        || warn "非 Arch 系发行版, 包安装步骤可能失败 (配置文件部分不受影响)"
+
+    if [[ $DO_PKGS -eq 1 ]]; then
+        if command_exists paru; then
+            AUR_HELPER="paru"
+        elif command_exists yay; then
+            AUR_HELPER="yay"
+        elif command_exists pacman; then
+            AUR_HELPER="pacman"
+            warn "未找到 paru/yay, 只装官方仓库包; AUR 包需自行安装"
+        else
+            warn "未找到 pacman, 跳过软件包安装"
+            DO_PKGS=0
+        fi
     fi
 
     echo ""
+}
+
+# ── Backup ──────────────────────────────────────────────
+backup_target() {
+    local target="$1"
+    [[ -e "$target" || -L "$target" ]] || return 0
+    if [[ $FORCE -eq 1 ]]; then
+        warn "覆盖 ${target/#$HOME/~} (未备份)"
+        rm -rf "$target"
+        return 0
+    fi
+    mkdir -p "$BACKUP_DIR"
+    local rel="${target#"$HOME"/}"
+    local dest="$BACKUP_DIR/${rel//\//_}"
+    mv "$target" "$dest"
+    info "已备份: ~/$rel -> ${BACKUP_DIR#"$HOME"/}/${dest##*/}"
+}
+
+# ── Deploy Dotfiles ─────────────────────────────────────
+install_dotfiles() {
+    echo -e "${CBLD}>> Deploying dotfiles${CDEF}"
+    separator
+    local copied=0
+    local item base target
+
+    # ~/.config/* — 按选择跳过未采用的 shell / 终端配置
+    mkdir -p "$HOME/.config"
+    for item in "$SCRIPT_DIR"/.config/*; do
+        base="$(basename "$item")"
+        case "$base" in
+            fish)    [[ "$SHELL_CHOICE" == "fish" ]] || continue ;;
+            ghostty) [[ "$TERM_CHOICE" == "ghostty" ]] || continue ;;
+            kitty)   [[ "$TERM_CHOICE" == "kitty" ]] || continue ;;
+        esac
+        target="$HOME/.config/$base"
+        [[ -e "$target" ]] && backup_target "$target"
+        cp -a "$item" "$target"
+        copied=$((copied + 1))
+        ok "~/.config/$base"
+    done
+
+    # 家目录 dotfiles — fish 只拿 .vimrc/.tmux.conf/.gtkrc-2.0, zsh 额外拿 .zshrc/.zprofile
+    for item in .vimrc .tmux.conf .gtkrc-2.0 .zshrc .zprofile; do
+        case "$item" in
+            .zshrc|.zprofile) [[ "$SHELL_CHOICE" == "zsh" ]] || continue ;;
+        esac
+        [[ -e "$SCRIPT_DIR/$item" ]] || continue
+        target="$HOME/$item"
+        [[ -e "$target" ]] && backup_target "$target"
+        cp -a "$SCRIPT_DIR/$item" "$target"
+        copied=$((copied + 1))
+        ok "~/$item"
+    done
+
+    # .local/share: 图标主题 + GTK 主题; nvim/ 是 lazy.nvim 插件缓存, 不复制
+    mkdir -p "$HOME/.local/share"
+    for sub in themes icons; do
+        [[ -d "$SCRIPT_DIR/.local/share/$sub" ]] || continue
+        target="$HOME/.local/share/$sub"
+        [[ -e "$target" ]] && backup_target "$target"
+        cp -a "$SCRIPT_DIR/.local/share/$sub" "$target"
+        copied=$((copied + 1))
+        ok "~/.local/share/$sub"
+    done
+
+    separator
+    echo -e "  ${CGRN}>> Dotfiles deployed ($copied items)${CDEF}"
+    [[ -d "$BACKUP_DIR" ]] && info "旧配置备份在: ${CBLE}$BACKUP_DIR${CDEF}, 确认无误后可删除" \
+        || info "没有需要备份的旧配置"
+    echo ""
+}
+
+# ── Packages ────────────────────────────────────────────
+install_packages() {
+    echo -e "${CBLD}>> Installing packages${CDEF}"
+    separator
+
+    if [[ $DO_PKGS -eq 0 ]]; then
+        info "已指定 --no-pkg, 跳过"
+        echo ""
+        return 0
+    fi
+
+    # ── Pacman packages ─────────────────────────────────
+    local pacman_pkgs=(
+        # ── Desktop ─────────────────────────────────────
+        niri
+        $TERM_CHOICE
+        xdg-desktop-portal-gtk xdg-desktop-portal-gnome polkit-gnome
+
+        # ── Input Method ────────────────────────────────
+        fcitx5 fcitx5-gtk fcitx5-qt fcitx5-chinese-addons fcitx5-configtool
+
+        # ── Tools ───────────────────────────────────────
+        neovim tmux mpv cava btop mako fuzzel swaylock starship
+        yazi eza htop bat fastfetch waypaper satty mangohud
+
+        # ── System Config ───────────────────────────────
+        keyd
+
+        # ── Fonts ───────────────────────────────────────
+        ttf-jetbrains-mono-nerd
+    )
+
+    # ── AUR packages ────────────────────────────────────
+    local aur_pkgs=(
+        eww matugen clipse clipse-gui go-musicfox hexecute sesheta
+    )
+
+    if [[ "$AUR_HELPER" == "pacman" ]]; then
+        info "使用 pacman 安装官方仓库包..."
+        separator
+        sudo pacman -S --needed --noconfirm "${pacman_pkgs[@]}" \
+            || warn "部分包安装失败, 请检查"
+        echo ""
+        return 0
+    fi
+
+    info "使用 $AUR_HELPER 安装 (${#pacman_pkgs[@]} 官方仓库 + ${#aur_pkgs[@]} AUR)..."
+    separator
+    "$AUR_HELPER" -S --needed --noconfirm "${pacman_pkgs[@]}" \
+        || warn "官方仓库包部分安装失败, 请检查"
+    "$AUR_HELPER" -S --needed --noconfirm "${aur_pkgs[@]}" \
+        || warn "AUR 包部分安装失败 (可手动确认: ${aur_pkgs[*]})"
+
+    separator
+    echo -e "  ${CGRN}>> Packages installed${CDEF}"
+    echo ""
+}
+
+# ── System Config (/etc) ────────────────────────────────
+install_system() {
+    echo -e "${CBLD}>> System config (/etc)${CDEF}"
+    separator
+
+    if [[ $DO_SYSTEM -eq 0 ]]; then
+        info "未指定 --system, 跳过 /etc 配置"
+        info "  如需键盘映射 (keyd):    sudo cp $SCRIPT_DIR/etc/keyd/default.conf /etc/keyd/"
+        info "  pacman.conf 请自行核对后手动合并, 脚本不会直接覆盖"
+        echo ""
+        return 0
+    fi
+
+    # ── keyd ────────────────────────────────────────────
+    if confirm "部署 keyd 键盘映射到 /etc/keyd/ 并启用服务?"; then
+        sudo mkdir -p /etc/keyd
+        [[ -f /etc/keyd/default.conf ]] && sudo cp /etc/keyd/default.conf /etc/keyd/default.conf.bak-dotfiles
+        sudo cp "$SCRIPT_DIR/etc/keyd/default.conf" /etc/keyd/default.conf
+        sudo systemctl enable --now keyd.service
+        ok "keyd 已部署并启用"
+    fi
+
+    # ── pacman.conf ─────────────────────────────────────
+    if confirm "将仓库的 pacman.conf 部署到 /etc (原文件备份为 pacman.conf.bak-dotfiles)?"; then
+        sudo cp /etc/pacman.conf /etc/pacman.conf.bak-dotfiles
+        sudo cp "$SCRIPT_DIR/etc/pacman.conf" /etc/pacman.conf
+        ok "pacman.conf 已部署 (原文件: /etc/pacman.conf.bak-dotfiles)"
+        warn "请确认镜像源/仓库列表符合你的网络环境"
+    fi
+    echo ""
+}
+
+# ── Post Install ────────────────────────────────────────
+post_install() {
+    echo -e "${CBLD}>> Post install${CDEF}"
+    separator
+
+    # ── Login shell ─────────────────────────────────────
+    if [[ $DO_FILES -eq 1 ]] && command_exists "$SHELL_CHOICE" \
+        && [[ "$(getent passwd "$USER" | cut -d: -f7)" != "$(command -v "$SHELL_CHOICE")" ]] \
+        && confirm "将 $SHELL_CHOICE 设为登录 shell (chsh)?"; then
+        chsh -s "$(command -v "$SHELL_CHOICE")" "$USER" \
+            && ok "登录 shell 已切换为 $SHELL_CHOICE" \
+            || warn "chsh 失败, 请手动执行: chsh -s \$(command -v $SHELL_CHOICE)"
+    fi
+
+    # ── systemd user daemon ─────────────────────────────
+    if [[ $DO_FILES -eq 1 ]]; then
+        systemctl --user daemon-reload 2>/dev/null && ok "systemd --user daemon-reload 完成"
+    fi
+
+    # ── Oh My Zsh (仅 zsh) ──────────────────────────────
+    if [[ $DO_FILES -eq 1 && "$SHELL_CHOICE" == "zsh" ]] && [[ -x "$SCRIPT_DIR/ohmyzsh.sh" ]] \
+        && confirm "现在运行 ohmyzsh.sh 安装 Oh My Zsh?"; then
+        bash "$SCRIPT_DIR/ohmyzsh.sh" || warn "Oh My Zsh 安装未完成, 可稍后手动运行"
+    fi
+
+    # ── nvim plugins ────────────────────────────────────
+    if [[ $DO_FILES -eq 1 ]] && command_exists nvim && confirm "现在同步 nvim 插件 (lazy.nvim)?"; then
+        nvim --headless "+Lazy! sync" +qa 2>/dev/null \
+            && ok "nvim 插件同步完成" \
+            || warn "nvim 插件同步未完成, 可稍后打开 nvim 手动 :Lazy sync"
+    fi
+
+    echo ""
+    echo -e "${CGRN}>> Setup complete!${CDEF}"
+    separator
+    echo -e "  ${CYLW}1.${CDEF} 注销并重新登录 niri (或重启), 使 niri/eww/fcitx5 等配置生效"
+    echo ""
+    echo -e "  ${CYLW}2.${CDEF} niri 绑定里有硬编码的另一个终端, 按需修改:"
+    echo -e "     Mod+Q -> spawn ghostty  (binds.kdl:3)"
+    echo -e "     Mod+V -> spawn kitty -e clipse gui  (binds.kdl:7)"
+    echo ""
+    echo -e "  ${CYLW}3.${CDEF} Games/ (VRChat 配置) 按需求未部署"
 }
 
 # ── Main ────────────────────────────────────────────────
 main() {
-    # ── Arguments ───────────────────────────────────────
-    while [[ $# -gt 0 ]]; do
-        case "$1" in
-            --unattended) RUNZSH=no; CHSH=no ;;
-            --skip-chsh)  CHSH=no ;;
-            *) echo -e "${CRED}>> Unknown option: $1${CDEF}"; exit 1 ;;
-        esac
-        shift
-    done
-
-    # Run unattended when stdin is not a terminal
-    if [[ ! -t 0 ]]; then
-        RUNZSH=no
-        CHSH=no
-    fi
-
-    # ── Checks ──────────────────────────────────────────
-    if ! command_exists zsh; then
-        echo -e "${CRED}>> Zsh is not installed, install it first.${CDEF}"
-        exit 1
-    fi
-
-    if [[ -d "$ZSH" ]]; then
-        echo -e "${CYLW}>> ${ZSH} already exists.${CDEF}"
-        echo "  ───────────────────────────────────────────────────"
-
-        if [[ -n "$custom_zsh" ]]; then
-            echo -e "  ${CYLW}1.${CDEF} Unset ZSH when calling the installer:"
-            echo -e "     ${CBLD}ZSH= bash install.sh${CDEF}"
-            echo -e "  ${CYLW}2.${CDEF} Install to a folder that does not exist yet:"
-            echo -e "     ${CBLD}ZSH=/path/to/new/ohmyzsh bash install.sh${CDEF}"
-            echo -e "  ${CYLW}3.${CDEF} Remove it if it holds nothing important:"
-            echo -e "     ${CBLD}rm -rf $ZSH${CDEF}"
-        else
-            echo -e "  Remove it if you want to reinstall."
-        fi
-
-        echo ""
-        exit 1
-    fi
-
-    # ── Install ─────────────────────────────────────────
-    setup_ohmyzsh
-    setup_shell
-
-    echo -e "${CGRN}>> Oh My Zsh is now installed!${CDEF}"
-    echo "  ───────────────────────────────────────────────────"
-    echo -e "  ${CYLW}~/.zshrc${CDEF} was left untouched - this script never writes to it."
-    echo -e "  Templates for plugins, themes and options live in:"
-    echo -e "  ${ZSH}/templates/zshrc.zsh-template"
-    echo ""
-
-    if [[ "$RUNZSH" == "no" ]]; then
-        echo -e "${CYLW}>> Run zsh to try it out.${CDEF}"
-        exit 0
-    fi
-
-    exec zsh -l
+    show_banner
+    choose_options
+    preflight
+    [[ $DO_FILES -eq 1 ]] && install_dotfiles
+    install_packages
+    install_system
+    post_install
 }
 
 main "$@"

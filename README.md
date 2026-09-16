@@ -43,7 +43,7 @@ ostty 1.3.1-arch2  abbr l eza
 | ------------------------------------- |
 | ![Cava](./assets/cava-musicfox.png) |
 ## 依赖
-
+ostty 1.3.1-arch2  toggle-overview
 | 名称 | 用途 | 链接 |
 | --- | --- | --- |
 | `niri` | Wayland 合成器 | [niri](https://github.com/YaLTeR/niri) |
@@ -76,17 +76,26 @@ ostty 1.3.1-arch2  abbr l eza
    git clone https://github.com/bt-ASH/dotfile-niri.git ~/dotfile-niri
    ```
 
-2. **复制配置**
+2. **一键配置（推荐）**
+   ```bash
+   cd ~/dotfile-niri && bash install.sh
+   ```
+   脚本会先让你选择 Shell（fish/zsh）和终端模拟器（ghostty/kitty），未被选中的配置不会部署；随后备份已有配置到 `~/.dotfiles-backup-<时间戳>/`、部署所有配置文件，并交互询问是否安装依赖。
+   常用参数：`--no-pkg` 只部署配置 / `--pkg-only` 只装包 / `--system` 额外部署 keyd / `--unattended` 无人值守（默认 fish + ghostty）。
+
+ostty 1.3.1-arch2  3. **手动复制（等效的旧方法）* *
    ```bash
    cp -r ~/dotfile-niri/.config/* ~/.config/
    cp ~/dotfile-niri/.vimrc ~/.vimrc
    ```
 
-3. **安装依赖**
+4. **安装依赖**
    - 使用包管理器安装上表「依赖」中列出的软件包。
 
-4. **重启 Niri**
+5. **重启 Niri**
    - 注销并重新登录，或直接重启 Niri 使配置生效。
+
+> 注意：`Games/`（VRChat 配置）不包含在安装流程中，需要的话请手动复制。
 
 ## 壁纸跟随主题
 
