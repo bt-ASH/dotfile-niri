@@ -1,6 +1,6 @@
-if status is-login; and test (tty) = /dev/tty1
-	niri-session > ~/niri.log 2>&1 &
-end 
+if status is-interactive; and status is-login; and test (tty) = /dev/tty1
+	bash niri-session &
+end
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
