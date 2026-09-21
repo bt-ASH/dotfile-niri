@@ -28,7 +28,7 @@ gestures {
 }
 
 cursor {
-    xcursor-theme "YuzuhaBLZ"
+    xcursor-theme "mornye-wuwa-cursors"
     xcursor-size 16
     hide-after-inactive-ms 3000
 }

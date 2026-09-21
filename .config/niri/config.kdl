@@ -66,9 +66,8 @@ include "layout.kdl"
 include "colors.kdl"
 
 spawn-at-startup "nm-applet"
-spawn-at-startup "eww" "daemon"
-spawn-sh-at-startup "$HOME/.config/eww/scripts/launch.sh"
-spawn-sh-at-startup "$HOME/.config/eww/scripts/watch-outputs.sh"
+spawn-sh-at-startup "sh ~/.config/eww/scripts/launch.sh"
+spawn-sh-at-startup "sh ~/.config/eww/scripts/watch-outputs.sh"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "sh" "-c" "sleep 2 && DISPLAY=:1 glava --desktop"
 spawn-at-startup "awww-daemon" "-n" "overview"
@@ -79,6 +78,7 @@ spawn-at-startup "~/.config/niri/scripts/swayidle.sh"
 spawn-at-startup "~/.config/niri/scripts/blur-overview.sh"
 spawn-sh-at-startup "clipse --listen"
 spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=niri & /usr/lib/xdg-desktop-portal-gnome"
+
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 

@@ -1,12 +1,12 @@
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "ghostty"; }
+    Mod+Q hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+B {spawn "bgselector"; }
     Mod+M {spawn "nautilus"; }
-    Mod+V {spawn "kitty" "-e" "clipse" "gui"; }
+    Mod+V {spawn "ghostty" "-e" "clipse" "gui"; }
     Mod+Shift+Q {spawn "waypaper"; }
-    Mod+Shift+W { spawn-sh "bash ~/.config/eww/scripts/launch.sh"; }
+    Mod+Shift+W { spawn-sh "eww kill && eww daemon && eww open bar"; }
     Mod+Shift+M { spawn-sh "bash ~/.config/niri/scripts/remako.sh"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn-sh "hyprlock -c ~/.config/niri/hyprlock.conf || swaylock"; }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
@@ -176,7 +176,6 @@ binds {
     Mod+Shift+F10 hotkey-overlay-title="随机下载动漫壁纸 Random download anime wallpaper" { spawn "~/.config/scripts/random-anime-wallpaper.sh"; }
     // 切换壁纸
     Mod+Alt+W hotkey-overlay-title="切换壁纸 Change wallpaper" { spawn "waypaper"; }
-    // eww 壁纸画廊（Super+W）
     // 切换颜色策略
     Mod+Alt+M hotkey-overlay-title="切换颜色策略 Change color strategy" { spawn "~/.config/scripts/matugen-select-type.sh"; }
     Mod+Alt+T hotkey-overlay-title="切换颜色策略 Change color strategy" { spawn "~/.config/scripts/matugen-select-type.sh"; }

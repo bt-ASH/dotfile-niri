@@ -28,8 +28,8 @@ fi
 FZF_CMD="echo \"$MENU_ITEMS\" | fzf --reverse --prompt='󰌌 快捷键: ' --info=hidden --border=none > /dev/null"
 
 # 动态检测终端并使用对应的参数启动
-if command -v kitty >/dev/null 2>&1; then
-    kitty --class "niri-hotkey-menu" --title "快捷键菜单" \
+if command -v ghostty >/dev/null 2>&1; then
+    ghostty --class "niri-hotkey-menu" --title "快捷键菜单" \
           -o remember_window_size=no -o initial_window_width=${MENU_WIDTH}c -o initial_window_height=${MENU_HEIGHT}c \
           bash -c "$FZF_CMD"
 
