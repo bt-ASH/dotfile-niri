@@ -11,8 +11,8 @@ if [ -f "$COLORS_FILE" ]; then
     source "$COLORS_FILE"
 fi
 
-if pkill -0 wshowkeys 2>/dev/null; then
-    pkill wshowkeys
+if killall -0 wshowkeys 2>/dev/null; then
+    killall wshowkeys
 else
     wshowkeys -a bottom -a right -m 20 -l 24 -r 15 \
         -b "$WKEYS_BG" -f "$WKEYS_FG" -s "$WKEYS_SP" \
