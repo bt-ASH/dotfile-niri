@@ -1,7 +1,6 @@
 #!/bin/bash
 # 事件驱动监听默认音频设备类型 (配合 variables.yuck 中的 deflisten 使用)
 # 输出: bt / headphone / hands-free / headset / phone / portable / car / default
-# 当设备从非 bt 变为 bt 时, 自动执行一次: wpctl set-volume @DEFAULT_AUDIO_SINK@ 15%
 
 detect() {
   local sink props name
@@ -51,10 +50,5 @@ pactl subscribe 2>/dev/null | while read -r line; do
   if [ "$cur" != "$prev" ]; then
     prev="$cur"
     echo "$cur"
-    # 变为蓝牙设备时, 自动把音量压到 15%, 每次连接只执行一次
-    if [ "$cur" = "bt" ]; then
-      wpctl set-volume @DEFAULT_AUDIO_SINK@ 15%
-      eww update volume="$(/home/ash/.config/eww/scripts/volume.sh)" 2>/dev/null
-    fi
   fi
 done
