@@ -9,7 +9,7 @@ binds {
     Mod+Shift+W { spawn-sh "eww kill && eww daemon && eww open bar"; }
     Mod+Shift+M { spawn-sh "bash ~/.config/niri/scripts/remako.sh"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn-sh "hyprlock -c ~/.config/niri/hyprlock.conf || swaylock"; }
-    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "killall orca || exec orca"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "volumeosd" "up"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "volumeosd" "down"; }
@@ -132,7 +132,7 @@ binds {
     Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
-    Mod+0 { spawn-sh "pkill fcitx5 || fcitx5"; }
+    Mod+0 { spawn-sh "killall fcitx5 || fcitx5"; }
     Mod+Z { spawn "sh" "-c" "~/.local/bin/voice-input.sh"; }
 
     Mod+Ctrl+F { expand-column-to-available-width; }

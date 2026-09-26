@@ -1,1 +1,1 @@
-pkill mako & sleep 0.1 && mako &
+killall mako & sleep 0.1 && mako &

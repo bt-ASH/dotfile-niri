@@ -9,7 +9,7 @@ layer-rule {
 
 overview {
     workspace-shadow {
-        on
+        off
         softness 40
         spread 8
     }
