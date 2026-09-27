@@ -60,4 +60,9 @@ set -gx PATH $PATH /home/shorin/.lmstudio/bin
 # export
 set -x EDITOR nvim
 
+# fish 跟随 matugen 终端配色 (~/.config/ghostty/themes/Matugen)
+set -g fish_color_user brblue     # #a39ec4 薰衣草, 弱化 user
+set -g fish_color_host magenta    # #e7b9d5 柔粉, 与 user 区分
+set -g fish_color_cwd green       # #bdc2ff 主色, 路径最突出
+
 [ -f ~/.cache/matugen/fzf-colors.sh ] && source ~/.cache/matugen/fzf-colors.sh
