@@ -1,2 +1,4 @@
-# ghostty 默认只加载本文件 (config), 实际配置写在 config.ghostty 中
-config-file = /home/ash/.config/ghostty/config.ghostty
+# 入口配置: ghostty tip 版会同时自动加载 config 和 config.ghostty,
+# 因此实际配置不能命名为 config.ghostty (会和 config-file 指令重复加载),
+# 统一写在 main.conf 中, 仅通过下面的指令加载一次
+config-file = /home/ash/.config/ghostty/main.conf
