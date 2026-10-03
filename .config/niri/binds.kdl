@@ -132,8 +132,7 @@ binds {
     Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
-    Mod+0 { spawn-sh "killall fcitx5 || fcitx5"; }
-    Mod+Z { spawn "sh" "-c" "~/.local/bin/voice-input.sh"; }
+    Mod+0 { spawn-sh "pkill fcitx5 || fcitx5"; }
 
     Mod+Ctrl+F { expand-column-to-available-width; }
 
@@ -181,5 +180,15 @@ binds {
     Mod+Alt+T hotkey-overlay-title="切换颜色策略 Change color strategy" { spawn "~/.config/scripts/matugen-select-type.sh"; }
     // 切换按键显示（wshowkeys，跟随壁纸配色）
     Mod+Alt+K hotkey-overlay-title="切换按键显示 Toggle keypress display" { spawn "~/.config/niri/scripts/wshowkeys-toggle.sh"; }
+
+    // ===== warpd：全键盘控制鼠标 (Wayland/niri) =====
+    // Wayland 下 warpd 不能常驻 daemon、也不能自己抓全局热键，必须由合成器绑键，
+    // 因此这里每个模式各 spawn 一个「一次性」进程，选完或按 esc 立即退出，
+    // 不会留下任何后台进程。键位含义见 ~/.config/warpd/config
+    // (warpd --list-options / warpd --list-keys)
+    Mod+X repeat=false allow-inhibiting=false hotkey-overlay-title="warpd 提示选点 Hint mode" { spawn "/home/ash/build/warpd/bin/warpd" "--hint" "--click" "1"; }
+    Mod+Shift+X repeat=false allow-inhibiting=false hotkey-overlay-title="warpd 两段提示 Two-pass hint mode" { spawn "/home/ash/build/warpd/bin/warpd" "--hint2" "--click" "1"; }
+    Mod+Z repeat=false allow-inhibiting=false hotkey-overlay-title="warpd 移动指针 Normal mode" { spawn "/home/ash/build/warpd/bin/warpd" "--normal"; }
+    Mod+G repeat=false allow-inhibiting=false hotkey-overlay-title="warpd 网格选点 Grid mode" { spawn "/home/ash/build/warpd/bin/warpd" "--grid"; }
 }
 
